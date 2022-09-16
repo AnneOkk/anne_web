@@ -1,4 +1,4 @@
-baseURL = "https://www.annekathrinkleine.com"
+baseURL = "annekathrinkleine.com/"
 theme = "hugo-apero"
 languageCode = "en"
 title = "Anne-Kathrin Kleine"
