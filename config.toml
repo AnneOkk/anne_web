@@ -1,8 +1,8 @@
-baseURL = "https://www.apreshill.com"
+baseURL = "https://www.annekathrinkleine.com"
 theme = "hugo-apero"
 languageCode = "en"
-title = "Alison Hill, PhD"
-author = "Alison Hill"
+title = "Anne-Kathrin Kleine"
+author = "Anne-Kathrin Kleine"
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
 disqusShortname = "" # see params.utterances to use utterances instead of Disqus
@@ -33,11 +33,11 @@ enableEmoji = true
     style = "github"
 
 [params]
-  orgName = "Alison Hill"
+  orgName = "Anne-Kathrin Kleine"
   orgLocal = ""
-  description = "Personal website and portfolio of Dr. Alison Hill."
+  description = "Personal website and portfolio of Anne-Kathrin Kleine."
   favicon = "/img/favicon.ico"
-  logo = "/img/penguin.png"
+  logo = "/img/pie_PNG50.png"
   mainSections = ["blog", "project", "talk"]
   navallcaps = true
   # show/hide social icons in site header & footer
@@ -48,7 +48,7 @@ enableEmoji = true
   # Place image file in `static` folder and specify image name here.
   sharing_image = "/img/papillons.jpg"
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
-  twitter = "apreshill"
+  twitter = "AnKaKleine"
 
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
@@ -89,31 +89,23 @@ enableEmoji = true
   [[params.social]]
       icon      = "twitter" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://twitter.com/apreshill"
+      url       = "https://twitter.com/AnKaKleine"
   [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://github.com/apreshill"
-  [[params.social]]
-      icon      = "youtube" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "https://www.youtube.com/channel/UCQYM-t2ut2zXr4d7TIFya1A"
-  [[params.social]]
-      icon      = "impactstory" # icon name without the 'fa-'
-      icon_pack = "ai"
-      url       = "https://impactstory.org/u/0000-0002-8082-1890"
+      url       = "https://github.com/AnneOkk"
   [[params.social]]
       icon      = "orcid" # icon name without the 'fa-'
       icon_pack = "ai"
-      url       = "http://orcid.org/0000-0002-8082-1890"
+      url       = "http://orcid.org/0000-0003-1919-2834"
   [[params.social]]
       icon      = "linkedin-in" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://www.linkedin.com/in/alisonpresmaneshill/"
+      url       = "https://de.linkedin.com/in/anne-kathrin-kleine/"
   [[params.social]]
       icon      = "google-scholar" # icon name without the 'fa-'
       icon_pack = "ai"
-      url       = "https://scholar.google.com/citations?user=yGD9V6MAAAAJ&hl=en"
+      url       = "https://scholar.google.com/citations?user=521wTxUAAAAJ&hl=en&oi=ao"
 
 [taxonomies]
   category = "categories"
@@ -133,12 +125,12 @@ enableEmoji = true
     url = "/blog/"
     weight = 2
   [[menu.header]]
-    name = "Projects"
+    name = "Data Projects"
     title = "Project Portfolio"
     url = "/project/"
     weight = 3
   [[menu.header]]
-    name = "Talks"
+    name = "Talks and Workshops"
     title = "Talks"
     url = "/talk/"
     weight = 4

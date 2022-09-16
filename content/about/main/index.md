@@ -6,7 +6,7 @@ use_featured: false # if false, use most recent by date
 number_categories: 5 # set to zero to exclude
 show_intro: true
 intro: |
-  Currently, I work on creating online experiences to bring machine learning and AI problems and solutions to life. My goal is to make AI more approachable, understandable, and empowering.
+  I am working on a review of available AI-powered diagnostic tools in the mental healthcare sector and teach data science skills to students and professionals.
 show_outro: true
 outro: |
   <i class="fas fa-kiwi-bird pr2"></i>Thank you for visiting!

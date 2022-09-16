@@ -1,7 +1,7 @@
 ---
 title: "About me"
 description: |
-  About Alison Hill.
+  About Anne-Kathrin Kleine.
 show_header: true
 sidebar_left: false
 # Keep this! Do not edit.

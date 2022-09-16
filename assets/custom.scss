@@ -17,14 +17,14 @@
         url('fonts/Petrona-Italic-VariableFont_wght.woff2') format('woff2'),
         url('fonts/Petrona-Italic-VariableFont_wght.woff') format('woff'),
         url('fonts/Petrona-Italic-VariableFont_wght.ttf')  format('truetype');
-    font-weight: 300;
+    font-weight: 1000;
     font-style: italic;
     font-display: swap;
 }
 
 :root {
-	--decorator-outer-offset-top: .3rem;
-	--decorator-outer-offset-left: -.475rem;
+	--decorator-outer-offset-top: .2rem;
+	--decorator-outer-offset-left: -.470rem;
 	--decorator-border-width: 1px;
 	--decorator-outer-dim: 12px;
 	--decorator-border: 4px solid #F3E0E1;

@@ -1,19 +1,19 @@
 ---
 title: Talks & workshops
 description: |
-  Events I have been invited to present at, shared along with slides, videos, and other linkable resources.
-author: "Alison Hill"
+  Presentations, workshops, seminars I have given, along with slides and linkable resources. 
+author: "Anne-Kathrin Kleine"
 show_post_thumbnail: true
 thumbnail_left: false
 show_author_byline: false
 show_post_date: true
 show_post_time: true
 # for listing page layout
-layout: list # list, list-sidebar
+# layout: list # list, list-sidebar
 
 # set up common front matter for all pages inside blog/
 cascade:
-  author: "Alison Hill"
+  author: "Anne-Kathrin Kleine"
   show_author_byline: false
   show_post_date: true
   show_post_time: true

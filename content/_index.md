@@ -1,9 +1,9 @@
 ---
-title: "Alison Hill, PhD"
-subtitle: "Senior Data Scientist, AI Strategy & Innovation @IBM"
-description: "I am a data scientist, behavioral scientist, and award-winning educator. I work on creating online experiences to bring machine learning and artificial intelligence (AI) problems and solutions to life. My goal is to make AI more approachable, understandable, and empowering."
+title: "Anne-Kathrin Kleine"
+subtitle: "Postdoctoral Researcher Human-AI Interaction at LMU Munich"
+description: "I am a data scientist and behavioral researcher. I work on assessing the impact and usability of AI solutions in the mental healthcare sector."
 images:
-  - img/avatar-circle.png
+  - img/anne.png
 image_left: false
 text_align_left: true
 show_social_links: true # specify social accounts in site config
