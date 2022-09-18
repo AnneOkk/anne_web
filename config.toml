@@ -67,8 +67,7 @@ enableEmoji = true
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
   # if you import your own fonts, name them here too
   customtextFontFamily = "Atkinson Hyperlegible"
-  customheadingFontFamily = "Petrona"
-  # alternatively, leave empty and select basic font options: sans-serif or serif
+  customheadingFontFamily = "Merriweather"  # alternatively, leave empty and select basic font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/
   textFontFamily = "sans-serif"
   headingFontFamily = "sans-serif"
@@ -150,11 +149,11 @@ enableEmoji = true
     title = "Contact form"
     url = "/contact/"
     weight = 2
-  [[menu.footer]]
-    name = "RSS"
-    title = "RSS"
-    url = "/blog/index.xml"
-    weight = 3
+#  [[menu.footer]]
+#    name = "RSS"
+#    title = "RSS"
+#    url = "/blog/index.xml"
+#    weight = 3
 
 # see https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
