@@ -8,8 +8,8 @@ summary: "A workshop on data analysis, reporting, and collaboration using R, Qua
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2022-09-21T09:00:00Z"
-date_end: "2022-09-21T15:00:00Z"
+date: "2022-09-17T09:00:00Z"
+date_end: "2022-09-17T15:00:00Z"
 all_day: true
 publishdate: "2022-09-17"
 categories:
