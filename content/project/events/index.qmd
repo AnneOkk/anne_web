@@ -4,7 +4,7 @@ execute:
   echo: true
   warning: false
   message: false
-author: "Anne Kleine"
+author: "Anne-Kathrin Kleine"
 summary: I used natural language processing (NLP) tools in R to analyse texts entrepreneurs wrote about the errors that happened in their business over the past two weeks. Most entrepreneurs in the sample were from India and the Netherlands, operating in various industries.  
 format: 
   hugo:
@@ -34,7 +34,6 @@ I prepared the data for reliability assessment and correlation analysis.
 
 ```{r}
 #| results: 'hide'
-getwd()
 dat <- read_csv("data/dat.csv")
 
 evdes <- dat$t1evdes_
@@ -65,16 +64,16 @@ comp_dat = apply_labels(comp,
                       t1age = "Age in years",
                       t1edu = c("Primary School" = 1,
                                 "Secondary School" = 2,
-                                "(Technical) Secondary School Diploma" = 3,
+                                "(Technical) School" = 3,
                                 "University Degree" = 4,
                                 "Doctorate Degree" = 5,
                                 "Other" = 6),
                       t1emotions = "Strength of different negative emotions about the event (increasing)",
-                      t1found = c("Yes, I was involved in founding the business." = 1,
-                                  "No, I was not involved in founding the business." = 2),
+                      t1found = c("Founded business." = 1,
+                                  "Did not found business." = 2),
                       t1gender = c("Male" = 1,
                                    "Female" = 2,
-                                   "Non-binary identified" = 3),
+                                   "Non-binary" = 3),
                       t1jobsa = "Level of satisfaction with job at T1 (increasing)",
                       t1jobstr = "Level of job strain (increasing)",
                       t1lang = c("English" = 1,
@@ -100,7 +99,7 @@ comp_dat = apply_labels(comp,
 
 ```{r}
 #| echo: false
-#| out.width: "60%"
+#| out.width: "80%"
 library(ggpubr)
 library(gridExtra)
 library(grid)
@@ -110,72 +109,72 @@ names(findiff.age) <- c("Age", "Frequency")
 ggplot(data=findiff.age, mapping=aes(x=Age, y=Frequency)) + 
   geom_col(fill = "#0073C2FF") + 
   theme_pubclean() + 
-  theme(axis.text.x = element_text(size = 7))
+  theme(axis.text.x = element_text(size = 10))
 ```
 
 #### Educational level: 
 
 ```{r}
 #| echo: false
-#| out.width: "60%"
+#| out.width: "80%"
 findiff.edu <- table(comp_dat$t1edu) %>% prop.table(.) %>% as.data.frame(.)
 names(findiff.edu) <- c("Education", "Frequency")
 ggplot(data=findiff.edu, mapping=aes(x=Education, y=Frequency)) + 
   geom_col(fill = "#0073C2FF") + 
   theme_pubclean() + 
-  theme(axis.text.x = element_text(size = 7))
+  theme(axis.text.x = element_text(size = 11))
 ```
 
 #### Gender:
 
 ```{r}
 #| echo: false
-#| out.width: "60%"
+#| out.width: "55%"
 findiff.gen <- table(comp_dat$t1gender) %>% prop.table(.) %>% as.data.frame(.)
 names(findiff.gen) <- c("Gender", "Frequency")
 ggplot(data=findiff.gen, mapping=aes(x=Gender, y=Frequency)) + 
   geom_col(fill = "#0073C2FF") + 
   theme_pubclean() + 
-  theme(axis.text.x = element_text(size = 7))
+  theme(axis.text.x = element_text(size = 13))
 ```
 
 #### Language:
 
 ```{r}
 #| echo: false
-#| out.width: "60%"
+#| out.width: "55%"
 findiff.lang <- table(comp_dat$t1lang) %>% prop.table(.) %>% as.data.frame(.)
 names(findiff.lang) <- c("Language", "Frequency")
 ggplot(data=findiff.lang, mapping=aes(x=Language, y=Frequency)) + 
   geom_col(fill = "#0073C2FF") + 
   theme_pubclean() + 
-  theme(axis.text.x = element_text(size = 7))
+  theme(axis.text.x = element_text(size = 13))
 ```
 
 #### Current occupation:
 
 ```{r}
 #| echo: false
-#| out.width: "60%"
+#| out.width: "75%"
 findiff.occ <- table(comp_dat$t1occ) %>% prop.table(.) %>% as.data.frame(.)
 names(findiff.occ) <- c("Occupation", "Frequency")
 ggplot(data=findiff.occ, mapping=aes(x=Occupation, y=Frequency)) + 
   geom_col(fill = "#0073C2FF") + 
   theme_pubclean() + 
-  theme(axis.text.x = element_text(size = 7))
+  theme(axis.text.x = element_text(size = 11))
 ```
 
 #### Whether they were involved in founding the business:
 
 ```{r}
 #| echo: false
-#| out.width: "60%"
+#| out.width: "55%"
 findiff.fou <- table(comp_dat$t1found) %>% prop.table(.) %>% as.data.frame(.)
 names(findiff.fou) <- c("Founding", "Frequency")
 ggplot(data=findiff.fou, mapping=aes(x=Founding, y=Frequency)) + 
   geom_col(fill = "#0073C2FF") + 
   theme_pubclean() + 
-  theme(axis.text.x = element_text(size = 7))
+  theme(axis.text.x = element_text(size = 12))
 
 ```
 
@@ -205,8 +204,8 @@ corstar_select %>%
     extensions = 'Buttons', 
     options = list(dom = 'Bfrtip', 
                    buttons = c('excel', "csv"),
-                   pageLength = 35,
-                  lengthMenu = c(25, 50, 75, 94)))
+                   pageLength = 10,
+                   lengthMenu = c(25, 50, 75, 94)))
 ```
 
 ## Text mining 

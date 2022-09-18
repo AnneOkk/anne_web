@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Anne Kleine">
+<meta name="author" content="Anne-Kathrin Kleine">
 
 <title>Using NLP for examining entrepreneurs’ business errors</title>
 <style>
@@ -123,7 +123,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
-   
+
   <ul>
   <li><a href="#some-background-information" id="toc-some-background-information" class="nav-link active" data-scroll-target="#some-background-information">Some background information</a></li>
   <li><a href="#loading-standard-libraries-and-source-custom-functions" id="toc-loading-standard-libraries-and-source-custom-functions" class="nav-link" data-scroll-target="#loading-standard-libraries-and-source-custom-functions">Loading standard libraries and source custom functions</a></li>
@@ -162,10 +162,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
              <p>Anne Kleine </p>
           </div>
   </div>
-    
-    
+
+
   </div>
-  
+
 
 </header>
 
@@ -209,8 +209,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>alph <span class="ot">&lt;-</span> <span class="fu">map</span>(alph_split, <span class="sc">~</span> psych<span class="sc">::</span><span class="fu">alpha</span>(.x), <span class="at">data =</span> .x) <span class="sc">%&gt;%</span></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(<span class="sc">~</span> .x<span class="sc">$</span>total)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Some items ( t3jobstr_1 ) were negatively correlated with the total scale and 
-probably should be reversed.  
+<pre><code>Some items ( t3jobstr_1 ) were negatively correlated with the total scale and
+probably should be reversed.
 To do this, run the function again with the 'check.keys=TRUE' option</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>alph_df <span class="ot">&lt;-</span> <span class="fu">do.call</span>(<span class="st">"rbind"</span>, alph) <span class="sc">%&gt;%</span> <span class="fu">round</span>(., <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -719,7 +719,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       toggleBodyColorMode(bsSheetEl);
     }
   }
-  toggleBodyColorPrimary();  
+  toggleBodyColorPrimary();
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -763,7 +763,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       theme: 'quarto',
       placement: 'bottom-start'
     };
-    window.tippy(el, config); 
+    window.tippy(el, config);
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
   for (var i=0; i<noterefs.length; i++) {

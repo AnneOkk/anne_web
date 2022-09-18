@@ -14,12 +14,7 @@ layout: list-sidebar # list, list-sidebar, list-grid
 sidebar: 
   title: Blog
   description: |
-    In this blog, I write about my research findings and implications in the organizational behavior domain (older entries) and ongoing projects and research results related to Human-AI interaction in healthcare. <br /> <br /> <br /> <br /> <br /> 
-    
-    <div class="small-text">  Next to being a data and research enthusiast, you frequently find me on my bike. Check out my latest activities and join me for a ride:</div> 
-    <br />
-    
-    <iframe height='400' width='250' frameborder='0' allowtransparency='true' scrolling='yes' src='https://www.strava.com/athletes/56021200/latest-rides/004c9101285c4f851fe9e6a73e2c796e0d68dbaa'></iframe>
+    In this blog, I write about my research findings and implications in the organizational behavior domain (older entries) and ongoing projects and research results related to Human-AI interaction in healthcare. <br /> <br /> 
   author: "Anne-Kathrin Kleine"
   text_link_url: /index.xml
   show_sidebar_adunit: true # show ad container

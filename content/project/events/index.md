@@ -4,7 +4,7 @@ execute:
   echo: true
   warning: false
   message: false
-author: "Anne Kleine"
+author: "Anne-Kathrin Kleine"
 summary: I used natural language processing (NLP) tools in R to analyse texts entrepreneurs wrote about the errors that happened in their business over the past two weeks. Most entrepreneurs in the sample were from India and the Netherlands, operating in various industries.  
 format: 
   hugo:
@@ -51,7 +51,6 @@ source("R/custom_functions.R")
 I prepared the data for reliability assessment and correlation analysis.
 
 ``` r
-getwd()
 dat <- read_csv("data/dat.csv")
 
 evdes <- dat$t1evdes_
@@ -79,27 +78,27 @@ alph_df <- do.call("rbind", alph) %>% round(., 2)
 
 #### Age of the entrepreneurs in the sample:
 
-<img src="index_files/figure-gfm/unnamed-chunk-4-1.png" style="width:60.0%" />
+<img src="index_files/figure-gfm/unnamed-chunk-4-1.png" style="width:80.0%" />
 
 #### Educational level:
 
-<img src="index_files/figure-gfm/unnamed-chunk-5-1.png" style="width:60.0%" />
+<img src="index_files/figure-gfm/unnamed-chunk-5-1.png" style="width:80.0%" />
 
 #### Gender:
 
-<img src="index_files/figure-gfm/unnamed-chunk-6-1.png" style="width:60.0%" />
+<img src="index_files/figure-gfm/unnamed-chunk-6-1.png" style="width:55.0%" />
 
 #### Language:
 
-<img src="index_files/figure-gfm/unnamed-chunk-7-1.png" style="width:60.0%" />
+<img src="index_files/figure-gfm/unnamed-chunk-7-1.png" style="width:55.0%" />
 
 #### Current occupation:
 
-<img src="index_files/figure-gfm/unnamed-chunk-8-1.png" style="width:60.0%" />
+<img src="index_files/figure-gfm/unnamed-chunk-8-1.png" style="width:75.0%" />
 
 #### Whether they were involved in founding the business:
 
-<img src="index_files/figure-gfm/unnamed-chunk-9-1.png" style="width:60.0%" />
+<img src="index_files/figure-gfm/unnamed-chunk-9-1.png" style="width:55.0%" />
 
 ### Reliabilities for multi-item variables:
 
@@ -112,8 +111,8 @@ DT::datatable(
                    pageLength = 20))
 ```
 
-<div id="htmlwidget-57ae36f581e92e5d260e" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-57ae36f581e92e5d260e">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["t1emotions","t1jobstr","t1threat","t2jobstr","t3jobstr"],[0.87,0.82,0.83,0.86,0.85],[0.87,0.83,0.83,0.88,0.83],[0.89,0.82,0.78,0.9,0.9],[0.3,0.44,0.62,0.55,0.5],[6.48,4.74,4.95,7.45,5],[0.02,0.02,0.03,0.02,0.02],[2.32,1.79,2.84,1.87,2.02],[0.75,0.66,1.22,0.72,0.65],[0.31,0.45,0.59,0.57,0.55]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>raw_alpha<\/th>\n      <th>std.alpha<\/th>\n      <th>G6(smc)<\/th>\n      <th>average_r<\/th>\n      <th>S/N<\/th>\n      <th>ase<\/th>\n      <th>mean<\/th>\n      <th>sd<\/th>\n      <th>median_r<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["excel","csv"],"pageLength":20,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-08bce9348eae4bfe9973" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-08bce9348eae4bfe9973">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["t1emotions","t1jobstr","t1threat","t2jobstr","t3jobstr"],[0.87,0.82,0.83,0.86,0.85],[0.87,0.83,0.83,0.88,0.83],[0.89,0.82,0.78,0.9,0.9],[0.3,0.44,0.62,0.55,0.5],[6.48,4.74,4.95,7.45,5],[0.02,0.02,0.03,0.02,0.02],[2.32,1.79,2.84,1.87,2.02],[0.75,0.66,1.22,0.72,0.65],[0.31,0.45,0.59,0.57,0.55]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>raw_alpha<\/th>\n      <th>std.alpha<\/th>\n      <th>G6(smc)<\/th>\n      <th>average_r<\/th>\n      <th>S/N<\/th>\n      <th>ase<\/th>\n      <th>mean<\/th>\n      <th>sd<\/th>\n      <th>median_r<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["excel","csv"],"pageLength":20,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ### Correlation table:
 
@@ -127,12 +126,12 @@ corstar_select %>%
     extensions = 'Buttons', 
     options = list(dom = 'Bfrtip', 
                    buttons = c('excel', "csv"),
-                   pageLength = 35,
-                  lengthMenu = c(25, 50, 75, 94)))
+                   pageLength = 10,
+                   lengthMenu = c(25, 50, 75, 94)))
 ```
 
-<div id="htmlwidget-9abbf36dcd6c7cfbe54f" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9abbf36dcd6c7cfbe54f">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["t1age","t1edu","t1emotions","t1found","t1gender","t1jobsa","t1jobstr","t1lang","t1occ","t1threat","t2jobsa","t2jobstr","t3jobsa","t3jobstr"],[" 1.00 "," 0.22**  ","-0.07    ","-0.11    ","-0.07    "," 0.06    ","-0.04    "," 0.04    ","-0.25**  ","-0.02    "," 0.19    ","-0.30    "," 0.04    ","-0.02    "],[" 0.22**  "," 1.00 ","-0.06    ","-0.17    ","-0.14    "," 0.10    ","-0.16    "," 0.12    ","-0.19*   ","-0.04    "," 0.14    ","-0.27    ","-0.41    "," 0.12    "],["-0.07    ","-0.06    "," 1.00 "," 0.14    ","-0.14    ","-0.35*** "," 0.62*** "," 0.04    "," 0.03    "," 0.36*** ","-0.54*   "," 0.72*** ","-0.14    "," 0.27    "],["-0.11    ","-0.17    "," 0.14    "," 1.00 "," 0.12    ","-0.06    "," 0.06    "," 0.01    "," 0.03    "," 0.01    ","  NaNNA","  NaNNA","-0.01    ","-0.28    "],["-0.07    ","-0.14    ","-0.14    "," 0.12    "," 1.00 "," 0.15    ","-0.05    ","-0.03    "," 0.24**  ","-0.09    "," 0.32    ","-0.34    "," 0.21    ","-0.27    "],[" 0.06    "," 0.10    ","-0.35*** ","-0.06    "," 0.15    "," 1.00 ","-0.56*** ","-0.05    "," 0.08    ","-0.10    "," 0.90*** ","-0.76*** "," 0.78*   "," 0.21    "],["-0.04    ","-0.16    "," 0.62*** "," 0.06    ","-0.05    ","-0.56*** "," 1.00 ","-0.02    ","-0.01    "," 0.23**  ","-0.68*** "," 0.72*** ","-0.22    "," 0.41    "],[" 0.04    "," 0.12    "," 0.04    "," 0.01    ","-0.03    ","-0.05    ","-0.02    "," 1.00 "," 0.01    "," 0.08    ","-0.17    "," 0.40    ","-0.09    "," 0.52    "],["-0.25**  ","-0.19*   "," 0.03    "," 0.03    "," 0.24**  "," 0.08    ","-0.01    "," 0.01    "," 1.00 "," 0.05    "," 0.26    "," 0.10    "," 0.36    "," 0.74*   "],["-0.02    ","-0.04    "," 0.36*** "," 0.01    ","-0.09    ","-0.10    "," 0.23**  "," 0.08    "," 0.05    "," 1.00 ","-0.08    "," 0.10    "," 0.24    "," 0.09    "],[" 0.19    "," 0.14    ","-0.54*   ","  NaNNA"," 0.32    "," 0.90*** ","-0.68*** ","-0.17    "," 0.26    ","-0.08    "," 1.00 ","-0.70*** "," 0.99    "," 0.28    "],["-0.30    ","-0.27    "," 0.72*** ","  NaNNA","-0.34    ","-0.76*** "," 0.72*** "," 0.40    "," 0.10    "," 0.10    ","-0.70*** "," 1.00 ","-0.28    "," 0.76    "],[" 0.04    ","-0.41    ","-0.14    ","-0.01    "," 0.21    "," 0.78*   ","-0.22    ","-0.09    "," 0.36    "," 0.24    "," 0.99    ","-0.28    "," 1.00 "," 0.39    "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>t1age<\/th>\n      <th>t1edu<\/th>\n      <th>t1emotions<\/th>\n      <th>t1found<\/th>\n      <th>t1gender<\/th>\n      <th>t1jobsa<\/th>\n      <th>t1jobstr<\/th>\n      <th>t1lang<\/th>\n      <th>t1occ<\/th>\n      <th>t1threat<\/th>\n      <th>t2jobsa<\/th>\n      <th>t2jobstr<\/th>\n      <th>t3jobsa<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["excel","csv"],"pageLength":35,"lengthMenu":[25,50,75,94],"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c27191f738c4dac1c7fa" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c27191f738c4dac1c7fa">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["t1age","t1edu","t1emotions","t1found","t1gender","t1jobsa","t1jobstr","t1lang","t1occ","t1threat","t2jobsa","t2jobstr","t3jobsa","t3jobstr"],[" 1.00 "," 0.22**  ","-0.07    ","-0.11    ","-0.07    "," 0.06    ","-0.04    "," 0.04    ","-0.25**  ","-0.02    "," 0.19    ","-0.30    "," 0.04    ","-0.02    "],[" 0.22**  "," 1.00 ","-0.06    ","-0.17    ","-0.14    "," 0.10    ","-0.16    "," 0.12    ","-0.19*   ","-0.04    "," 0.14    ","-0.27    ","-0.41    "," 0.12    "],["-0.07    ","-0.06    "," 1.00 "," 0.14    ","-0.14    ","-0.35*** "," 0.62*** "," 0.04    "," 0.03    "," 0.36*** ","-0.54*   "," 0.72*** ","-0.14    "," 0.27    "],["-0.11    ","-0.17    "," 0.14    "," 1.00 "," 0.12    ","-0.06    "," 0.06    "," 0.01    "," 0.03    "," 0.01    ","  NaNNA","  NaNNA","-0.01    ","-0.28    "],["-0.07    ","-0.14    ","-0.14    "," 0.12    "," 1.00 "," 0.15    ","-0.05    ","-0.03    "," 0.24**  ","-0.09    "," 0.32    ","-0.34    "," 0.21    ","-0.27    "],[" 0.06    "," 0.10    ","-0.35*** ","-0.06    "," 0.15    "," 1.00 ","-0.56*** ","-0.05    "," 0.08    ","-0.10    "," 0.90*** ","-0.76*** "," 0.78*   "," 0.21    "],["-0.04    ","-0.16    "," 0.62*** "," 0.06    ","-0.05    ","-0.56*** "," 1.00 ","-0.02    ","-0.01    "," 0.23**  ","-0.68*** "," 0.72*** ","-0.22    "," 0.41    "],[" 0.04    "," 0.12    "," 0.04    "," 0.01    ","-0.03    ","-0.05    ","-0.02    "," 1.00 "," 0.01    "," 0.08    ","-0.17    "," 0.40    ","-0.09    "," 0.52    "],["-0.25**  ","-0.19*   "," 0.03    "," 0.03    "," 0.24**  "," 0.08    ","-0.01    "," 0.01    "," 1.00 "," 0.05    "," 0.26    "," 0.10    "," 0.36    "," 0.74*   "],["-0.02    ","-0.04    "," 0.36*** "," 0.01    ","-0.09    ","-0.10    "," 0.23**  "," 0.08    "," 0.05    "," 1.00 ","-0.08    "," 0.10    "," 0.24    "," 0.09    "],[" 0.19    "," 0.14    ","-0.54*   ","  NaNNA"," 0.32    "," 0.90*** ","-0.68*** ","-0.17    "," 0.26    ","-0.08    "," 1.00 ","-0.70*** "," 0.99    "," 0.28    "],["-0.30    ","-0.27    "," 0.72*** ","  NaNNA","-0.34    ","-0.76*** "," 0.72*** "," 0.40    "," 0.10    "," 0.10    ","-0.70*** "," 1.00 ","-0.28    "," 0.76    "],[" 0.04    ","-0.41    ","-0.14    ","-0.01    "," 0.21    "," 0.78*   ","-0.22    ","-0.09    "," 0.36    "," 0.24    "," 0.99    ","-0.28    "," 1.00 "," 0.39    "]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>t1age<\/th>\n      <th>t1edu<\/th>\n      <th>t1emotions<\/th>\n      <th>t1found<\/th>\n      <th>t1gender<\/th>\n      <th>t1jobsa<\/th>\n      <th>t1jobstr<\/th>\n      <th>t1lang<\/th>\n      <th>t1occ<\/th>\n      <th>t1threat<\/th>\n      <th>t2jobsa<\/th>\n      <th>t2jobstr<\/th>\n      <th>t3jobsa<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["excel","csv"],"pageLength":10,"lengthMenu":[25,50,75,94],"columnDefs":[{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ## Text mining
 
