@@ -12,7 +12,7 @@ format:
     toc-depth: 5
 ---
 
-I used natural language processing (NLP) tools in R to analyse texts entrepreneurs wrote about the errors that happened in their business over the past two weeks. Most entrepreneurs in the sample were from India and the Netherlands, operating in various industries.
+I used natural language processing (NLP) to analyse texts entrepreneurs wrote about the errors that happened in their business over the past two weeks. Entrepreneurs in the sample were from India and the Netherlands, operating in various industries.
 
 ## Data preparation
 
@@ -28,17 +28,15 @@ library(lattice)
 source("R/custom_functions.R")
 ```
 
-### Reading in data and renaming 
+### Reading in data and preprocessing 
+
+I prepared the data for reliability assessment and correlation analysis. 
 
 ```{r}
 #| results: 'hide'
 getwd()
 dat <- read_csv("data/dat.csv")
-```
 
-I prepared the data for reliability assessment and correlation analysis. 
-
-```{r}
 evdes <- dat$t1evdes_
 comp_dat <- dat %>%
   dplyr::select(matches("t1emotions|jobstr|jobsa|t1threat|gender|age|found|t1occ$|lang|edu|max_sev"))
@@ -102,7 +100,7 @@ comp_dat = apply_labels(comp,
 
 ```{r}
 #| echo: false
-#| out.width: "75%"
+#| out.width: "60%"
 library(ggpubr)
 library(gridExtra)
 library(grid)
@@ -119,7 +117,7 @@ ggplot(data=findiff.age, mapping=aes(x=Age, y=Frequency)) +
 
 ```{r}
 #| echo: false
-#| out.width: "75%"
+#| out.width: "60%"
 findiff.edu <- table(comp_dat$t1edu) %>% prop.table(.) %>% as.data.frame(.)
 names(findiff.edu) <- c("Education", "Frequency")
 ggplot(data=findiff.edu, mapping=aes(x=Education, y=Frequency)) + 
@@ -132,7 +130,7 @@ ggplot(data=findiff.edu, mapping=aes(x=Education, y=Frequency)) +
 
 ```{r}
 #| echo: false
-#| out.width: "75%"
+#| out.width: "60%"
 findiff.gen <- table(comp_dat$t1gender) %>% prop.table(.) %>% as.data.frame(.)
 names(findiff.gen) <- c("Gender", "Frequency")
 ggplot(data=findiff.gen, mapping=aes(x=Gender, y=Frequency)) + 
@@ -145,7 +143,7 @@ ggplot(data=findiff.gen, mapping=aes(x=Gender, y=Frequency)) +
 
 ```{r}
 #| echo: false
-#| out.width: "75%"
+#| out.width: "60%"
 findiff.lang <- table(comp_dat$t1lang) %>% prop.table(.) %>% as.data.frame(.)
 names(findiff.lang) <- c("Language", "Frequency")
 ggplot(data=findiff.lang, mapping=aes(x=Language, y=Frequency)) + 
@@ -158,7 +156,7 @@ ggplot(data=findiff.lang, mapping=aes(x=Language, y=Frequency)) +
 
 ```{r}
 #| echo: false
-#| out.width: "75%"
+#| out.width: "60%"
 findiff.occ <- table(comp_dat$t1occ) %>% prop.table(.) %>% as.data.frame(.)
 names(findiff.occ) <- c("Occupation", "Frequency")
 ggplot(data=findiff.occ, mapping=aes(x=Occupation, y=Frequency)) + 
@@ -171,7 +169,7 @@ ggplot(data=findiff.occ, mapping=aes(x=Occupation, y=Frequency)) +
 
 ```{r}
 #| echo: false
-#| out.width: "75%"
+#| out.width: "60%"
 findiff.fou <- table(comp_dat$t1found) %>% prop.table(.) %>% as.data.frame(.)
 names(findiff.fou) <- c("Founding", "Frequency")
 ggplot(data=findiff.fou, mapping=aes(x=Founding, y=Frequency)) + 
@@ -181,7 +179,7 @@ ggplot(data=findiff.fou, mapping=aes(x=Founding, y=Frequency)) +
 
 ```
 
-### The reliabilities for the multi-item variables:
+### Reliabilities for multi-item variables:
 
 ```{r}
 #| warning: false
@@ -195,12 +193,12 @@ DT::datatable(
                    pageLength = 20))
 ```
 
-### The correlation table:
+### Correlation table:
 
 ```{r}
 cor <- round(cor(comp, use="pairwise.complete.obs"), 2)
 
-corstar_select <- data.frame(corstars(comp, removeTriangle = "upper", result="none"))
+corstar_select <- data.frame(corstars(comp, removeTriangle = "none", result="none"))
 
 corstar_select %>%
   DT::datatable(
