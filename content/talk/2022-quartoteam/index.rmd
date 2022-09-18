@@ -13,7 +13,9 @@ date_end: "2022-09-17T15:00:00Z"
 all_day: true
 publishdate: "2022-09-17"
 categories:
-  - panel
+  - workshop
+  - r 
+  - quarto
 featured: no
 image:
   focal_point: 'center'

@@ -12,9 +12,10 @@ date: "2022-05-24T09:00:00Z"
 date_end: "2022-05-25T15:00:00Z"
 all_day: true
 publishdate: "2022-05-24"
-
 categories:
-  - panel
+  - workshop
+  - r 
+  - rmarkdown
 featured: no
 image:
   focal_point: 'center'
