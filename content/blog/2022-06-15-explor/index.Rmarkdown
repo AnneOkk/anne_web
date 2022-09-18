@@ -9,7 +9,7 @@ tags: [research]
 categories:
   - career exploration
   - meta-analysis
-summary: "In this meta-analysis, we explored the antecedents and outcomes of students' career exploration."
+summary: "On the basis of Lent and Brown's (2013) model of career self-management (CSM), the meta-analysis examined the antecedents and outcomes of career exploration among college students (K = 109, N = 34,969 students). The findings highlight several implications for the further development of the CSM model, future research on students' career exploration, and career development practice."
 image:
   caption: '[Photo by Stanley Morales on Pexels](https://www.pexels.com/photo/woman-in-black-long-sleeve-dress-standing-on-brown-concrete-pathway-3186386/)'
   focal_point: 'Smart'

@@ -9,7 +9,7 @@ tags: [research]
 categories:
   - latent profile analysis
   - entrepreneurs
-summary: Using a latent profile analysis approach, we examined the emergence of mixed challenge and threat appraisal profiles of entrepreneurial action errors and how different profiles are related to entrepreneurs' ways of dealing with errors.
+summary: Using a latent profile analysis approach, we examine the emergence of mixed challenge and threat appraisal profiles of entrepreneurial action errors. In addition, we investigate how different profiles are related to entrepreneurs' ways of dealing with errors.
 links:
 - icon: github
   icon_pack: fab
