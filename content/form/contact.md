@@ -12,7 +12,7 @@ show_social_links: true # specify social accounts in site config
 show_poweredby_formspree: true
 # From the Integration tab in Formspree where it says Your form's endpoint is:
 # https://formspree.io/f/abcdefgh The id will be "abcdefgh"
-formspree_form_id: "mdopqgqv"
+formspree_form_id: "mdobyvzz"
 ---
 
 ** Contact page don't contain a body, just the front matter above.

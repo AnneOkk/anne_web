@@ -87,6 +87,10 @@ enableEmoji = true
   # Icon pack "fas" includes solid icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
   # Icon pack "far" includes regular icons, see: https://fontawesome.com/icons?d=gallery&s=regular&m=free
   [[params.social]]
+      icon      = "wrench" # icon name without the 'fa-'
+      icon_pack = "fas"
+      url       = "https://www.en.peoplemanagement.uni-muenchen.de/human_ai_interaction/index.html"
+  [[params.social]]
       icon      = "twitter" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://twitter.com/AnKaKleine"

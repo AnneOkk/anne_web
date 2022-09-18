@@ -19,6 +19,9 @@ output:
     toc_depth: 1
 ---
 
+<iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/56021200/latest-rides/004c9101285c4f851fe9e6a73e2c796e0d68dbaa'></iframe>
+
+
 Thriving at work refers to a positive psychological state characterized by a joint sense of vitality and learning. 
 
 #### What we did:
