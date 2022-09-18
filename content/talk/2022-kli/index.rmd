@@ -116,7 +116,7 @@ Please [sign up on osf](https://osf.io/) before the workshop.
 
 # Slides 
 
-#### Day 1
+#### [Day 1](https://anneokk.netlify.app/slides/day_one.html)
 
 
 ```{r echo = FALSE, include = TRUE}
@@ -124,7 +124,7 @@ knitr::include_url('https://anneokk.netlify.app/slides/day_one.html#1')
 ```
 
  
-#### Day 2
+#### [Day 2](https://anneokk.netlify.app/slides/day_two.html)
 
 
 ```{r echo = FALSE, include = TRUE}

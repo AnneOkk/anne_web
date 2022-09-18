@@ -112,13 +112,13 @@ Please [sign up on osf](https://osf.io/) before the workshop.
 
 # Slides 
 
-#### Day 1
+#### [Day 1](https://anneokk.netlify.app/slides/day_one.html)
 
 
 <iframe src="https://anneokk.netlify.app/slides/day_one.html#1" width="672" height="400px" data-external="1"></iframe>
 
  
-#### Day 2
+#### [Day 2](https://anneokk.netlify.app/slides/day_two.html)
 
 
 <iframe src="https://anneokk.netlify.app/slides/day_two.html#1" width="672" height="400px" data-external="1"></iframe>
