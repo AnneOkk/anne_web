@@ -12,7 +12,6 @@ date: "2022-09-21T09:00:00Z"
 date_end: "2022-09-21T15:00:00Z"
 all_day: true
 publishdate: "2022-09-21"
-
 categories:
   - panel
 featured: no
