@@ -4,6 +4,7 @@ name: Contact Us Form
 description: "This form is for contacting me about opportunities to work together or questions about posts or projects."
 date: 2022-09-25T13:38:41-06:00
 draft: false
+url: contact
 type: form
 layout: split-right # split-right or split-left
 submit_button_label: Send Message
