@@ -148,7 +148,7 @@ enableEmoji = true
   [[menu.footer]]
     name = "Contact"
     title = "Contact form"
-    url = "/contact/"
+    url = "/form/"
     weight = 2
 #  [[menu.footer]]
 #    name = "RSS"
