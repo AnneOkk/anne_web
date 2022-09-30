@@ -4,9 +4,7 @@ execute:
   echo: true
   warning: false
   message: false
-author: 
-    - "Nanxi Yan and"
-    - "Anne-Kathrin Kleine"
+author: "Nanxi Yan and Anne-Kathrin Kleine"
 summary: We used natural language processing (NLP) tools in R to analyse newspaper articles about revenge bedtime procrastination. We preselected articles that contain the keyword "revenge bedtime procrastination" in the title.
 format: 
   hugo:
