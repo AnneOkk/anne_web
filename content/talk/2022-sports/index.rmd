@@ -1,0 +1,35 @@
+---
+title: R and Quarto Workshop
+draft: false
+event: 'Körperliche Fitness – Sport als Hilfsmittel zur Stressbewältigung im Arbeitsalltag'
+event_url: 'https://www.peoplemanagement.uni-muenchen.de/angebot/vaprog202223/prof_habil/prof_selbst/prof_selbst_6/index.html'
+location: remote
+summary: "Das Seminar richtet sich an alle, die Lust haben, Sport (wieder) stärker in ihren Alltag zu integrieren. Es geht darum, herauszufinden, wo ich aktuell stehe und welche Umstände es mir erschweren, regelmäßig Sport zu machen. Welcher Sport passt zu mir? Welche sportlichen Ziele habe ich und wie kann ich diese mit Spaß erreichen? Verbinde ich Sport mit Leistungsanspruch - belastet oder motiviert mich diese Einstellung?"
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2022-10-17T15:00:00Z"
+date_end: "2022-10-17T17:00:00Z"
+all_day: true
+publishdate: "2022-10-17"
+categories:
+  - sports
+  - workshop
+featured: no
+image:
+  focal_point: 'center'
+  preview_only: no
+projects: []
+links:
+- icon: images
+  icon_pack: fas
+  name: slides
+  url: https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/#/title-slide
+---
+
+# Slides 
+
+
+
+ 
+
