@@ -1,21 +1,20 @@
 ---
 title: R and Quarto Workshop
 draft: false
-event: 'R, Quarto, and GitHub Intro Workshop for the Human-AI and Leadership and People Management Teams, LMU Munich'
-event_url: 
+event: 'Körperliche Fitness – Sport als Hilfsmittel zur Stressbewältigung im Arbeitsalltag'
+event_url: 'https://www.peoplemanagement.uni-muenchen.de/angebot/vaprog202223/prof_habil/prof_selbst/prof_selbst_6/index.html'
 location: remote
-summary: "A workshop on data analysis, reporting, and collaboration using R, Quarto, osf, and GitHub."
+summary: "Das Seminar richtet sich an alle, die Lust haben, Sport (wieder) stärker in ihren Alltag zu integrieren. Es geht darum, herauszufinden, wo ich aktuell stehe und welche Umstände es mir erschweren, regelmäßig Sport zu machen. Welcher Sport passt zu mir? Welche sportlichen Ziele habe ich und wie kann ich diese mit Spaß erreichen? Verbinde ich Sport mit Leistungsanspruch - belastet oder motiviert mich diese Einstellung?"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2022-09-17T09:00:00Z"
-date_end: "2022-09-17T15:00:00Z"
+date: "2022-10-17T15:00:00Z"
+date_end: "2022-10-17T17:00:00Z"
 all_day: true
 publishdate: "2022-09-17"
 categories:
+  - sports
   - workshop
-  - r 
-  - quarto
 featured: no
 image:
   focal_point: 'center'
@@ -26,15 +25,11 @@ links:
   icon_pack: fas
   name: slides
   url: https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/#/title-slide
-- icon: github
-  icon_pack: fab
-  name: materials
-  url: https://github.com/AnneOkk/Quarto_workshop
 ---
 
 # Slides 
 
-<iframe src="https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/" width="672" height="400px" data-external="1"></iframe>
+
 
  
 

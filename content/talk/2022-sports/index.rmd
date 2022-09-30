@@ -24,11 +24,15 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/#/title-slide
+  url: https://anneokk.quarto.pub/sport-workshop-lmu/#/title-slide
 ---
 
 # Slides 
 
+
+```{r echo = FALSE, include = TRUE}
+knitr::include_url('https://anneokk.quarto.pub/sport-workshop-lmu/#/title-slide') 
+```
 
 
  
