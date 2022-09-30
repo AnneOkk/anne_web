@@ -34,7 +34,7 @@ links:
 
 # Slides 
 
-<iframe src="https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/" width="672" height="400px" data-external="1"></iframe>
+<iframe src="https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/#/title-slide" width="672" height="400px" data-external="1"></iframe>
 
  
 

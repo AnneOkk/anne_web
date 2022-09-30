@@ -35,7 +35,7 @@ links:
 # Slides 
 
 ```{r echo = FALSE, include = TRUE}
-knitr::include_url('https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/') 
+knitr::include_url('https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/#/title-slide') 
 ```
 
  
