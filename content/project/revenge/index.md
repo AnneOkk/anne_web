@@ -5,9 +5,9 @@ execute:
   warning: false
   message: false
 author: 
-    - "Nanxi Yan"
+    - "Nanxi Yan and"
     - "Anne-Kathrin Kleine"
-summary: We used natural language processing (NLP) tools in R to analyse newspaper articles about revenge bedtime procrastination. We preselected articles that contain the keyword **revenge bedtime procrastination** in the title.
+summary: We used natural language processing (NLP) tools in R to analyse newspaper articles about revenge bedtime procrastination. We preselected articles that contain the keyword "revenge bedtime procrastination" in the title.
 format: 
   hugo:
     toc: false
