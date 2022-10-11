@@ -35,6 +35,8 @@ links:
 
 # Worksheet 
 
+[Download here](https://docs.google.com/document/d/1L_yYUZqHBQjsz3LfT3EsZpr71lHKnsQ1/edit?usp=sharing&amp;ouid=110225228792349400532&amp;rtpof=true&amp;sd=true)
+
 <iframe src="https://docs.google.com/document/d/1L_yYUZqHBQjsz3LfT3EsZpr71lHKnsQ1/edit?usp=sharing&amp;ouid=110225228792349400532&amp;rtpof=true&amp;sd=true
 " width="672" height="400px" data-external="1"></iframe>
 
