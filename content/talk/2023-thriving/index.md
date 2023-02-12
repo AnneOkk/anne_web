@@ -1,10 +1,10 @@
 ---
-title: Thriving at work presentation
+title: Thriving at work
 draft: false
 event: 'Harvard University - Learning Innovation Laboratory (LILA)'
 event_url: 
 location: remote
-summary: "Enablers of thriving at work in organizations"
+summary: "Enablers of thriving at work"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -28,4 +28,4 @@ links:
 
 ---
 
-
+![](/img/thriving.png)

@@ -13,9 +13,6 @@ layout: list-sidebar # list, list-sidebar, list-grid
 # for list-sidebar layout
 sidebar: 
   title: Blog
-  description: |
-    In this blog, I write about my research findings and implications in the organizational behavior domain (older entries) and ongoing projects and research results related to Human-AI interaction in healthcare. <br /> <br /> 
-  author: "Anne-Kathrin Kleine"
   text_link_url: /index.xml
   show_sidebar_adunit: true # show ad container
 

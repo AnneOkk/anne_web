@@ -6,7 +6,7 @@ use_featured: false # if false, use most recent by date
 number_categories: 5 # set to zero to exclude
 show_intro: true
 intro: |
-  I am working on a review of available AI-powered diagnostic tools in the mental healthcare sector and teach data science skills to students and professionals.
+  My latest projects, talks, articles...
 show_outro: true
 outro: |
   <i class="fas fa-kiwi-bird pr2"></i>Thank you for visiting!
