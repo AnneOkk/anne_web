@@ -13,6 +13,7 @@ layout: list-sidebar # list, list-sidebar, list-grid
 # for list-sidebar layout
 sidebar: 
   title: Blog
+  description: "This blog features articles I have written and reports on topics I am currently researching, with a particular focus on Human-AI-Interaction, thriving at work, and the enablers of healthy work in general."
   text_link_url: /index.xml
   show_sidebar_adunit: true # show ad container
 
