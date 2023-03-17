@@ -1,8 +1,8 @@
 ---
-title: "CV"
+title: ""
 #description: |
 #  About Anne-Kathrin Kleine.
-show_header: false
+show_header: true
 sidebar_left: false
 # Keep this! Do not edit.
 cascade:
@@ -14,5 +14,5 @@ links:
   url: "/pdf/cv.pdf"
 ---
 
-<iframe src="/pdf/cv.pdf"></iframe>
+
 
