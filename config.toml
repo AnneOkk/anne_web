@@ -1,5 +1,6 @@
 baseURL = "https://annekathrinkleine.netlify.app/"
-theme = "hugo-apero"
+theme = ["hugo-embed-pdf-shortcode", "hugo-apero"]
+enableInlineShortcodes = true
 languageCode = "en"
 title = "Anne-Kathrin Kleine"
 author = "Anne-Kathrin Kleine"
@@ -138,12 +139,6 @@ enableEmoji = true
     title = "Talks"
     url = "/talk/"
     weight = 4
-
-  [[menu.header]]
-    name = "CV"
-    title = "CV"
-    url = "/cv/"
-    weight = 5
 
   # Configure footer
   [[menu.footer]]
