@@ -129,14 +129,20 @@ enableEmoji = true
     url = "/blog/"
     weight = 2
   [[menu.header]]
-    name = "Data Projects"
+    name = "Other projects"
     title = "Project Portfolio"
     url = "/project/"
     weight = 3
   [[menu.header]]
-    name = "Talks and Workshops"
+    name = "Talks"
     title = "Talks"
     url = "/talk/"
+    weight = 4
+
+  [[menu.header]]
+    name = "CV"
+    title = "CV"
+    url = "/cv/"
     weight = 4
 
   # Configure footer
