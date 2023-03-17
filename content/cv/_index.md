@@ -1,7 +1,6 @@
 ---
 title: ""
-description: |
-  About Anne-Kathrin Kleine.
+link: "/pdf/cv.pdf"
 show_header: true
 sidebar_left: false
 # Keep this! Do not edit.
