@@ -140,6 +140,11 @@ enableEmoji = true
     url = "/talk/"
     weight = 4
 
+  [[menu.header]]
+   name = "Resume"
+   url = "/pdf/cv.pdf"
+   weight = 5
+
   # Configure footer
   [[menu.footer]]
     name = "License"
