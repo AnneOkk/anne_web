@@ -130,8 +130,8 @@ enableEmoji = true
     url = "/blog/"
     weight = 2
   [[menu.header]]
-    name = "Other projects"
-    title = "Project Portfolio"
+    name = "Projects"
+    title ="Project Portfolio"
     url = "/project/"
     weight = 3
   [[menu.header]]
