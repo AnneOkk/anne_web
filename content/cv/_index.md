@@ -14,3 +14,5 @@ links:
   url: "/pdf/cv.pdf"
 ---
 
+<iframe src="/pdf/cv.pdf"></iframe>
+
