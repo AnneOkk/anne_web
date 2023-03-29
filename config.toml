@@ -139,11 +139,14 @@ enableEmoji = true
     title = "Talks"
     url = "/talk/"
     weight = 4
-
   [[menu.header]]
-   name = "Resume"
-   url = "/pdf/cv.pdf"
-   weight = 5
+    name = "Resume"
+    url = "/pdf/cv.pdf"
+    weight = 5
+  [[menu.header]]
+    name = "search"
+    weight = 6
+
 
   # Configure footer
   [[menu.footer]]
@@ -161,6 +164,14 @@ enableEmoji = true
 #    title = "RSS"
 #    url = "/blog/index.xml"
 #    weight = 3
+
+[outputFormats.SearchIndex]
+mediaType = "application/json"
+baseName = "searchindex"
+
+[outputs]
+  home = [ "HTML", "RSS", "SearchIndex" ]
+
 
 # see https://gohugo.io/about/hugo-and-gdpr/
 [privacy]

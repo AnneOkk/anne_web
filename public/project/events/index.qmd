@@ -1,0 +1,406 @@
+---
+title: "Using NLP for examining entrepreneurs' business errors"
+execute:
+  echo: true
+  warning: false
+  message: false
+author: "Anne-Kathrin Kleine"
+summary: I used natural language processing (NLP) tools in R to analyse texts entrepreneurs wrote about the errors that happened in their business over the past two weeks. Most entrepreneurs in the sample were from India and the Netherlands, operating in various industries.  
+format: 
+  hugo:
+    toc: false
+    toc-depth: 5
+---
+
+I used natural language processing (NLP) to analyse texts entrepreneurs wrote about the errors that happened in their business over the past two weeks. Entrepreneurs in the sample were from India and the Netherlands, operating in various industries.
+
+## Data preparation
+
+### Loading standard libraries and source custom functions
+
+```{r}
+#| results: 'hide'
+library(kableExtra)
+library(tidyverse)
+library(expss)
+library(lattice)
+
+source("R/custom_functions.R")
+```
+
+### Reading in data and preprocessing 
+
+I prepared the data for reliability assessment and correlation analysis. 
+
+```{r}
+#| results: 'hide'
+dat <- read_csv("data/dat.csv")
+
+evdes <- dat$t1evdes_
+comp_dat <- dat %>%
+  dplyr::select(matches("t1emotions|jobstr|jobsa|t1threat|gender|age|found|t1occ$|lang|edu|max_sev"))
+
+alph_dat <- dat %>%
+  dplyr::select(matches("t1emotions|jobstr|t1threat"))
+
+comp_split <- comp_dat %>%
+  split.default(sub("_.*", "", names(comp_dat))) 
+
+alph_split <- alph_dat %>%
+  split.default(sub("_.*", "", names(alph_dat))) 
+
+
+comp <- map(comp_split, ~ multicon::composite(.x, nomiss = 0.8), data = .x) %>% as.data.frame(.)
+alph <- map(alph_split, ~ psych::alpha(.x, check.keys=TRUE), data = .x) %>%
+  map(~ .x$total)
+
+alph_df <- do.call("rbind", alph) %>% round(., 2)
+```
+
+```{r}
+#| echo: false
+#| resuls: 'hide'
+comp_dat = apply_labels(comp,
+                      t1age = "Age in years",
+                      t1edu = c("Primary School" = 1,
+                                "Secondary School" = 2,
+                                "(Technical) School" = 3,
+                                "University Degree" = 4,
+                                "Doctorate Degree" = 5,
+                                "Other" = 6),
+                      t1emotions = "Strength of different negative emotions about the event (increasing)",
+                      t1found = c("Founded business." = 1,
+                                  "Did not found business." = 2),
+                      t1gender = c("Male" = 1,
+                                   "Female" = 2,
+                                   "Non-binary" = 3),
+                      t1jobsa = "Level of satisfaction with job at T1 (increasing)",
+                      t1jobstr = "Level of job strain (increasing)",
+                      t1lang = c("English" = 1,
+                                 "Dutch" = 2,
+                                 "Other" = 3),
+                      
+                      t1occ = c("Entrepreneur" = 1,
+                                "Employee" = 2,
+                                "Student" = 3,
+                                "Volunteer" = 4,
+                                "Other" = 5),
+                      t1threat = "Extent to which the event is interpreted as a threat (increasing)",
+                      t2jobsa = "Level of satisfaction with job at T2 (increasing)",
+                      t2jobstr = "Level of job strain at T2 (increasing)",
+                      t3jobsa = "Level of satisfaction with job at T2 (increasing)",
+                      t3jobstr = "Level of job strain at T2 (increasing)"
+)
+```
+
+### Overview of sample characteristics
+
+#### Age of the entrepreneurs in the sample:
+
+```{r}
+#| echo: false
+#| out.width: "80%"
+library(ggpubr)
+library(gridExtra)
+library(grid)
+
+findiff.age <- table(comp_dat$t1age) %>% prop.table(.) %>% as.data.frame(.)
+names(findiff.age) <- c("Age", "Frequency")
+ggplot(data=findiff.age, mapping=aes(x=Age, y=Frequency)) + 
+  geom_col(fill = "#0073C2FF") + 
+  theme_pubclean() + 
+  theme(axis.text.x = element_text(size = 10))
+```
+
+#### Educational level: 
+
+```{r}
+#| echo: false
+#| out.width: "80%"
+findiff.edu <- table(comp_dat$t1edu) %>% prop.table(.) %>% as.data.frame(.)
+names(findiff.edu) <- c("Education", "Frequency")
+ggplot(data=findiff.edu, mapping=aes(x=Education, y=Frequency)) + 
+  geom_col(fill = "#0073C2FF") + 
+  theme_pubclean() + 
+  theme(axis.text.x = element_text(size = 11))
+```
+
+#### Gender:
+
+```{r}
+#| echo: false
+#| out.width: "55%"
+findiff.gen <- table(comp_dat$t1gender) %>% prop.table(.) %>% as.data.frame(.)
+names(findiff.gen) <- c("Gender", "Frequency")
+ggplot(data=findiff.gen, mapping=aes(x=Gender, y=Frequency)) + 
+  geom_col(fill = "#0073C2FF") + 
+  theme_pubclean() + 
+  theme(axis.text.x = element_text(size = 13))
+```
+
+#### Language:
+
+```{r}
+#| echo: false
+#| out.width: "55%"
+findiff.lang <- table(comp_dat$t1lang) %>% prop.table(.) %>% as.data.frame(.)
+names(findiff.lang) <- c("Language", "Frequency")
+ggplot(data=findiff.lang, mapping=aes(x=Language, y=Frequency)) + 
+  geom_col(fill = "#0073C2FF") + 
+  theme_pubclean() + 
+  theme(axis.text.x = element_text(size = 13))
+```
+
+#### Current occupation:
+
+```{r}
+#| echo: false
+#| out.width: "75%"
+findiff.occ <- table(comp_dat$t1occ) %>% prop.table(.) %>% as.data.frame(.)
+names(findiff.occ) <- c("Occupation", "Frequency")
+ggplot(data=findiff.occ, mapping=aes(x=Occupation, y=Frequency)) + 
+  geom_col(fill = "#0073C2FF") + 
+  theme_pubclean() + 
+  theme(axis.text.x = element_text(size = 11))
+```
+
+#### Whether they were involved in founding the business:
+
+```{r}
+#| echo: false
+#| out.width: "55%"
+findiff.fou <- table(comp_dat$t1found) %>% prop.table(.) %>% as.data.frame(.)
+names(findiff.fou) <- c("Founding", "Frequency")
+ggplot(data=findiff.fou, mapping=aes(x=Founding, y=Frequency)) + 
+  geom_col(fill = "#0073C2FF") + 
+  theme_pubclean() + 
+  theme(axis.text.x = element_text(size = 12))
+
+```
+
+### Reliabilities for multi-item variables:
+
+```{r}
+#| warning: false
+#| include: true
+#| echo: true
+alph_df %>%
+DT::datatable(
+    extensions = 'Buttons', 
+    options = list(dom = 'Bfrtip', 
+                   buttons = c('excel', "csv"),
+                   pageLength = 20))
+```
+
+### Correlation table:
+
+```{r}
+cor <- round(cor(comp, use="pairwise.complete.obs"), 2)
+
+corstar_select <- data.frame(corstars(comp, removeTriangle = "none", result="none"))
+
+corstar_select %>%
+  DT::datatable(
+    extensions = 'Buttons', 
+    options = list(dom = 'Bfrtip', 
+                   buttons = c('excel', "csv"),
+                   pageLength = 10,
+                   lengthMenu = c(25, 50, 75, 94)))
+```
+
+## Text mining 
+
+First, I created an annotated data frame from the text data.
+
+```{r}
+library(udpipe)
+ud_model <- udpipe_download_model(language = "english")
+ud_model <- udpipe_load_model(ud_model$file_model)
+x <- udpipe_annotate(ud_model, x = evdes)
+x <- as.data.frame(x)
+```
+
+Next, I selected nouns and adjectives from the text data frame and removed duplicate entries. 
+
+```{r}
+library(tm)
+stats <- subset(x, upos %in% c("NOUN", "ADJ"))
+
+stats2 <- stats %>% 
+     dplyr::group_by(doc_id) %>% 
+     dplyr::mutate(sentences = paste0(token, collapse = " ")) 
+
+evdes_nouns <- stats2[!(duplicated(stats2$sentences) | duplicated(stats2$sentences)),] %>% dplyr::select(sentences)
+
+evdes <- evdes_nouns$sentences
+evdes_1 <- VectorSource(evdes)
+TextDoc <- Corpus(evdes_1)
+```
+
+
+### Cleaning text data 
+
+I cleaned the data by removing unnecessary white space and converting special characters into white space. I also transformed all letters to lower case, removed numbers, stop words (e.g., and, or...), and punctuation. Finally, I lemmatized the remaining words (see [here](https://www.rdocumentation.org/packages/textstem/versions/0.1.4/topics/lemmatize_strings) for more information on the lemmatization function.) 
+
+```{r}
+library(textstem)
+#Replacing "/", "@" and "|" with space
+toSpace <- content_transformer(function(x, pattern ) gsub(pattern, " ", x))
+TextDoc <- tm_map(TextDoc, toSpace, "/")
+TextDoc <- tm_map(TextDoc, toSpace, "@")
+TextDoc <- tm_map(TextDoc, toSpace, "\\|")
+TextDoc <- tm_map(TextDoc, toSpace, "\\|")
+
+# Convert the text to lower case
+TextDoc <- tm_map(TextDoc, content_transformer(tolower))
+# Remove numbers
+TextDoc <- tm_map(TextDoc, removeNumbers)
+# Remove english common stopwords
+TextDoc <- tm_map(TextDoc, removeWords, stopwords("english"))
+# Remove punctuations
+TextDoc <- tm_map(TextDoc, removePunctuation)
+# Eliminate extra white spaces
+TextDoc <- tm_map(TextDoc, stripWhitespace)
+# Text stemming - which reduces words to their root form
+#TextDoc <- tm_map(TextDoc, stemDocument)
+TextDoc <- tm_map(TextDoc, lemmatize_strings)
+```
+
+### Building the document martix
+
+```{r}
+# Build a term-document matrix
+TextDoc_tdm <- TermDocumentMatrix(TextDoc)
+TextDoc_dtm <- DocumentTermMatrix(TextDoc)
+TextDoc_tdm <- removeSparseTerms(TextDoc_tdm, .99)
+TextDoc_dtm <- removeSparseTerms(TextDoc_dtm, .99)
+
+dtm_m <- as.matrix(TextDoc_tdm)
+# Sort by descearing value of frequency
+dtm_v <- sort(rowSums(dtm_m),decreasing=TRUE)
+dtm_d <- data.frame(word = names(dtm_v),freq=dtm_v)
+# Display the top 5 most frequent words
+head(dtm_d, 5)
+```
+
+### A word cloud of the most common nouns and adjectives
+
+```{r}
+library(wordcloud)
+#generate word cloud
+set.seed(1234)
+wordcloud(words = dtm_d$word, freq = dtm_d$freq, min.freq = 5,
+          scale=c(3,.4), 
+          max.words=100, random.order=FALSE, rot.per=0.40, 
+          colors=brewer.pal(8, "Dark2"))
+```
+
+### The most frequently occurring nouns and adjectives
+
+```{r}
+stats <- subset(x, upos %in% c("NOUN", "ADJ"))
+stats <- txt_freq(x = stats$lemma)
+
+dtm_d$word <- factor(dtm_d$word, levels = rev(dtm_d$word))
+dtm_head <- head(dtm_d, 22)
+barchart(word ~ freq, data = dtm_head, col = "cadetblue", main = "Most occurring nouns and adjectives", xlab = "Freq")
+```
+
+### Showing connections between words
+
+I created a cluster dendogram to show connections between words.
+
+```{r}
+library(tidytext)
+
+dtm_top <- removeSparseTerms(TextDoc_tdm, sparse = .97)
+TextDoc_tdm_m <- as.matrix(dtm_top)
+distance <- dist(TextDoc_tdm_m, method = "euclidean")
+fit <- hclust(distance, method = "complete")
+plot(fit)
+```
+
+Hmm.. not super informative. What about trying to find topics in the texts? 
+
+### Topic modeling
+
+#### I started with 10 topics...
+
+```{r}
+library(topicmodels)
+rowTotals <- apply(TextDoc_dtm , 1, sum)
+TextDoc_dtm   <- TextDoc_dtm[rowTotals> 0, ] 
+# set a seed so that the output of the model is predictable
+ap_lda <- LDA(TextDoc_dtm, k = 10, control = list(seed = 1234))
+ap_lda
+#> A LDA_VEM topic model with 2 topics.
+
+ap_topics <- tidy(ap_lda, matrix = "beta")
+
+ap_top_terms <- ap_topics %>%
+  group_by(topic) %>%
+  slice_max(beta, n = 4) %>% 
+  ungroup() %>%
+  arrange(topic, -beta)
+
+ap_top_terms %>%
+  mutate(term = reorder_within(term, beta, topic)) %>%
+  ggplot(aes(beta, term, fill = factor(topic))) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~ topic, scales = "free") +
+  scale_y_reordered()
+
+```
+
+The visualisation displays the per-topic-per-word probabilities (called beta). For each word combination, the model computes the probability of that term being generated from that topic. For example, the most common words in topic 1 include "part", "lack", and "fund". Maybe sth. related to capital and funding? Topic five revolves around issues with customers and service. The usefulness of the topic modeling always depends on the text data. And finding the right number of topics to extract is an iterative approach. 
+
+
+#### Here's a solution for 6 topics:
+
+```{r}
+# set a seed so that the output of the model is predictable
+ap_lda <- LDA(TextDoc_dtm, k = 6, control = list(seed = 1234))
+#> A LDA_VEM topic model with 2 topics.
+
+ap_topics <- tidy(ap_lda, matrix = "beta")
+
+ap_top_terms <- ap_topics %>%
+  group_by(topic) %>%
+  slice_max(beta, n = 5) %>% 
+  ungroup() %>%
+  arrange(topic, -beta)
+
+ap_top_terms %>%
+  mutate(term = reorder_within(term, beta, topic)) %>%
+  ggplot(aes(beta, term, fill = factor(topic))) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~ topic, scales = "free") +
+  scale_y_reordered()
+```
+
+See [here](https://www.tidytextmining.com/topicmodeling.html) for more information on topic modeling. 
+
+
+
+We could also consider examining the words with the greatest difference in beta between two topics. This can be estimated based on the log ratio of the two. We can filter for relatively common words to make the example more concrete. Here, we filter for words with a beta greater than 0.001. 
+
+```{r}
+library(tidyr)
+beta_wide <- ap_topics %>%
+  mutate(topic = paste0("topic", topic)) %>%
+  pivot_wider(names_from = topic, values_from = beta) %>% 
+  filter(topic1 > .001 | topic2 > .001) %>%
+  mutate(log_ratio = log2(topic2 / topic1))
+
+beta_wide
+
+beta_wide %>%
+  group_by(direction = log_ratio > 0) %>%
+  slice_max(abs(log_ratio), n = 10) %>% 
+  ungroup() %>%
+  mutate(term = reorder(term, log_ratio)) %>%
+  ggplot(aes(log_ratio, term)) +
+  geom_col() +
+  labs(x = "Log2 ratio of beta in topic 2 / topic 1", y = NULL)
+```
+

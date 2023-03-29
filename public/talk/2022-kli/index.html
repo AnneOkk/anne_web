@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.96.0" />
+<title>R Markdown Workshop | Anne-Kathrin Kleine</title>
+
+
+<meta property="twitter:site" content="@AnKaKleine">
+<meta property="twitter:creator" content="@AnKaKleine">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Personal website and portfolio of Anne-Kathrin Kleine.">
+
+
+<meta property="og:site_name" content="Anne-Kathrin Kleine">
+<meta property="og:title" content="R Markdown Workshop | Anne-Kathrin Kleine">
+<meta property="og:description" content="Personal website and portfolio of Anne-Kathrin Kleine." />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://annekathrinkleine.netlify.app/talk/2022-kli/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://annekathrinkleine.netlify.app/talk/2022-kli/featured.png" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://annekathrinkleine.netlify.app/talk/2022-kli/featured.png" >
+    
+    
+  <meta itemprop="name" content="R Markdown Workshop">
+<meta itemprop="description" content="A workshop on data analysis, reporting, and collaboration using R, R Markdown, osf, blogdown, and GitHub."><meta itemprop="datePublished" content="2022-05-24T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-05-24T09:00:00+00:00" />
+<meta itemprop="wordCount" content="488"><meta itemprop="image" content="https://annekathrinkleine.netlify.app/talk/2022-kli/featured.png">
+<meta itemprop="keywords" content="" />
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.30aa852651a3b60a986789222e86752f581da2081056dd6311350df5c0cb0140.css" integrity="sha256-MKqFJlGjtgqYZ4kiLoZ1L1gdoggQVt1jETUN9cDLAUA=" media="screen">
+  
+  
+  <script src="/panelset.min.8f4cba0107356728f266d94a12a4d18ef504eda8a9a284cda73675bae7884a68.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.8b5ea8073fc53326c522fc440b588fe565d1146f2d55ab786e884859aca97cd7.js" type="text/javascript"></script>
+  
+  <script data-goatcounter=""
+        async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+      <div class="grid-container">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://annekathrinkleine.netlify.app/" title="Home">
+      <img src="/img/pie_PNG50.png" class="dib db-l h2 w-auto" alt="Anne-Kathrin Kleine">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About me">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Project Portfolio">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/talk/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/pdf/cv.pdf" title="">Resume</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">R Markdown Workshop</h1>
+        
+        
+        <p class="f7 db mv0 ttu">May 24, 2022</p>
+      
+        <div class="ph0 pt5">
+          
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://anneokk.netlify.app/slides/day_one.html" target="_blank" rel="noopener"><i class="fas fa-images fa-lg fa-fw mr2"></i>slides</a>
+
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://github.com/AnneOkk/Workshop_Rmarkdown/tree/master/content/blog/Workshop_day_one" target="_blank" rel="noopener"><i class="fab fa-github fa-lg fa-fw mr2"></i>materials</a>
+
+
+        </div>
+      
+      <section class="event-details cf pt5-ns pt4">
+  
+  
+  <div class="first-column">
+    <h5 class="row-label">Date</h5>
+  </div>
+  <div class="second-column">
+    <p class="row-details">
+
+
+
+
+
+  
+  
+      May 24 &ndash; 25, 2022
+  
+  
+</p>
+  </div>
+  <div class="first-column">
+    <h5 class="row-label">Time</h5>
+  </div>
+  <div class="second-column">
+    <p class="row-details">
+
+
+
+
+  
+  
+      9:00 AM &ndash; 3:00 PM
+  
+
+</p>
+  </div>
+  
+  
+  <div class="first-column">
+    <h5 class="row-label">Location</h5>
+  </div>
+  <div class="second-column">
+    <p class="row-details">remote</p>
+  </div>
+  
+  
+  <div class="first-column">
+    <h5 class="row-label">Event</h5>
+  </div>
+  <div class="second-column">
+      <p class="row-details">
+        
+          Educational Series for Behavioral Researchers in the Netherlands, Kurt-Lewin Institute
+      </p>
+  </div>
+  
+</section>
+      </header>
+      <section class="post-body pt5 pb4">
+        
+
+
+
+<h1 id="preparation">Preparation
+  <a href="#preparation"></a>
+</h1>
+
+
+
+
+<h4 id="1-install-r">1) Install R
+  <a href="#1-install-r"></a>
+</h4>
+<p>Please make sure that you have a 
+<a href="https://cran.rstudio.com/" target="_blank" rel="noopener">recent R version</a> installed (&gt;= 4.0.0 is recommended).
+You can check your R Version in the Console (in RStudio) by typing:
+<code>R.version.string</code></p>
+<img src="images/rvers.png" width="50%" />
+<p>If you are using an older R version, please install the 
+<a href="https://cran.rstudio.com/" target="_blank" rel="noopener">newest R version</a>.</p>
+
+
+
+
+<h4 id="2-install-r-studio">2) Install R Studio
+  <a href="#2-install-r-studio"></a>
+</h4>
+<p>Go to the 
+<a href="https://www.rstudio.com/" target="_blank" rel="noopener">RStudio website</a> and download the newest version if you are using an older version of RStudio (if in doubt, better update!). Simply follow the download instructions. The new version will be available next time you open RStudio.</p>
+
+
+
+
+<h4 id="3-install-necessary-packages">3) Install necessary packages
+  <a href="#3-install-necessary-packages"></a>
+</h4>
+<p>You need several R packages for the workshop. Please make sure to install these packages before the workshop. The easiest way to do so is by running this code in R:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>cran_packs &lt;- c(&#34;learnr&#34;, &#34;bookdown&#34;, &#34;stargazer&#34;,
+</span></span><span style="display:flex;"><span>                &#34;officer&#34;, &#34;rticles&#34;, &#34;webshot&#34;,
+</span></span><span style="display:flex;"><span>                &#34;tidyverse&#34;, &#34;remotes&#34;, &#34;magick&#34;, 
+</span></span><span style="display:flex;"><span>                &#34;kableExtra&#34;, &#34;vtable&#34;, &#34;devtools&#34;)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>install.packages(cran_packs, dependencies = TRUE)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>github_packs &lt;- c(&#39;rstudio/blogdown&#39;,
+</span></span><span style="display:flex;"><span>                  &#39;haozhu233/kableExtra&#39;, &#39;crsh/papaja&#39;)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>remotes::install_github(github_packs, dependencies = TRUE)
+</span></span></code></pre></div><p>Once these packages are installed, you may use blogdown to install the Hugo package. Hugo is a static site generator that we will use to build blogdown paged. You may install Hugo using blogdown, like so:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>blogdown::install_hugo()
+</span></span></code></pre></div><p>You can check whether the installations were successful by running <code>library(package_name)</code>. All installed packages must be loaded before we can use them during the workshop.</p>
+<img src="images/library.png" width="50%" />
+
+
+
+
+<h4 id="4-set-up-git-and-github">4) Set up Git and GitHub
+  <a href="#4-set-up-git-and-github"></a>
+</h4>
+<p>To make the most out of the workshop, I highly encourage you to install Git and to create a GitHub account for version control.
+Follow the instructions from the 
+<a href="https://happygitwithr.com/" target="_blank" rel="noopener">Happy Git with R Book</a> and the official 
+<a href="https://docs.github.com/en/get-started/quickstart/set-up-git" target="_blank" rel="noopener">GitHub guides</a>:</p>
+<ol>
+<li>
+<p>
+<a href="https://happygitwithr.com/github-acct.html" target="_blank" rel="noopener">Register a GitHub account</a></p>
+</li>
+<li>
+<p>
+<a href="https://docs.github.com/en/get-started/quickstart/set-up-git" target="_blank" rel="noopener">Install Git</a>. Follow the instructions under <strong>Setting up Git</strong> (do not use the Desktop client). For <strong>Windows Users</strong>: Follow the installation instructions for Git 
+<a href="https://www.computerhope.com/issues/ch001927.htm" target="_blank" rel="noopener">here</a>.</p>
+</li>
+</ol>
+
+
+
+
+<h4 id="once-this-is-done-you-are-all-set-for-the-workshop-">Once this is done, you are all set for the workshop! 🎉
+  <a href="#once-this-is-done-you-are-all-set-for-the-workshop-"></a>
+</h4>
+
+
+
+
+<h4 id="5-sign-up-on-osf">5) Sign up on osf
+  <a href="#5-sign-up-on-osf"></a>
+</h4>
+<p>Many social scientists use osf to store their data or code. It is possible to integrate your GitHub repositories into osf.
+Please 
+<a href="https://osf.io/" target="_blank" rel="noopener">sign up on osf</a> before the workshop.</p>
+
+
+
+
+<h4 id="6-install-tex">6) Install TeX
+  <a href="#6-install-tex"></a>
+</h4>
+<ul>
+<li>Windows: 
+<a href="https://miktex.org/" target="_blank" rel="noopener">MikTeX</a></li>
+<li>Mac: 
+<a href="http://www.tug.org/mactex/" target="_blank" rel="noopener">MacTeX</a></li>
+</ul>
+
+
+
+
+<h1 id="slides">Slides
+  <a href="#slides"></a>
+</h1>
+
+
+
+
+<h4 id="day-1httpsanneokknetlifyappslidesday_onehtml">
+<a href="https://anneokk.netlify.app/slides/day_one.html" target="_blank" rel="noopener">Day 1</a>
+  <a href="#day-1httpsanneokknetlifyappslidesday_onehtml"></a>
+</h4>
+<iframe src="https://anneokk.netlify.app/slides/day_one.html#1" width="672" height="400px" data-external="1"></iframe>
+
+
+
+
+<h4 id="day-2httpsanneokknetlifyappslidesday_twohtml">
+<a href="https://anneokk.netlify.app/slides/day_two.html" target="_blank" rel="noopener">Day 2</a>
+  <a href="#day-2httpsanneokknetlifyappslidesday_twohtml"></a>
+</h4>
+<iframe src="https://anneokk.netlify.app/slides/day_two.html#1" width="672" height="400px" data-external="1"></iframe>
+
+
+
+
+<h1 id="schedule">Schedule
+  <a href="#schedule"></a>
+</h1>
+
+
+
+
+<h4 id="-dates">🗓️ Dates:
+  <a href="#-dates"></a>
+</h4>
+<p>24th &amp; 25th May 2022</p>
+
+
+
+
+<h4 id="-timetable-for-day-1">🕛 Timetable for Day 1:
+  <a href="#-timetable-for-day-1"></a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>When</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>09:00-09:30</td>
+<td>🖐 WALK-IN and final installation support</td>
+</tr>
+<tr>
+<td>Session #1</td>
+<td>09:30-10:15</td>
+<td><strong>Introduction to R Markdown</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>10:15-10:30</td>
+<td>🍵 BREAK</td>
+</tr>
+<tr>
+<td>Session #2</td>
+<td>10:30-11:15</td>
+<td><strong>R Markdown - Text, code, reference management</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>11:15-11:30</td>
+<td>🍵 BREAK</td>
+</tr>
+<tr>
+<td>Session #3</td>
+<td>11:30-13:00</td>
+<td><strong>R Markdown - extended options and project organisation</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>13:00-13:40</td>
+<td>🍔 LUNCH BREAK</td>
+</tr>
+<tr>
+<td>Session #4</td>
+<td>13:40-15:00</td>
+<td><strong>R Markdown - building your own project</strong></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h4 id="-timetable-for-day-2">🕛 Timetable for Day 2:
+  <a href="#-timetable-for-day-2"></a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>When</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>09:00-09:30</td>
+<td>❓ Q &amp; A</td>
+</tr>
+<tr>
+<td>Session #1</td>
+<td>09:30-10:15</td>
+<td><strong>Version control with Git &amp; GitHub - the basics</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>10:15-10:30</td>
+<td>🍵 BREAK</td>
+</tr>
+<tr>
+<td>Session #2</td>
+<td>10:30-11:15</td>
+<td><strong>Version control with Git &amp; GitHub - collaborating; Integration with osf</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>11:15-11:30</td>
+<td>🍵 BREAK</td>
+</tr>
+<tr>
+<td>Session #3</td>
+<td>11:30-13:00</td>
+<td><strong>Blogdown - build your own project websites</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>13:00-13:40</td>
+<td>🍔 LUNCH BREAK</td>
+</tr>
+<tr>
+<td>Session #4</td>
+<td>13:40-15:00</td>
+<td><strong>Other R (Markdown) tools, final Q &amp; A</strong></td>
+</tr>
+</tbody>
+</table>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">May 24, 2022</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">3 minute read, 488 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://annekathrinkleine.netlify.app/categories/workshop">workshop</a>  <a href="https://annekathrinkleine.netlify.app/categories/r">r</a>  <a href="https://annekathrinkleine.netlify.app/categories/rmarkdown">rmarkdown</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://annekathrinkleine.netlify.app/talk/2022-quartoteam/">&larr; R and Quarto Workshop</a>
+  
+  
+  
+</div>
+
+      </footer>
+    </article>
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2023 Anne-Kathrin Kleine
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/AnKaKleine" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.strava.com/athletes/56021200" title="strava" target="_blank" rel="noopener">
+      <i class="fab fa-strava fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/AnneOkk" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="http://orcid.org/0000-0003-1919-2834" title="orcid" target="_blank" rel="noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://de.linkedin.com/in/anne-kathrin-kleine/" title="linkedin-in" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=521wTxUAAAAJ&amp;hl=en&amp;oi=ao" title="google-scholar" target="_blank" rel="noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+</footer>
+
+      </div>
+    </body>
+</html>

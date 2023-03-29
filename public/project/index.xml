@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Projects on Anne-Kathrin Kleine</title>
+    <link>https://annekathrinkleine.netlify.app/project/</link>
+    <description>Recent content in Data Projects on Anne-Kathrin Kleine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://annekathrinkleine.netlify.app/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Feedback reports for entrepreneurs using shiny and golem</title>
+      <link>https://annekathrinkleine.netlify.app/project/feedback-rep/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/project/feedback-rep/</guid>
+      <description>&lt;p&gt;Please contact me for more information.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using NLP for examining newspaper articles about revenge bedtime procrastination</title>
+      <link>https://annekathrinkleine.netlify.app/project/revenge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/project/revenge/</guid>
+      <description>&lt;p&gt;We used natural language processing (NLP) tools in R to analyse newspaper articles about revenge bedtime procrastination. We preselected articles that contain the keyword &lt;strong&gt;revenge bedtime procrastination&lt;/strong&gt; in the title.&lt;/p&gt;
+
+
+
+
+&lt;h2 id=&#34;data-preparation&#34;&gt;Data preparation
+  &lt;a href=&#34;#data-preparation&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h2&gt;
+
+
+
+
+&lt;h3 id=&#34;loading-standard-libraries-and-source-custom-functions&#34;&gt;Loading standard libraries and source custom functions
+  &lt;a href=&#34;#loading-standard-libraries-and-source-custom-functions&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(kableExtra)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(tidyverse)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(expss)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(lattice)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;source&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;R/custom_functions.R&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;h3 id=&#34;reading-in-data-and-preprocessing&#34;&gt;Reading in data and preprocessing
+  &lt;a href=&#34;#reading-in-data-and-preprocessing&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dat &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; readxl&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;read_excel&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;data/newsdata_selected.xlsx&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;content &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; dat&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;Content
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;h2 id=&#34;text-mining&#34;&gt;Text mining
+  &lt;a href=&#34;#text-mining&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;First, we created an annotated data frame from the text data.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(udpipe)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ud_model &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;udpipe_download_model&lt;/span&gt;(language &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;english&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The Universal Dependencies (UD) models contain 94 models of 61 languages, each consisting of a tokenizer, tagger, lemmatizer and dependency parser, all trained using the UD data. See 
+&lt;a href=&#34;https://ufal.mff.cuni.cz/udpipe/1/models&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for more information. We downloaded the English language Universal Dependencies (UD) model to use it for our text data.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ud_model &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;udpipe_load_model&lt;/span&gt;(ud_model&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;file_model)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;udpipe_annotate&lt;/span&gt;(ud_model, x &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; content)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;as.data.frame&lt;/span&gt;(x)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next, we selected nouns and adjectives from the text data frame and removed duplicate entries.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(tm)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;stats &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;subset&lt;/span&gt;(x, upos &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%in%&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;NOUN&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;ADJ&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;stats2 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; stats &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     dplyr&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;group_by&lt;/span&gt;(doc_id) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     dplyr&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(sentences &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;paste0&lt;/span&gt;(token, collapse &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;)) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;text_nouns &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; stats2[&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;duplicated&lt;/span&gt;(stats2&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;sentences) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;duplicated&lt;/span&gt;(stats2&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;sentences)),] &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; dplyr&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;select&lt;/span&gt;(sentences)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;evdes &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; text_nouns&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;sentences
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;evdes_1 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;VectorSource&lt;/span&gt;(evdes)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;Corpus&lt;/span&gt;(evdes_1)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;h3 id=&#34;cleaning-text-data&#34;&gt;Cleaning text data
+  &lt;a href=&#34;#cleaning-text-data&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Next, we cleaned the text data. Specifically, we removed unnecessary white space and converted special characters into white space. We also transformed letters to lower case, removed numbers, stop words (e.g., and, or&amp;hellip;), and punctuation. Finally, used lemmatization for remaining words (see 
+&lt;a href=&#34;https://www.rdocumentation.org/packages/textstem/versions/0.1.4/topics/lemmatize_strings&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for more information on lemmatization.)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(textstem)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#Replacing &amp;#34;/&amp;#34;, &amp;#34;@&amp;#34; and &amp;#34;|&amp;#34; with space&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;toSpace &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;content_transformer&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;function&lt;/span&gt;(x, pattern ) &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;gsub&lt;/span&gt;(pattern, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;, x))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, toSpace, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, toSpace, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;@&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, toSpace, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;\\|&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, toSpace, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;\\|&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Convert the text to lower case&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;content_transformer&lt;/span&gt;(tolower))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Remove numbers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, removeNumbers)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Remove english common stopwords&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, removeWords, &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;stopwords&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;english&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Remove punctuations&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, removePunctuation)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Eliminate extra white spaces&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, stripWhitespace)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Text stemming - which reduces words to their root form&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#TextDoc &amp;lt;- tm_map(TextDoc, stemDocument)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, lemmatize_strings)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We also removed a couple of words that are not very informative for understanding the phenomenon, including words relating to time or abstract words like &amp;ldquo;thing&amp;rdquo;, &amp;ldquo;many&amp;rdquo;, &amp;ldquo;medium&amp;rdquo;, &amp;hellip;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, removeWords, &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;sleep&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;day&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;time&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;hour&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;night&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;long&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;late&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;year&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;minute&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;week&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;daytime&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                          &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;people&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;thing&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;term&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;way&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;expert&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;effect&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;part&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;life&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;activity&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;person&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                          &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;self&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;consequence&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;read&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;problem&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;behaviour&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;behavior&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;concept&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                          &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;many&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;medium&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;important&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;much&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;enough&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;next&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;enough&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;important&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;good&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                          &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;little&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;right&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;high&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;hard&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;new&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;even&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;bad&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;close&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Additionally, we create a text document with our keywords (&amp;ldquo;revenge&amp;rdquo;, &amp;ldquo;bedtime&amp;rdquo;, &amp;ldquo;procrastination&amp;rdquo;) removed.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_wc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, removeWords, &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;revenge&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;bedtime&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;sleep&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;procrastination&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;day&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We also removed words that appear in less than 90 percent of all documents.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Build a term-document matrix&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_tdm &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;TermDocumentMatrix&lt;/span&gt;(TextDoc)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_dtm &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;DocumentTermMatrix&lt;/span&gt;(TextDoc)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_tdm &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;removeSparseTerms&lt;/span&gt;(TextDoc_tdm, &lt;span style=&#34;color:#099&#34;&gt;.90&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_dtm &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;removeSparseTerms&lt;/span&gt;(TextDoc_dtm, &lt;span style=&#34;color:#099&#34;&gt;.90&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_tdm_wc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;TermDocumentMatrix&lt;/span&gt;(TextDoc_wc)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_dtm_wc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;DocumentTermMatrix&lt;/span&gt;(TextDoc_wc)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_tdm_wc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;removeSparseTerms&lt;/span&gt;(TextDoc_tdm_wc, &lt;span style=&#34;color:#099&#34;&gt;.90&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_dtm_wc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;removeSparseTerms&lt;/span&gt;(TextDoc_dtm_wc, &lt;span style=&#34;color:#099&#34;&gt;.90&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We sorted the results by the number the terms appear in the texts (decreasing).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_m &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;as.matrix&lt;/span&gt;(TextDoc_tdm)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Sort by descearing value of frequency&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_v &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;sort&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;rowSums&lt;/span&gt;(dtm_m),decreasing&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;TRUE&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_d &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;data.frame&lt;/span&gt;(word &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;names&lt;/span&gt;(dtm_v),freq&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;dtm_v)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Display the top 5 most frequent words&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_m_wc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;as.matrix&lt;/span&gt;(TextDoc_tdm_wc)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Sort by descearing value of frequency&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_v_wc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;sort&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;rowSums&lt;/span&gt;(dtm_m_wc),decreasing&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;TRUE&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_d_wc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;data.frame&lt;/span&gt;(word &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;names&lt;/span&gt;(dtm_v_wc),freq&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;dtm_v_wc)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Display the top 5 most frequent words&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As was to be expected, the most frequently appearing words in the original documents are our keywords.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;head&lt;/span&gt;(dtm_d, &lt;span style=&#34;color:#099&#34;&gt;5&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;                           word freq
+procrastination procrastination   47
+bedtime                 bedtime   44
+bed                         bed   36
+revenge                 revenge   33
+work                       work   29
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But if the keywords are removed, the ten most frequent words are:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;head&lt;/span&gt;(dtm_d_wc, &lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;             word freq
+bed           bed   36
+work         work   29
+phone       phone   20
+control   control   18
+health     health   17
+schedule schedule   17
+light       light   13
+social     social   13
+pandemic pandemic   12
+study       study   11
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+&lt;h3 id=&#34;a-word-cloud-of-the-most-common-nouns-and-adjectives&#34;&gt;A word cloud of the most common nouns and adjectives
+  &lt;a href=&#34;#a-word-cloud-of-the-most-common-nouns-and-adjectives&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(wordcloud)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#generate word cloud&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;set.seed&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;1234&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;wordcloud&lt;/span&gt;(words &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; dtm_d_wc&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;word, freq &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; dtm_d&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;freq, min.freq &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;5&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          scale&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#099&#34;&gt;.4&lt;/span&gt;), 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          max.words&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#099&#34;&gt;100&lt;/span&gt;, random.order&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;FALSE&lt;/span&gt;, rot.per&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#099&#34;&gt;0.40&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          colors&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;brewer.pal&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;8&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;Dark2&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-13-1.png&#34; width=&#34;768&#34; /&gt;
+
+
+
+
+&lt;h3 id=&#34;the-most-frequently-occurring-nouns-and-adjectives&#34;&gt;The most frequently occurring nouns and adjectives
+  &lt;a href=&#34;#the-most-frequently-occurring-nouns-and-adjectives&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;stats &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;subset&lt;/span&gt;(x, upos &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%in%&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;NOUN&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;ADJ&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;stats &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;txt_freq&lt;/span&gt;(x &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; stats&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;lemma)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_d_wc&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;word &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;factor&lt;/span&gt;(dtm_d_wc&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;word, levels &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;rev&lt;/span&gt;(dtm_d_wc&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;word))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_head &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;head&lt;/span&gt;(dtm_d_wc, &lt;span style=&#34;color:#099&#34;&gt;22&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;barchart&lt;/span&gt;(word &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;~&lt;/span&gt; freq, data &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; dtm_head, col &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;cadetblue&amp;#34;&lt;/span&gt;, main &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;Most occurring nouns and adjectives&amp;#34;&lt;/span&gt;, xlab &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;Freq&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-14-1.png&#34; width=&#34;768&#34; /&gt;
+
+
+
+
+&lt;h3 id=&#34;showing-connections-between-words&#34;&gt;Showing connections between words
+  &lt;a href=&#34;#showing-connections-between-words&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;We created a cluster dendogram to show connections between words, with a sparsity threshold of 60 percent.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(tidytext)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_top &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;removeSparseTerms&lt;/span&gt;(TextDoc_tdm, sparse &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;.60&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_tdm_m &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;as.matrix&lt;/span&gt;(dtm_top)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;distance &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;dist&lt;/span&gt;(TextDoc_tdm_m, method &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;euclidean&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fit &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;hclust&lt;/span&gt;(distance, method &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;complete&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;plot&lt;/span&gt;(fit)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-15-1.png&#34; width=&#34;768&#34; /&gt;
+
+
+
+
+&lt;h3 id=&#34;topic-modeling&#34;&gt;Topic modeling
+  &lt;a href=&#34;#topic-modeling&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+
+
+
+
+&lt;h4 id=&#34;we-started-with-10-topics&#34;&gt;We started with 10 topics
+  &lt;a href=&#34;#we-started-with-10-topics&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;We again selected the text matrix without the keywords (&amp;ldquo;revenge&amp;rdquo;, &amp;ldquo;bedtime&amp;rdquo;, and &amp;ldquo;procrastination&amp;rdquo;)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(topicmodels)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rowTotals &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;apply&lt;/span&gt;(TextDoc_dtm_wc , &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;, sum)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_dtm   &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; TextDoc_dtm_wc[rowTotals&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;, ] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# set a seed so that the output of the model is predictable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_lda &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;LDA&lt;/span&gt;(TextDoc_dtm, k &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;, control &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;list&lt;/span&gt;(seed &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;1234&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_lda
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;A LDA_VEM topic model with 10 topics.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#&amp;gt; A LDA_VEM topic model with 2 topics.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_topics &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tidy&lt;/span&gt;(ap_lda, matrix &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;beta&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_top_terms &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; ap_topics &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;group_by&lt;/span&gt;(topic) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;slice_max&lt;/span&gt;(beta, n &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;4&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ungroup&lt;/span&gt;() &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;arrange&lt;/span&gt;(topic, &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;beta)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_top_terms &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(term &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;reorder_within&lt;/span&gt;(term, beta, topic)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;aes&lt;/span&gt;(beta, term, fill &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;factor&lt;/span&gt;(topic))) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;geom_col&lt;/span&gt;(show.legend &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;FALSE&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;facet_wrap&lt;/span&gt;(&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;~&lt;/span&gt; topic, scales &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;free&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;scale_y_reordered&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-16-1.png&#34; width=&#34;768&#34; /&gt;
+&lt;p&gt;The visualisation displays the per-topic-per-word probabilities (called beta). For each word combination, the model computes the probability of that term being generated from that topic. For example, the most common words in topic 1 include &amp;ldquo;part&amp;rdquo;, &amp;ldquo;lack&amp;rdquo;, and &amp;ldquo;fund&amp;rdquo;. Maybe sth. related to capital and funding? Topic five revolves around issues with customers and service. The usefulness of the topic modeling always depends on the text data. And finding the right number of topics to extract is an iterative approach.&lt;/p&gt;
+
+
+
+
+&lt;h4 id=&#34;heres-a-solution-for-8-topics&#34;&gt;Here&amp;rsquo;s a solution for 8 topics:
+  &lt;a href=&#34;#heres-a-solution-for-8-topics&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# set a seed so that the output of the model is predictable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_lda &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;LDA&lt;/span&gt;(TextDoc_dtm, k &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;8&lt;/span&gt;, control &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;list&lt;/span&gt;(seed &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;1234&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#&amp;gt; A LDA_VEM topic model with 2 topics.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_topics &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tidy&lt;/span&gt;(ap_lda, matrix &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;beta&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_top_terms &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; ap_topics &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;group_by&lt;/span&gt;(topic) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;slice_max&lt;/span&gt;(beta, n &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;5&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ungroup&lt;/span&gt;() &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;arrange&lt;/span&gt;(topic, &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;beta)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_top_terms &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(term &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;reorder_within&lt;/span&gt;(term, beta, topic)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;aes&lt;/span&gt;(beta, term, fill &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;factor&lt;/span&gt;(topic))) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;geom_col&lt;/span&gt;(show.legend &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;FALSE&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;facet_wrap&lt;/span&gt;(&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;~&lt;/span&gt; topic, scales &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;free&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;scale_y_reordered&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-17-1.png&#34; width=&#34;768&#34; /&gt;
+
+
+
+
+&lt;h4 id=&#34;heres-a-solution-for-6-topics&#34;&gt;Here&amp;rsquo;s a solution for 6 topics:
+  &lt;a href=&#34;#heres-a-solution-for-6-topics&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# set a seed so that the output of the model is predictable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_lda &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;LDA&lt;/span&gt;(TextDoc_dtm, k &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;6&lt;/span&gt;, control &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;list&lt;/span&gt;(seed &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;1234&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#&amp;gt; A LDA_VEM topic model with 2 topics.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_topics &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tidy&lt;/span&gt;(ap_lda, matrix &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;beta&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_top_terms &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; ap_topics &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;group_by&lt;/span&gt;(topic) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;slice_max&lt;/span&gt;(beta, n &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;5&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ungroup&lt;/span&gt;() &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;arrange&lt;/span&gt;(topic, &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;beta)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_top_terms &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(term &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;reorder_within&lt;/span&gt;(term, beta, topic)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;aes&lt;/span&gt;(beta, term, fill &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;factor&lt;/span&gt;(topic))) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;geom_col&lt;/span&gt;(show.legend &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;FALSE&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;facet_wrap&lt;/span&gt;(&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;~&lt;/span&gt; topic, scales &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;free&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;scale_y_reordered&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-18-1.png&#34; width=&#34;768&#34; /&gt;
+&lt;p&gt;See 
+&lt;a href=&#34;https://www.tidytextmining.com/topicmodeling.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for more information on topic modeling.&lt;/p&gt;
+&lt;p&gt;We could also consider examining the words with the greatest difference in beta between two topics. This can be estimated based on the log ratio of the two. We can filter for relatively common words to make the example more concrete. Here, we filter for words with a beta greater than 0.005.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(tidyr)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;beta_wide &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; ap_topics &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(topic &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;paste0&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;topic&amp;#34;&lt;/span&gt;, topic)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;pivot_wider&lt;/span&gt;(names_from &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; topic, values_from &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; beta) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;filter&lt;/span&gt;(topic1 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;.005&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; topic2 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;.005&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(log_ratio &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;log2&lt;/span&gt;(topic2 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt; topic1))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;beta_wide
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;# A tibble: 167 × 8
+   term     topic1    topic2    topic3    topic4    topic5   topic6 log_ratio
+   &amp;lt;chr&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;
+ 1 alarm   0.00904 6.55e- 75 5.20e-  3 8.16e-242 4.63e-104 1.31e-74 -240.    
+ 2 balance 0.00904 2.67e-104 2.07e-104 2.80e-248 2.46e-104 9.48e-75 -337.    
+ 3 bed     0.0422  5.92e-  2 1.32e-  2 1.89e-  2 3.67e-  2 2.47e-74    0.489 
+ 4 binge   0.00602 9.51e- 75 8.36e- 75 6.29e-  3 5.69e-  3 1.89e-74 -239.    
+ 5 brain   0.0120  1.18e-  2 2.38e-  7 6.29e-  3 1.14e-  2 1.18e- 2   -0.0258
+ 6 busy    0.00602 3.72e- 44 5.13e-  3 1.26e-  2 8.49e-  5 1.95e-74 -137.    
+ 7 chinese 0.00904 3.72e- 44 2.59e-104 1.52e-247 3.07e-104 1.18e- 2 -137.    
+ 8 clock   0.00602 5.92e-  3 1.04e-  2 1.43e-243 6.53e- 75 1.35e-74   -0.0258
+ 9 concern 0.00301 5.92e-  3 3.15e-104 5.91e-240 5.66e- 75 1.17e-74    0.974 
+10 control 0.0151  5.92e-  3 1.82e-  2 6.29e-  3 1.99e-  2 4.71e- 2   -1.35  
+# … with 157 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;beta_wide &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;group_by&lt;/span&gt;(direction &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; log_ratio &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;slice_max&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;abs&lt;/span&gt;(log_ratio), n &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ungroup&lt;/span&gt;() &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(term &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;reorder&lt;/span&gt;(term, log_ratio)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;aes&lt;/span&gt;(log_ratio, term)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;geom_col&lt;/span&gt;(fill &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;#b0157a&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;labs&lt;/span&gt;(x &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;Log2 ratio of beta in topic 2 / topic 1&amp;#34;&lt;/span&gt;, y &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;NULL&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-19-1.png&#34; width=&#34;768&#34; /&gt;
+
+
+
+
+&lt;h3 id=&#34;sentiment-analysis&#34;&gt;Sentiment analysis
+  &lt;a href=&#34;#sentiment-analysis&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Sentiment Analysis is a process of extracting opinions that have different scores like positive, negative or neutral. Based on sentiment analysis, we can find out the nature of opinion or sentences in the newspaper articles.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(tidytext)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(textdata)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nrc_joy &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;get_sentiments&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;nrc&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;filter&lt;/span&gt;(sentiment &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;joy&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;joyful_aspects &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; dtm_d_wc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;inner_join&lt;/span&gt;(nrc_joy) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;count&lt;/span&gt;(word, sort &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;TRUE&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A wordcloud of the joyful and pleasant aspects of revenge bedtime procrastination.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(wordcloud)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#generate word cloud&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;set.seed&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;1234&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;wordcloud&lt;/span&gt;(words &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; joyful_aspects&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;word, freq &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; dtm_d&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;freq, min.freq &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;5&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          scale&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#099&#34;&gt;.4&lt;/span&gt;), 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          max.words&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#099&#34;&gt;100&lt;/span&gt;, random.order&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;FALSE&lt;/span&gt;, rot.per&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#099&#34;&gt;0.40&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          colors&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;brewer.pal&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;8&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;Dark2&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-21-1.png&#34; width=&#34;768&#34; /&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Somehow, &amp;#34;work&amp;#34; gets an extremely high positive value. We remove the word for the sentiment analysis. &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_d_wc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; dtm_d_wc[&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;grep&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;work&amp;#34;&lt;/span&gt;, dtm_d_wc&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;word),]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rbc_sentiment &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; dtm_d_wc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;inner_join&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;get_sentiments&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;bing&amp;#34;&lt;/span&gt;)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;pivot_wider&lt;/span&gt;(names_from &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; sentiment, values_from &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; freq, values_fill &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(sentiment &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; positive &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt; negative)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, we can plot the frequency of positive and negative words across all articles.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rbc_sentiment&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;index &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;seq.int&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;nrow&lt;/span&gt;(rbc_sentiment)) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ggplot&lt;/span&gt;(rbc_sentiment, &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;aes&lt;/span&gt;(index, sentiment)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;geom_col&lt;/span&gt;(show.legend &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;FALSE&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-23-1.png&#34; width=&#34;768&#34; /&gt;
+&lt;p&gt;We see that negative words appear more frequently in the articles.&lt;/p&gt;
+&lt;p&gt;Finally, we take a look at the particulalry negative and positive words (with sentiment values qual to or greater than three):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rbc_sentiment_strong &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; rbc_sentiment &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;filter&lt;/span&gt;(sentiment &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; sentiment &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;-3&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ggplot&lt;/span&gt;(rbc_sentiment_strong, &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;aes&lt;/span&gt;(word, sentiment)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;geom_col&lt;/span&gt;(show.legend &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;FALSE&lt;/span&gt;, fill &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;#4e1391&amp;#34;&lt;/span&gt;) 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-24-1.png&#34; width=&#34;768&#34; /&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using NLP for examining entrepreneurs&#39; business errors</title>
+      <link>https://annekathrinkleine.netlify.app/project/events/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/project/events/</guid>
+      <description>&lt;script src=&#34;index_files/libs/htmlwidgets-1.5.4/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;index_files/libs/datatables-css-0.0.0/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;index_files/libs/datatables-binding-0.23/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;index_files/libs/jquery-3.6.0/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;index_files/libs/dt-core-1.11.3/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;index_files/libs/dt-core-1.11.3/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;index_files/libs/dt-core-1.11.3/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;index_files/libs/jszip-1.11.3/jszip.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;index_files/libs/dt-ext-buttons-1.11.3/css/buttons.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;index_files/libs/dt-ext-buttons-1.11.3/js/dataTables.buttons.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;index_files/libs/dt-ext-buttons-1.11.3/js/buttons.html5.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;index_files/libs/dt-ext-buttons-1.11.3/js/buttons.colVis.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;index_files/libs/dt-ext-buttons-1.11.3/js/buttons.print.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;index_files/libs/crosstalk-1.2.0/css/crosstalk.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;index_files/libs/crosstalk-1.2.0/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;I used natural language processing (NLP) to analyse texts entrepreneurs wrote about the errors that happened in their business over the past two weeks. Entrepreneurs in the sample were from India and the Netherlands, operating in various industries.&lt;/p&gt;
+
+
+
+
+&lt;h2 id=&#34;data-preparation&#34;&gt;Data preparation
+  &lt;a href=&#34;#data-preparation&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h2&gt;
+
+
+
+
+&lt;h3 id=&#34;loading-standard-libraries-and-source-custom-functions&#34;&gt;Loading standard libraries and source custom functions
+  &lt;a href=&#34;#loading-standard-libraries-and-source-custom-functions&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(kableExtra)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(tidyverse)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(expss)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(lattice)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;source&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;R/custom_functions.R&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;h3 id=&#34;reading-in-data-and-preprocessing&#34;&gt;Reading in data and preprocessing
+  &lt;a href=&#34;#reading-in-data-and-preprocessing&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;I prepared the data for reliability assessment and correlation analysis.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dat &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;read_csv&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;data/dat.csv&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;evdes &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; dat&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;t1evdes_
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;comp_dat &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; dat &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  dplyr&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;matches&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;t1emotions|jobstr|jobsa|t1threat|gender|age|found|t1occ$|lang|edu|max_sev&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alph_dat &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; dat &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  dplyr&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;select&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;matches&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;t1emotions|jobstr|t1threat&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;comp_split &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; comp_dat &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;split.default&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;sub&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;_.*&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;names&lt;/span&gt;(comp_dat))) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alph_split &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; alph_dat &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;split.default&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;sub&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;_.*&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;names&lt;/span&gt;(alph_dat))) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;comp &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;map&lt;/span&gt;(comp_split, &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;~&lt;/span&gt; multicon&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;composite&lt;/span&gt;(.x, nomiss &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;0.8&lt;/span&gt;), data &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; .x) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;as.data.frame&lt;/span&gt;(.)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alph &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;map&lt;/span&gt;(alph_split, &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;~&lt;/span&gt; psych&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;alpha&lt;/span&gt;(.x, check.keys&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;TRUE&lt;/span&gt;), data &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; .x) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;map&lt;/span&gt;(&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;~&lt;/span&gt; .x&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;total)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alph_df &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;do.call&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;rbind&amp;#34;&lt;/span&gt;, alph) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;round&lt;/span&gt;(., &lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;h3 id=&#34;overview-of-sample-characteristics&#34;&gt;Overview of sample characteristics
+  &lt;a href=&#34;#overview-of-sample-characteristics&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+
+
+
+
+&lt;h4 id=&#34;age-of-the-entrepreneurs-in-the-sample&#34;&gt;Age of the entrepreneurs in the sample:
+  &lt;a href=&#34;#age-of-the-entrepreneurs-in-the-sample&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-4-1.png&#34; style=&#34;width:80.0%&#34; /&gt;
+
+
+
+
+&lt;h4 id=&#34;educational-level&#34;&gt;Educational level:
+  &lt;a href=&#34;#educational-level&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-5-1.png&#34; style=&#34;width:80.0%&#34; /&gt;
+
+
+
+
+&lt;h4 id=&#34;gender&#34;&gt;Gender:
+  &lt;a href=&#34;#gender&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-6-1.png&#34; style=&#34;width:55.0%&#34; /&gt;
+
+
+
+
+&lt;h4 id=&#34;language&#34;&gt;Language:
+  &lt;a href=&#34;#language&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-7-1.png&#34; style=&#34;width:55.0%&#34; /&gt;
+
+
+
+
+&lt;h4 id=&#34;current-occupation&#34;&gt;Current occupation:
+  &lt;a href=&#34;#current-occupation&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-8-1.png&#34; style=&#34;width:75.0%&#34; /&gt;
+
+
+
+
+&lt;h4 id=&#34;whether-they-were-involved-in-founding-the-business&#34;&gt;Whether they were involved in founding the business:
+  &lt;a href=&#34;#whether-they-were-involved-in-founding-the-business&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-9-1.png&#34; style=&#34;width:55.0%&#34; /&gt;
+
+
+
+
+&lt;h3 id=&#34;reliabilities-for-multi-item-variables&#34;&gt;Reliabilities for multi-item variables:
+  &lt;a href=&#34;#reliabilities-for-multi-item-variables&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alph_df &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;DT&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;datatable&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    extensions &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#39;Buttons&amp;#39;&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    options &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;list&lt;/span&gt;(dom &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#39;Bfrtip&amp;#39;&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                   buttons &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#39;excel&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;csv&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                   pageLength &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;20&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div id=&#34;htmlwidget-08bce9348eae4bfe9973&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-08bce9348eae4bfe9973&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;vertical&#34;:false,&#34;extensions&#34;:[&#34;Buttons&#34;],&#34;data&#34;:[[&#34;t1emotions&#34;,&#34;t1jobstr&#34;,&#34;t1threat&#34;,&#34;t2jobstr&#34;,&#34;t3jobstr&#34;],[0.87,0.82,0.83,0.86,0.85],[0.87,0.83,0.83,0.88,0.83],[0.89,0.82,0.78,0.9,0.9],[0.3,0.44,0.62,0.55,0.5],[6.48,4.74,4.95,7.45,5],[0.02,0.02,0.03,0.02,0.02],[2.32,1.79,2.84,1.87,2.02],[0.75,0.66,1.22,0.72,0.65],[0.31,0.45,0.59,0.57,0.55]],&#34;container&#34;:&#34;&lt;table class=\&#34;display\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt; &lt;\/th&gt;\n      &lt;th&gt;raw_alpha&lt;\/th&gt;\n      &lt;th&gt;std.alpha&lt;\/th&gt;\n      &lt;th&gt;G6(smc)&lt;\/th&gt;\n      &lt;th&gt;average_r&lt;\/th&gt;\n      &lt;th&gt;S/N&lt;\/th&gt;\n      &lt;th&gt;ase&lt;\/th&gt;\n      &lt;th&gt;mean&lt;\/th&gt;\n      &lt;th&gt;sd&lt;\/th&gt;\n      &lt;th&gt;median_r&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&#34;,&#34;options&#34;:{&#34;dom&#34;:&#34;Bfrtip&#34;,&#34;buttons&#34;:[&#34;excel&#34;,&#34;csv&#34;],&#34;pageLength&#34;:20,&#34;columnDefs&#34;:[{&#34;className&#34;:&#34;dt-right&#34;,&#34;targets&#34;:[1,2,3,4,5,6,7,8,9]},{&#34;orderable&#34;:false,&#34;targets&#34;:0}],&#34;order&#34;:[],&#34;autoWidth&#34;:false,&#34;orderClasses&#34;:false,&#34;lengthMenu&#34;:[10,20,25,50,100]}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+
+
+
+
+&lt;h3 id=&#34;correlation-table&#34;&gt;Correlation table:
+  &lt;a href=&#34;#correlation-table&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cor &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;round&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;cor&lt;/span&gt;(comp, use&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;pairwise.complete.obs&amp;#34;&lt;/span&gt;), &lt;span style=&#34;color:#099&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;corstar_select &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;data.frame&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;corstars&lt;/span&gt;(comp, removeTriangle &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;none&amp;#34;&lt;/span&gt;, result&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;none&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;corstar_select &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  DT&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;datatable&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    extensions &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#39;Buttons&amp;#39;&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    options &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;list&lt;/span&gt;(dom &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#39;Bfrtip&amp;#39;&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                   buttons &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#39;excel&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;csv&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                   pageLength &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                   lengthMenu &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;25&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;50&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;75&lt;/span&gt;, &lt;span style=&#34;color:#099&#34;&gt;94&lt;/span&gt;)))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div id=&#34;htmlwidget-c27191f738c4dac1c7fa&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-c27191f738c4dac1c7fa&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;vertical&#34;:false,&#34;extensions&#34;:[&#34;Buttons&#34;],&#34;data&#34;:[[&#34;t1age&#34;,&#34;t1edu&#34;,&#34;t1emotions&#34;,&#34;t1found&#34;,&#34;t1gender&#34;,&#34;t1jobsa&#34;,&#34;t1jobstr&#34;,&#34;t1lang&#34;,&#34;t1occ&#34;,&#34;t1threat&#34;,&#34;t2jobsa&#34;,&#34;t2jobstr&#34;,&#34;t3jobsa&#34;,&#34;t3jobstr&#34;],[&#34; 1.00 &#34;,&#34; 0.22**  &#34;,&#34;-0.07    &#34;,&#34;-0.11    &#34;,&#34;-0.07    &#34;,&#34; 0.06    &#34;,&#34;-0.04    &#34;,&#34; 0.04    &#34;,&#34;-0.25**  &#34;,&#34;-0.02    &#34;,&#34; 0.19    &#34;,&#34;-0.30    &#34;,&#34; 0.04    &#34;,&#34;-0.02    &#34;],[&#34; 0.22**  &#34;,&#34; 1.00 &#34;,&#34;-0.06    &#34;,&#34;-0.17    &#34;,&#34;-0.14    &#34;,&#34; 0.10    &#34;,&#34;-0.16    &#34;,&#34; 0.12    &#34;,&#34;-0.19*   &#34;,&#34;-0.04    &#34;,&#34; 0.14    &#34;,&#34;-0.27    &#34;,&#34;-0.41    &#34;,&#34; 0.12    &#34;],[&#34;-0.07    &#34;,&#34;-0.06    &#34;,&#34; 1.00 &#34;,&#34; 0.14    &#34;,&#34;-0.14    &#34;,&#34;-0.35*** &#34;,&#34; 0.62*** &#34;,&#34; 0.04    &#34;,&#34; 0.03    &#34;,&#34; 0.36*** &#34;,&#34;-0.54*   &#34;,&#34; 0.72*** &#34;,&#34;-0.14    &#34;,&#34; 0.27    &#34;],[&#34;-0.11    &#34;,&#34;-0.17    &#34;,&#34; 0.14    &#34;,&#34; 1.00 &#34;,&#34; 0.12    &#34;,&#34;-0.06    &#34;,&#34; 0.06    &#34;,&#34; 0.01    &#34;,&#34; 0.03    &#34;,&#34; 0.01    &#34;,&#34;  NaNNA&#34;,&#34;  NaNNA&#34;,&#34;-0.01    &#34;,&#34;-0.28    &#34;],[&#34;-0.07    &#34;,&#34;-0.14    &#34;,&#34;-0.14    &#34;,&#34; 0.12    &#34;,&#34; 1.00 &#34;,&#34; 0.15    &#34;,&#34;-0.05    &#34;,&#34;-0.03    &#34;,&#34; 0.24**  &#34;,&#34;-0.09    &#34;,&#34; 0.32    &#34;,&#34;-0.34    &#34;,&#34; 0.21    &#34;,&#34;-0.27    &#34;],[&#34; 0.06    &#34;,&#34; 0.10    &#34;,&#34;-0.35*** &#34;,&#34;-0.06    &#34;,&#34; 0.15    &#34;,&#34; 1.00 &#34;,&#34;-0.56*** &#34;,&#34;-0.05    &#34;,&#34; 0.08    &#34;,&#34;-0.10    &#34;,&#34; 0.90*** &#34;,&#34;-0.76*** &#34;,&#34; 0.78*   &#34;,&#34; 0.21    &#34;],[&#34;-0.04    &#34;,&#34;-0.16    &#34;,&#34; 0.62*** &#34;,&#34; 0.06    &#34;,&#34;-0.05    &#34;,&#34;-0.56*** &#34;,&#34; 1.00 &#34;,&#34;-0.02    &#34;,&#34;-0.01    &#34;,&#34; 0.23**  &#34;,&#34;-0.68*** &#34;,&#34; 0.72*** &#34;,&#34;-0.22    &#34;,&#34; 0.41    &#34;],[&#34; 0.04    &#34;,&#34; 0.12    &#34;,&#34; 0.04    &#34;,&#34; 0.01    &#34;,&#34;-0.03    &#34;,&#34;-0.05    &#34;,&#34;-0.02    &#34;,&#34; 1.00 &#34;,&#34; 0.01    &#34;,&#34; 0.08    &#34;,&#34;-0.17    &#34;,&#34; 0.40    &#34;,&#34;-0.09    &#34;,&#34; 0.52    &#34;],[&#34;-0.25**  &#34;,&#34;-0.19*   &#34;,&#34; 0.03    &#34;,&#34; 0.03    &#34;,&#34; 0.24**  &#34;,&#34; 0.08    &#34;,&#34;-0.01    &#34;,&#34; 0.01    &#34;,&#34; 1.00 &#34;,&#34; 0.05    &#34;,&#34; 0.26    &#34;,&#34; 0.10    &#34;,&#34; 0.36    &#34;,&#34; 0.74*   &#34;],[&#34;-0.02    &#34;,&#34;-0.04    &#34;,&#34; 0.36*** &#34;,&#34; 0.01    &#34;,&#34;-0.09    &#34;,&#34;-0.10    &#34;,&#34; 0.23**  &#34;,&#34; 0.08    &#34;,&#34; 0.05    &#34;,&#34; 1.00 &#34;,&#34;-0.08    &#34;,&#34; 0.10    &#34;,&#34; 0.24    &#34;,&#34; 0.09    &#34;],[&#34; 0.19    &#34;,&#34; 0.14    &#34;,&#34;-0.54*   &#34;,&#34;  NaNNA&#34;,&#34; 0.32    &#34;,&#34; 0.90*** &#34;,&#34;-0.68*** &#34;,&#34;-0.17    &#34;,&#34; 0.26    &#34;,&#34;-0.08    &#34;,&#34; 1.00 &#34;,&#34;-0.70*** &#34;,&#34; 0.99    &#34;,&#34; 0.28    &#34;],[&#34;-0.30    &#34;,&#34;-0.27    &#34;,&#34; 0.72*** &#34;,&#34;  NaNNA&#34;,&#34;-0.34    &#34;,&#34;-0.76*** &#34;,&#34; 0.72*** &#34;,&#34; 0.40    &#34;,&#34; 0.10    &#34;,&#34; 0.10    &#34;,&#34;-0.70*** &#34;,&#34; 1.00 &#34;,&#34;-0.28    &#34;,&#34; 0.76    &#34;],[&#34; 0.04    &#34;,&#34;-0.41    &#34;,&#34;-0.14    &#34;,&#34;-0.01    &#34;,&#34; 0.21    &#34;,&#34; 0.78*   &#34;,&#34;-0.22    &#34;,&#34;-0.09    &#34;,&#34; 0.36    &#34;,&#34; 0.24    &#34;,&#34; 0.99    &#34;,&#34;-0.28    &#34;,&#34; 1.00 &#34;,&#34; 0.39    &#34;]],&#34;container&#34;:&#34;&lt;table class=\&#34;display\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt; &lt;\/th&gt;\n      &lt;th&gt;t1age&lt;\/th&gt;\n      &lt;th&gt;t1edu&lt;\/th&gt;\n      &lt;th&gt;t1emotions&lt;\/th&gt;\n      &lt;th&gt;t1found&lt;\/th&gt;\n      &lt;th&gt;t1gender&lt;\/th&gt;\n      &lt;th&gt;t1jobsa&lt;\/th&gt;\n      &lt;th&gt;t1jobstr&lt;\/th&gt;\n      &lt;th&gt;t1lang&lt;\/th&gt;\n      &lt;th&gt;t1occ&lt;\/th&gt;\n      &lt;th&gt;t1threat&lt;\/th&gt;\n      &lt;th&gt;t2jobsa&lt;\/th&gt;\n      &lt;th&gt;t2jobstr&lt;\/th&gt;\n      &lt;th&gt;t3jobsa&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&#34;,&#34;options&#34;:{&#34;dom&#34;:&#34;Bfrtip&#34;,&#34;buttons&#34;:[&#34;excel&#34;,&#34;csv&#34;],&#34;pageLength&#34;:10,&#34;lengthMenu&#34;:[25,50,75,94],&#34;columnDefs&#34;:[{&#34;orderable&#34;:false,&#34;targets&#34;:0}],&#34;order&#34;:[],&#34;autoWidth&#34;:false,&#34;orderClasses&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+
+
+
+
+&lt;h2 id=&#34;text-mining&#34;&gt;Text mining
+  &lt;a href=&#34;#text-mining&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;First, I created an annotated data frame from the text data.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(udpipe)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ud_model &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;udpipe_download_model&lt;/span&gt;(language &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;english&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ud_model &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;udpipe_load_model&lt;/span&gt;(ud_model&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;file_model)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;udpipe_annotate&lt;/span&gt;(ud_model, x &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; evdes)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;as.data.frame&lt;/span&gt;(x)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next, I selected nouns and adjectives from the text data frame and removed duplicate entries.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(tm)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;stats &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;subset&lt;/span&gt;(x, upos &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%in%&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;NOUN&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;ADJ&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;stats2 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; stats &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     dplyr&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;group_by&lt;/span&gt;(doc_id) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     dplyr&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(sentences &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;paste0&lt;/span&gt;(token, collapse &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;)) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;evdes_nouns &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; stats2[&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;duplicated&lt;/span&gt;(stats2&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;sentences) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;duplicated&lt;/span&gt;(stats2&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;sentences)),] &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; dplyr&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;select&lt;/span&gt;(sentences)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;evdes &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; evdes_nouns&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;sentences
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;evdes_1 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;VectorSource&lt;/span&gt;(evdes)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;Corpus&lt;/span&gt;(evdes_1)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;h3 id=&#34;cleaning-text-data&#34;&gt;Cleaning text data
+  &lt;a href=&#34;#cleaning-text-data&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;I cleaned the data by removing unnecessary white space and converting special characters into white space. I also transformed all letters to lower case, removed numbers, stop words (e.g., and, or&amp;hellip;), and punctuation. Finally, I lemmatized the remaining words (see 
+&lt;a href=&#34;https://www.rdocumentation.org/packages/textstem/versions/0.1.4/topics/lemmatize_strings&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for more information on the lemmatization function.)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(textstem)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#Replacing &amp;#34;/&amp;#34;, &amp;#34;@&amp;#34; and &amp;#34;|&amp;#34; with space&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;toSpace &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;content_transformer&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;function&lt;/span&gt;(x, pattern ) &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;gsub&lt;/span&gt;(pattern, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;, x))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, toSpace, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, toSpace, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;@&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, toSpace, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;\\|&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, toSpace, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;\\|&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Convert the text to lower case&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;content_transformer&lt;/span&gt;(tolower))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Remove numbers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, removeNumbers)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Remove english common stopwords&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, removeWords, &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;stopwords&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;english&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Remove punctuations&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, removePunctuation)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Eliminate extra white spaces&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, stripWhitespace)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Text stemming - which reduces words to their root form&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#TextDoc &amp;lt;- tm_map(TextDoc, stemDocument)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tm_map&lt;/span&gt;(TextDoc, lemmatize_strings)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;h3 id=&#34;building-the-document-martix&#34;&gt;Building the document martix
+  &lt;a href=&#34;#building-the-document-martix&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Build a term-document matrix&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_tdm &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;TermDocumentMatrix&lt;/span&gt;(TextDoc)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_dtm &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;DocumentTermMatrix&lt;/span&gt;(TextDoc)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_tdm &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;removeSparseTerms&lt;/span&gt;(TextDoc_tdm, &lt;span style=&#34;color:#099&#34;&gt;.99&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_dtm &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;removeSparseTerms&lt;/span&gt;(TextDoc_dtm, &lt;span style=&#34;color:#099&#34;&gt;.99&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_m &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;as.matrix&lt;/span&gt;(TextDoc_tdm)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Sort by descearing value of frequency&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_v &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;sort&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;rowSums&lt;/span&gt;(dtm_m),decreasing&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;TRUE&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_d &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;data.frame&lt;/span&gt;(word &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;names&lt;/span&gt;(dtm_v),freq&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;dtm_v)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# Display the top 5 most frequent words&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;head&lt;/span&gt;(dtm_d, &lt;span style=&#34;color:#099&#34;&gt;5&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;             word freq
+product   product   22
+client     client   21
+business business   16
+time         time   16
+customer customer   12
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+&lt;h3 id=&#34;a-word-cloud-of-the-most-common-nouns-and-adjectives&#34;&gt;A word cloud of the most common nouns and adjectives
+  &lt;a href=&#34;#a-word-cloud-of-the-most-common-nouns-and-adjectives&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(wordcloud)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#generate word cloud&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;set.seed&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;1234&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;wordcloud&lt;/span&gt;(words &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; dtm_d&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;word, freq &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; dtm_d&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;freq, min.freq &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;5&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          scale&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#099&#34;&gt;.4&lt;/span&gt;), 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          max.words&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#099&#34;&gt;100&lt;/span&gt;, random.order&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;FALSE&lt;/span&gt;, rot.per&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#099&#34;&gt;0.40&lt;/span&gt;, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          colors&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;brewer.pal&lt;/span&gt;(&lt;span style=&#34;color:#099&#34;&gt;8&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;Dark2&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-16-1.png&#34; width=&#34;768&#34; /&gt;
+
+
+
+
+&lt;h3 id=&#34;the-most-frequently-occurring-nouns-and-adjectives&#34;&gt;The most frequently occurring nouns and adjectives
+  &lt;a href=&#34;#the-most-frequently-occurring-nouns-and-adjectives&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;stats &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;subset&lt;/span&gt;(x, upos &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%in%&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;NOUN&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;ADJ&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;stats &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;txt_freq&lt;/span&gt;(x &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; stats&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;lemma)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_d&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;word &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;factor&lt;/span&gt;(dtm_d&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;word, levels &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;rev&lt;/span&gt;(dtm_d&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;$&lt;/span&gt;word))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_head &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;head&lt;/span&gt;(dtm_d, &lt;span style=&#34;color:#099&#34;&gt;22&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;barchart&lt;/span&gt;(word &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;~&lt;/span&gt; freq, data &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; dtm_head, col &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;cadetblue&amp;#34;&lt;/span&gt;, main &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;Most occurring nouns and adjectives&amp;#34;&lt;/span&gt;, xlab &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;Freq&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-17-1.png&#34; width=&#34;768&#34; /&gt;
+
+
+
+
+&lt;h3 id=&#34;showing-connections-between-words&#34;&gt;Showing connections between words
+  &lt;a href=&#34;#showing-connections-between-words&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;I created a cluster dendogram to show connections between words.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(tidytext)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dtm_top &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;removeSparseTerms&lt;/span&gt;(TextDoc_tdm, sparse &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;.97&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_tdm_m &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;as.matrix&lt;/span&gt;(dtm_top)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;distance &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;dist&lt;/span&gt;(TextDoc_tdm_m, method &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;euclidean&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fit &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;hclust&lt;/span&gt;(distance, method &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;complete&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;plot&lt;/span&gt;(fit)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-18-1.png&#34; width=&#34;768&#34; /&gt;
+&lt;p&gt;Hmm.. not super informative. What about trying to find topics in the texts?&lt;/p&gt;
+
+
+
+
+&lt;h3 id=&#34;topic-modeling&#34;&gt;Topic modeling
+  &lt;a href=&#34;#topic-modeling&#34;&gt;&lt;svg class=&#34;anchor-symbol&#34; aria-hidden=&#34;true&#34; height=&#34;26&#34; width=&#34;26&#34; viewBox=&#34;0 0 22 22&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+      &lt;path d=&#34;M0 0h24v24H0z&#34; fill=&#34;currentColor&#34;&gt;&lt;/path&gt;
+      &lt;path d=&#34;M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z&#34;&gt;&lt;/path&gt;
+    &lt;/svg&gt;&lt;/a&gt;
+&lt;/h3&gt;
+
+
+
+
+&lt;h4 id=&#34;i-started-with-10-topics&#34;&gt;I started with 10 topics&amp;hellip;
+  &lt;a href=&#34;#i-started-with-10-topics&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(topicmodels)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rowTotals &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;apply&lt;/span&gt;(TextDoc_dtm , &lt;span style=&#34;color:#099&#34;&gt;1&lt;/span&gt;, sum)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TextDoc_dtm   &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; TextDoc_dtm[rowTotals&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;0&lt;/span&gt;, ] 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# set a seed so that the output of the model is predictable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_lda &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;LDA&lt;/span&gt;(TextDoc_dtm, k &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;, control &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;list&lt;/span&gt;(seed &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;1234&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_lda
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;A LDA_VEM topic model with 10 topics.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#&amp;gt; A LDA_VEM topic model with 2 topics.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_topics &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tidy&lt;/span&gt;(ap_lda, matrix &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;beta&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_top_terms &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; ap_topics &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;group_by&lt;/span&gt;(topic) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;slice_max&lt;/span&gt;(beta, n &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;4&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ungroup&lt;/span&gt;() &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;arrange&lt;/span&gt;(topic, &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;beta)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_top_terms &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(term &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;reorder_within&lt;/span&gt;(term, beta, topic)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;aes&lt;/span&gt;(beta, term, fill &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;factor&lt;/span&gt;(topic))) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;geom_col&lt;/span&gt;(show.legend &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;FALSE&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;facet_wrap&lt;/span&gt;(&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;~&lt;/span&gt; topic, scales &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;free&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;scale_y_reordered&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-19-1.png&#34; width=&#34;768&#34; /&gt;
+&lt;p&gt;The visualisation displays the per-topic-per-word probabilities (called beta). For each word combination, the model computes the probability of that term being generated from that topic. For example, the most common words in topic 1 include &amp;ldquo;part&amp;rdquo;, &amp;ldquo;lack&amp;rdquo;, and &amp;ldquo;fund&amp;rdquo;. Maybe sth. related to capital and funding? Topic five revolves around issues with customers and service. The usefulness of the topic modeling always depends on the text data. And finding the right number of topics to extract is an iterative approach.&lt;/p&gt;
+
+
+
+
+&lt;h4 id=&#34;heres-a-solution-for-6-topics&#34;&gt;Here&amp;rsquo;s a solution for 6 topics:
+  &lt;a href=&#34;#heres-a-solution-for-6-topics&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;# set a seed so that the output of the model is predictable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_lda &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;LDA&lt;/span&gt;(TextDoc_dtm, k &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;6&lt;/span&gt;, control &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;list&lt;/span&gt;(seed &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;1234&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#998;font-style:italic&#34;&gt;#&amp;gt; A LDA_VEM topic model with 2 topics.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_topics &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;tidy&lt;/span&gt;(ap_lda, matrix &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;beta&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_top_terms &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; ap_topics &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;group_by&lt;/span&gt;(topic) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;slice_max&lt;/span&gt;(beta, n &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;5&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ungroup&lt;/span&gt;() &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;arrange&lt;/span&gt;(topic, &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;-&lt;/span&gt;beta)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ap_top_terms &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(term &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;reorder_within&lt;/span&gt;(term, beta, topic)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;aes&lt;/span&gt;(beta, term, fill &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;factor&lt;/span&gt;(topic))) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;geom_col&lt;/span&gt;(show.legend &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;FALSE&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;facet_wrap&lt;/span&gt;(&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;~&lt;/span&gt; topic, scales &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;free&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;scale_y_reordered&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-20-1.png&#34; width=&#34;768&#34; /&gt;
+&lt;p&gt;See 
+&lt;a href=&#34;https://www.tidytextmining.com/topicmodeling.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for more information on topic modeling.&lt;/p&gt;
+&lt;p&gt;We could also consider examining the words with the greatest difference in beta between two topics. This can be estimated based on the log ratio of the two. We can filter for relatively common words to make the example more concrete. Here, we filter for words with a beta greater than 0.001.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;library&lt;/span&gt;(tidyr)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;beta_wide &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;lt;-&lt;/span&gt; ap_topics &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(topic &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;paste0&lt;/span&gt;(&lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;topic&amp;#34;&lt;/span&gt;, topic)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;pivot_wider&lt;/span&gt;(names_from &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; topic, values_from &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; beta) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;filter&lt;/span&gt;(topic1 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;.001&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; topic2 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;.001&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(log_ratio &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;log2&lt;/span&gt;(topic2 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;/&lt;/span&gt; topic1))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;beta_wide
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;# A tibble: 59 × 8
+   term        topic1   topic2   topic3   topic4   topic5   topic6 log_ratio
+   &amp;lt;chr&amp;gt;        &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;
+ 1 financial 1.24e- 2 9.01e-60 2.00e- 2 7.09e-23 1.12e-13 4.47e-43  -190.   
+ 2 month     7.43e- 2 2.18e-29 1.92e-48 1.20e-78 1.14e-58 2.59e-45   -91.5  
+ 3 revenue   2.27e- 2 4.89e-69 1.78e-75 2.45e-63 1.29e- 2 3.24e-74  -221.   
+ 4 support   3.72e- 2 6.41e-25 3.27e-68 1.18e-21 3.88e-31 4.42e-25   -75.6  
+ 5 time      2.58e- 2 3.43e- 2 4.79e-14 1.23e- 1 8.13e-23 2.26e- 3     0.408
+ 6 unable    2.48e- 2 6.61e-18 3.88e-28 4.38e-52 5.72e-10 1.53e-61   -51.7  
+ 7 company   4.81e-47 6.45e- 2 2.68e-42 3.58e-39 1.13e-71 2.67e-35   150.   
+ 8 contact   4.77e-69 2.58e- 2 1.33e-74 1.39e-71 3.81e-30 4.05e-71   222.   
+ 9 day       5.11e-59 5.02e- 2 1.01e- 2 4.96e-14 6.97e-36 1.15e- 3   189.   
+10 job       9.47e-69 5.16e- 2 3.06e-75 5.72e-71 2.03e-74 6.21e-25   222.   
+# … with 49 more rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;beta_wide &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;group_by&lt;/span&gt;(direction &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; log_ratio &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;slice_max&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;abs&lt;/span&gt;(log_ratio), n &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#099&#34;&gt;10&lt;/span&gt;) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ungroup&lt;/span&gt;() &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;mutate&lt;/span&gt;(term &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;reorder&lt;/span&gt;(term, log_ratio)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;%&amp;gt;%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;ggplot&lt;/span&gt;(&lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;aes&lt;/span&gt;(log_ratio, term)) &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;geom_col&lt;/span&gt;() &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#900;font-weight:bold&#34;&gt;labs&lt;/span&gt;(x &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d14&#34;&gt;&amp;#34;Log2 ratio of beta in topic 2 / topic 1&amp;#34;&lt;/span&gt;, y &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;NULL&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;index_files/figure-gfm/unnamed-chunk-21-1.png&#34; width=&#34;768&#34; /&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
+
+

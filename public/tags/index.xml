@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Anne-Kathrin Kleine</title>
+    <link>https://annekathrinkleine.netlify.app/tags/</link>
+    <description>Recent content in Tags on Anne-Kathrin Kleine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://annekathrinkleine.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>research</title>
+      <link>https://annekathrinkleine.netlify.app/tags/research/</link>
+      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shiny</title>
+      <link>https://annekathrinkleine.netlify.app/tags/shiny/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/tags/shiny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golem</title>
+      <link>https://annekathrinkleine.netlify.app/tags/golem/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/tags/golem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>application</title>
+      <link>https://annekathrinkleine.netlify.app/tags/application/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/tags/application/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
+
+

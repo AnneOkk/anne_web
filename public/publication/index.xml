@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Anne-Kathrin Kleine</title>
+    <link>https://annekathrinkleine.netlify.app/publication/</link>
+    <description>Recent content in Publications on Anne-Kathrin Kleine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://annekathrinkleine.netlify.app/publication/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://annekathrinkleine.netlify.app/publication/template/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/publication/template/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
+
+

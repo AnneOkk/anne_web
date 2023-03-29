@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>quarto on Anne-Kathrin Kleine</title>
+    <link>https://annekathrinkleine.netlify.app/categories/quarto/</link>
+    <description>Recent content in quarto on Anne-Kathrin Kleine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 17 Sep 2022 09:00:00 +0000</lastBuildDate><atom:link href="https://annekathrinkleine.netlify.app/categories/quarto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R and Quarto Workshop</title>
+      <link>https://annekathrinkleine.netlify.app/talk/2022-quartoteam/</link>
+      <pubDate>Sat, 17 Sep 2022 09:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/talk/2022-quartoteam/</guid>
+      <description>
+
+
+
+&lt;h1 id=&#34;slides&#34;&gt;Slides
+  &lt;a href=&#34;#slides&#34;&gt;&lt;/a&gt;
+&lt;/h1&gt;
+&lt;iframe src=&#34;..&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
+
+

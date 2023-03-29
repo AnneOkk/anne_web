@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.96.0" />
+<title>Using NLP for examining newspaper articles about revenge bedtime procrastination | Anne-Kathrin Kleine</title>
+
+
+<meta property="twitter:site" content="@AnKaKleine">
+<meta property="twitter:creator" content="@AnKaKleine">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Personal website and portfolio of Anne-Kathrin Kleine.">
+
+
+<meta property="og:site_name" content="Anne-Kathrin Kleine">
+<meta property="og:title" content="Using NLP for examining newspaper articles about revenge bedtime procrastination | Anne-Kathrin Kleine">
+<meta property="og:description" content="Personal website and portfolio of Anne-Kathrin Kleine." />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://annekathrinkleine.netlify.app/project/revenge/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://annekathrinkleine.netlify.app/project/revenge/featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://annekathrinkleine.netlify.app/project/revenge/featured.jpg" >
+    
+    
+  <meta itemprop="name" content="Using NLP for examining newspaper articles about revenge bedtime procrastination">
+<meta itemprop="description" content="We used natural language processing (NLP) tools in R to analyse newspaper articles about revenge bedtime procrastination. We preselected articles that contain the keyword &ldquo;revenge bedtime procrastination&rdquo; in the title.">
+
+<meta itemprop="wordCount" content="1612"><meta itemprop="image" content="https://annekathrinkleine.netlify.app/project/revenge/featured.jpg">
+<meta itemprop="keywords" content="" />
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.30aa852651a3b60a986789222e86752f581da2081056dd6311350df5c0cb0140.css" integrity="sha256-MKqFJlGjtgqYZ4kiLoZ1L1gdoggQVt1jETUN9cDLAUA=" media="screen">
+  
+  
+  <script src="/panelset.min.8f4cba0107356728f266d94a12a4d18ef504eda8a9a284cda73675bae7884a68.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.8b5ea8073fc53326c522fc440b588fe565d1146f2d55ab786e884859aca97cd7.js" type="text/javascript"></script>
+  
+  <script data-goatcounter=""
+        async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+      <div class="grid-container">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://annekathrinkleine.netlify.app/" title="Home">
+      <img src="/img/pie_PNG50.png" class="dib db-l h2 w-auto" alt="Anne-Kathrin Kleine">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About me">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/project/" title="Project Portfolio">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/pdf/cv.pdf" title="">Resume</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Using NLP for examining newspaper articles about revenge bedtime procrastination</h1>
+        
+        
+        
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <p>We used natural language processing (NLP) tools in R to analyse newspaper articles about revenge bedtime procrastination. We preselected articles that contain the keyword <strong>revenge bedtime procrastination</strong> in the title.</p>
+
+
+
+
+<h2 id="data-preparation">Data preparation
+  <a href="#data-preparation"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+
+
+
+
+<h3 id="loading-standard-libraries-and-source-custom-functions">Loading standard libraries and source custom functions
+  <a href="#loading-standard-libraries-and-source-custom-functions"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(kableExtra)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(expss)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(lattice)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">source</span>(<span style="color:#d14">&#34;R/custom_functions.R&#34;</span>)
+</span></span></code></pre></div>
+
+
+
+<h3 id="reading-in-data-and-preprocessing">Reading in data and preprocessing
+  <a href="#reading-in-data-and-preprocessing"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>dat <span style="color:#000;font-weight:bold">&lt;-</span> readxl<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">read_excel</span>(<span style="color:#d14">&#34;data/newsdata_selected.xlsx&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>content <span style="color:#000;font-weight:bold">&lt;-</span> dat<span style="color:#000;font-weight:bold">$</span>Content
+</span></span></code></pre></div>
+
+
+
+<h2 id="text-mining">Text mining
+  <a href="#text-mining"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>First, we created an annotated data frame from the text data.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(udpipe)
+</span></span><span style="display:flex;"><span>ud_model <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">udpipe_download_model</span>(language <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;english&#34;</span>)
+</span></span></code></pre></div><p>The Universal Dependencies (UD) models contain 94 models of 61 languages, each consisting of a tokenizer, tagger, lemmatizer and dependency parser, all trained using the UD data. See 
+<a href="https://ufal.mff.cuni.cz/udpipe/1/models" target="_blank" rel="noopener">here</a> for more information. We downloaded the English language Universal Dependencies (UD) model to use it for our text data.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>ud_model <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">udpipe_load_model</span>(ud_model<span style="color:#000;font-weight:bold">$</span>file_model)
+</span></span><span style="display:flex;"><span>x <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">udpipe_annotate</span>(ud_model, x <span style="color:#000;font-weight:bold">=</span> content)
+</span></span><span style="display:flex;"><span>x <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">as.data.frame</span>(x)
+</span></span></code></pre></div><p>Next, we selected nouns and adjectives from the text data frame and removed duplicate entries.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(tm)
+</span></span><span style="display:flex;"><span>stats <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">subset</span>(x, upos <span style="color:#000;font-weight:bold">%in%</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;NOUN&#34;</span>, <span style="color:#d14">&#34;ADJ&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>stats2 <span style="color:#000;font-weight:bold">&lt;-</span> stats <span style="color:#000;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>     dplyr<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">group_by</span>(doc_id) <span style="color:#000;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>     dplyr<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">mutate</span>(sentences <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">paste0</span>(token, collapse <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34; &#34;</span>)) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>text_nouns <span style="color:#000;font-weight:bold">&lt;-</span> stats2[<span style="color:#000;font-weight:bold">!</span>(<span style="color:#900;font-weight:bold">duplicated</span>(stats2<span style="color:#000;font-weight:bold">$</span>sentences) <span style="color:#000;font-weight:bold">|</span> <span style="color:#900;font-weight:bold">duplicated</span>(stats2<span style="color:#000;font-weight:bold">$</span>sentences)),] <span style="color:#000;font-weight:bold">%&gt;%</span> dplyr<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">select</span>(sentences)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>evdes <span style="color:#000;font-weight:bold">&lt;-</span> text_nouns<span style="color:#000;font-weight:bold">$</span>sentences
+</span></span><span style="display:flex;"><span>evdes_1 <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">VectorSource</span>(evdes)
+</span></span><span style="display:flex;"><span>TextDoc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">Corpus</span>(evdes_1)
+</span></span></code></pre></div>
+
+
+
+<h3 id="cleaning-text-data">Cleaning text data
+  <a href="#cleaning-text-data"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Next, we cleaned the text data. Specifically, we removed unnecessary white space and converted special characters into white space. We also transformed letters to lower case, removed numbers, stop words (e.g., and, or&hellip;), and punctuation. Finally, used lemmatization for remaining words (see 
+<a href="https://www.rdocumentation.org/packages/textstem/versions/0.1.4/topics/lemmatize_strings" target="_blank" rel="noopener">here</a> for more information on lemmatization.)</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(textstem)
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#Replacing &#34;/&#34;, &#34;@&#34; and &#34;|&#34; with space</span>
+</span></span><span style="display:flex;"><span>toSpace <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">content_transformer</span>(<span style="color:#900;font-weight:bold">function</span>(x, pattern ) <span style="color:#900;font-weight:bold">gsub</span>(pattern, <span style="color:#d14">&#34; &#34;</span>, x))
+</span></span><span style="display:flex;"><span>TextDoc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tm_map</span>(TextDoc, toSpace, <span style="color:#d14">&#34;/&#34;</span>)
+</span></span><span style="display:flex;"><span>TextDoc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tm_map</span>(TextDoc, toSpace, <span style="color:#d14">&#34;@&#34;</span>)
+</span></span><span style="display:flex;"><span>TextDoc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tm_map</span>(TextDoc, toSpace, <span style="color:#d14">&#34;\\|&#34;</span>)
+</span></span><span style="display:flex;"><span>TextDoc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tm_map</span>(TextDoc, toSpace, <span style="color:#d14">&#34;\\|&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Convert the text to lower case</span>
+</span></span><span style="display:flex;"><span>TextDoc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tm_map</span>(TextDoc, <span style="color:#900;font-weight:bold">content_transformer</span>(tolower))
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Remove numbers</span>
+</span></span><span style="display:flex;"><span>TextDoc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tm_map</span>(TextDoc, removeNumbers)
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Remove english common stopwords</span>
+</span></span><span style="display:flex;"><span>TextDoc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tm_map</span>(TextDoc, removeWords, <span style="color:#900;font-weight:bold">stopwords</span>(<span style="color:#d14">&#34;english&#34;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Remove punctuations</span>
+</span></span><span style="display:flex;"><span>TextDoc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tm_map</span>(TextDoc, removePunctuation)
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Eliminate extra white spaces</span>
+</span></span><span style="display:flex;"><span>TextDoc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tm_map</span>(TextDoc, stripWhitespace)
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Text stemming - which reduces words to their root form</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#TextDoc &lt;- tm_map(TextDoc, stemDocument)</span>
+</span></span><span style="display:flex;"><span>TextDoc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tm_map</span>(TextDoc, lemmatize_strings)
+</span></span></code></pre></div><p>We also removed a couple of words that are not very informative for understanding the phenomenon, including words relating to time or abstract words like &ldquo;thing&rdquo;, &ldquo;many&rdquo;, &ldquo;medium&rdquo;, &hellip;</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>TextDoc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tm_map</span>(TextDoc, removeWords, <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;sleep&#34;</span>, <span style="color:#d14">&#34;day&#34;</span>, <span style="color:#d14">&#34;time&#34;</span>, <span style="color:#d14">&#34;hour&#34;</span>, <span style="color:#d14">&#34;night&#34;</span>,<span style="color:#d14">&#34;long&#34;</span>, <span style="color:#d14">&#34;late&#34;</span>, <span style="color:#d14">&#34;year&#34;</span>, <span style="color:#d14">&#34;minute&#34;</span>, <span style="color:#d14">&#34;week&#34;</span>, <span style="color:#d14">&#34;daytime&#34;</span>,
+</span></span><span style="display:flex;"><span>                                          <span style="color:#d14">&#34;people&#34;</span>, <span style="color:#d14">&#34;thing&#34;</span>, <span style="color:#d14">&#34;term&#34;</span>, <span style="color:#d14">&#34;way&#34;</span>, <span style="color:#d14">&#34;reason&#34;</span>, <span style="color:#d14">&#34;expert&#34;</span>, <span style="color:#d14">&#34;effect&#34;</span>, <span style="color:#d14">&#34;part&#34;</span>, <span style="color:#d14">&#34;life&#34;</span>, <span style="color:#d14">&#34;activity&#34;</span>, <span style="color:#d14">&#34;person&#34;</span>,
+</span></span><span style="display:flex;"><span>                                          <span style="color:#d14">&#34;self&#34;</span>, <span style="color:#d14">&#34;consequence&#34;</span>, <span style="color:#d14">&#34;read&#34;</span>, <span style="color:#d14">&#34;amount&#34;</span>, <span style="color:#d14">&#34;problem&#34;</span>, <span style="color:#d14">&#34;behaviour&#34;</span>, <span style="color:#d14">&#34;behavior&#34;</span>, <span style="color:#d14">&#34;concept&#34;</span>,
+</span></span><span style="display:flex;"><span>                                          <span style="color:#d14">&#34;many&#34;</span>, <span style="color:#d14">&#34;medium&#34;</span>, <span style="color:#d14">&#34;important&#34;</span>, <span style="color:#d14">&#34;much&#34;</span>, <span style="color:#d14">&#34;enough&#34;</span>, <span style="color:#d14">&#34;next&#34;</span>, <span style="color:#d14">&#34;enough&#34;</span>, <span style="color:#d14">&#34;important&#34;</span>, <span style="color:#d14">&#34;good&#34;</span>,
+</span></span><span style="display:flex;"><span>                                          <span style="color:#d14">&#34;little&#34;</span>, <span style="color:#d14">&#34;right&#34;</span>, <span style="color:#d14">&#34;high&#34;</span>, <span style="color:#d14">&#34;hard&#34;</span>, <span style="color:#d14">&#34;new&#34;</span>, <span style="color:#d14">&#34;even&#34;</span>, <span style="color:#d14">&#34;bad&#34;</span>, <span style="color:#d14">&#34;close&#34;</span>))
+</span></span></code></pre></div><p>Additionally, we create a text document with our keywords (&ldquo;revenge&rdquo;, &ldquo;bedtime&rdquo;, &ldquo;procrastination&rdquo;) removed.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>TextDoc_wc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tm_map</span>(TextDoc, removeWords, <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;revenge&#34;</span>, <span style="color:#d14">&#34;bedtime&#34;</span>, <span style="color:#d14">&#34;sleep&#34;</span>, <span style="color:#d14">&#34;procrastination&#34;</span>, <span style="color:#d14">&#34;day&#34;</span>))
+</span></span></code></pre></div><p>We also removed words that appear in less than 90 percent of all documents.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Build a term-document matrix</span>
+</span></span><span style="display:flex;"><span>TextDoc_tdm <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">TermDocumentMatrix</span>(TextDoc)
+</span></span><span style="display:flex;"><span>TextDoc_dtm <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">DocumentTermMatrix</span>(TextDoc)
+</span></span><span style="display:flex;"><span>TextDoc_tdm <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">removeSparseTerms</span>(TextDoc_tdm, <span style="color:#099">.90</span>)
+</span></span><span style="display:flex;"><span>TextDoc_dtm <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">removeSparseTerms</span>(TextDoc_dtm, <span style="color:#099">.90</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TextDoc_tdm_wc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">TermDocumentMatrix</span>(TextDoc_wc)
+</span></span><span style="display:flex;"><span>TextDoc_dtm_wc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">DocumentTermMatrix</span>(TextDoc_wc)
+</span></span><span style="display:flex;"><span>TextDoc_tdm_wc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">removeSparseTerms</span>(TextDoc_tdm_wc, <span style="color:#099">.90</span>)
+</span></span><span style="display:flex;"><span>TextDoc_dtm_wc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">removeSparseTerms</span>(TextDoc_dtm_wc, <span style="color:#099">.90</span>)
+</span></span></code></pre></div><p>We sorted the results by the number the terms appear in the texts (decreasing).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>dtm_m <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">as.matrix</span>(TextDoc_tdm)
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Sort by descearing value of frequency</span>
+</span></span><span style="display:flex;"><span>dtm_v <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">sort</span>(<span style="color:#900;font-weight:bold">rowSums</span>(dtm_m),decreasing<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">TRUE</span>)
+</span></span><span style="display:flex;"><span>dtm_d <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">data.frame</span>(word <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">names</span>(dtm_v),freq<span style="color:#000;font-weight:bold">=</span>dtm_v)
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Display the top 5 most frequent words</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dtm_m_wc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">as.matrix</span>(TextDoc_tdm_wc)
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Sort by descearing value of frequency</span>
+</span></span><span style="display:flex;"><span>dtm_v_wc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">sort</span>(<span style="color:#900;font-weight:bold">rowSums</span>(dtm_m_wc),decreasing<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">TRUE</span>)
+</span></span><span style="display:flex;"><span>dtm_d_wc <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">data.frame</span>(word <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">names</span>(dtm_v_wc),freq<span style="color:#000;font-weight:bold">=</span>dtm_v_wc)
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Display the top 5 most frequent words</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#</span>
+</span></span></code></pre></div><p>As was to be expected, the most frequently appearing words in the original documents are our keywords.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">head</span>(dtm_d, <span style="color:#099">5</span>)
+</span></span></code></pre></div><pre><code>                           word freq
+procrastination procrastination   47
+bedtime                 bedtime   44
+bed                         bed   36
+revenge                 revenge   33
+work                       work   29
+</code></pre>
+<p>But if the keywords are removed, the ten most frequent words are:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">head</span>(dtm_d_wc, <span style="color:#099">10</span>)
+</span></span></code></pre></div><pre><code>             word freq
+bed           bed   36
+work         work   29
+phone       phone   20
+control   control   18
+health     health   17
+schedule schedule   17
+light       light   13
+social     social   13
+pandemic pandemic   12
+study       study   11
+</code></pre>
+
+
+
+
+<h3 id="a-word-cloud-of-the-most-common-nouns-and-adjectives">A word cloud of the most common nouns and adjectives
+  <a href="#a-word-cloud-of-the-most-common-nouns-and-adjectives"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(wordcloud)
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#generate word cloud</span>
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">set.seed</span>(<span style="color:#099">1234</span>)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">wordcloud</span>(words <span style="color:#000;font-weight:bold">=</span> dtm_d_wc<span style="color:#000;font-weight:bold">$</span>word, freq <span style="color:#000;font-weight:bold">=</span> dtm_d<span style="color:#000;font-weight:bold">$</span>freq, min.freq <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">5</span>,
+</span></span><span style="display:flex;"><span>          scale<span style="color:#000;font-weight:bold">=</span><span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">3</span>,<span style="color:#099">.4</span>), 
+</span></span><span style="display:flex;"><span>          max.words<span style="color:#000;font-weight:bold">=</span><span style="color:#099">100</span>, random.order<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">FALSE</span>, rot.per<span style="color:#000;font-weight:bold">=</span><span style="color:#099">0.40</span>, 
+</span></span><span style="display:flex;"><span>          colors<span style="color:#000;font-weight:bold">=</span><span style="color:#900;font-weight:bold">brewer.pal</span>(<span style="color:#099">8</span>, <span style="color:#d14">&#34;Dark2&#34;</span>))
+</span></span></code></pre></div><img src="index_files/figure-gfm/unnamed-chunk-13-1.png" width="768" />
+
+
+
+
+<h3 id="the-most-frequently-occurring-nouns-and-adjectives">The most frequently occurring nouns and adjectives
+  <a href="#the-most-frequently-occurring-nouns-and-adjectives"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>stats <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">subset</span>(x, upos <span style="color:#000;font-weight:bold">%in%</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;NOUN&#34;</span>, <span style="color:#d14">&#34;ADJ&#34;</span>))
+</span></span><span style="display:flex;"><span>stats <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">txt_freq</span>(x <span style="color:#000;font-weight:bold">=</span> stats<span style="color:#000;font-weight:bold">$</span>lemma)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dtm_d_wc<span style="color:#000;font-weight:bold">$</span>word <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">factor</span>(dtm_d_wc<span style="color:#000;font-weight:bold">$</span>word, levels <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">rev</span>(dtm_d_wc<span style="color:#000;font-weight:bold">$</span>word))
+</span></span><span style="display:flex;"><span>dtm_head <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">head</span>(dtm_d_wc, <span style="color:#099">22</span>)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">barchart</span>(word <span style="color:#000;font-weight:bold">~</span> freq, data <span style="color:#000;font-weight:bold">=</span> dtm_head, col <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;cadetblue&#34;</span>, main <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Most occurring nouns and adjectives&#34;</span>, xlab <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Freq&#34;</span>)
+</span></span></code></pre></div><img src="index_files/figure-gfm/unnamed-chunk-14-1.png" width="768" />
+
+
+
+
+<h3 id="showing-connections-between-words">Showing connections between words
+  <a href="#showing-connections-between-words"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>We created a cluster dendogram to show connections between words, with a sparsity threshold of 60 percent.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(tidytext)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dtm_top <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">removeSparseTerms</span>(TextDoc_tdm, sparse <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">.60</span>)
+</span></span><span style="display:flex;"><span>TextDoc_tdm_m <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">as.matrix</span>(dtm_top)
+</span></span><span style="display:flex;"><span>distance <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">dist</span>(TextDoc_tdm_m, method <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;euclidean&#34;</span>)
+</span></span><span style="display:flex;"><span>fit <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">hclust</span>(distance, method <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;complete&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">plot</span>(fit)
+</span></span></code></pre></div><img src="index_files/figure-gfm/unnamed-chunk-15-1.png" width="768" />
+
+
+
+
+<h3 id="topic-modeling">Topic modeling
+  <a href="#topic-modeling"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+
+
+
+
+<h4 id="we-started-with-10-topics">We started with 10 topics
+  <a href="#we-started-with-10-topics"></a>
+</h4>
+<p>We again selected the text matrix without the keywords (&ldquo;revenge&rdquo;, &ldquo;bedtime&rdquo;, and &ldquo;procrastination&rdquo;)</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(topicmodels)
+</span></span><span style="display:flex;"><span>rowTotals <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">apply</span>(TextDoc_dtm_wc , <span style="color:#099">1</span>, sum)
+</span></span><span style="display:flex;"><span>TextDoc_dtm   <span style="color:#000;font-weight:bold">&lt;-</span> TextDoc_dtm_wc[rowTotals<span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">3</span>, ] 
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># set a seed so that the output of the model is predictable</span>
+</span></span><span style="display:flex;"><span>ap_lda <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">LDA</span>(TextDoc_dtm, k <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">10</span>, control <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">list</span>(seed <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1234</span>))
+</span></span><span style="display:flex;"><span>ap_lda
+</span></span></code></pre></div><pre><code>A LDA_VEM topic model with 10 topics.
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic">#&gt; A LDA_VEM topic model with 2 topics.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ap_topics <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tidy</span>(ap_lda, matrix <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;beta&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ap_top_terms <span style="color:#000;font-weight:bold">&lt;-</span> ap_topics <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">group_by</span>(topic) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">slice_max</span>(beta, n <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">4</span>) <span style="color:#000;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">ungroup</span>() <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">arrange</span>(topic, <span style="color:#000;font-weight:bold">-</span>beta)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ap_top_terms <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">mutate</span>(term <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">reorder_within</span>(term, beta, topic)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">ggplot</span>(<span style="color:#900;font-weight:bold">aes</span>(beta, term, fill <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">factor</span>(topic))) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">geom_col</span>(show.legend <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">FALSE</span>) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">facet_wrap</span>(<span style="color:#000;font-weight:bold">~</span> topic, scales <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;free&#34;</span>) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">scale_y_reordered</span>()
+</span></span></code></pre></div><img src="index_files/figure-gfm/unnamed-chunk-16-1.png" width="768" />
+<p>The visualisation displays the per-topic-per-word probabilities (called beta). For each word combination, the model computes the probability of that term being generated from that topic. For example, the most common words in topic 1 include &ldquo;part&rdquo;, &ldquo;lack&rdquo;, and &ldquo;fund&rdquo;. Maybe sth. related to capital and funding? Topic five revolves around issues with customers and service. The usefulness of the topic modeling always depends on the text data. And finding the right number of topics to extract is an iterative approach.</p>
+
+
+
+
+<h4 id="heres-a-solution-for-8-topics">Here&rsquo;s a solution for 8 topics:
+  <a href="#heres-a-solution-for-8-topics"></a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># set a seed so that the output of the model is predictable</span>
+</span></span><span style="display:flex;"><span>ap_lda <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">LDA</span>(TextDoc_dtm, k <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">8</span>, control <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">list</span>(seed <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1234</span>))
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#&gt; A LDA_VEM topic model with 2 topics.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ap_topics <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tidy</span>(ap_lda, matrix <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;beta&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ap_top_terms <span style="color:#000;font-weight:bold">&lt;-</span> ap_topics <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">group_by</span>(topic) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">slice_max</span>(beta, n <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">5</span>) <span style="color:#000;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">ungroup</span>() <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">arrange</span>(topic, <span style="color:#000;font-weight:bold">-</span>beta)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ap_top_terms <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">mutate</span>(term <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">reorder_within</span>(term, beta, topic)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">ggplot</span>(<span style="color:#900;font-weight:bold">aes</span>(beta, term, fill <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">factor</span>(topic))) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">geom_col</span>(show.legend <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">FALSE</span>) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">facet_wrap</span>(<span style="color:#000;font-weight:bold">~</span> topic, scales <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;free&#34;</span>) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">scale_y_reordered</span>()
+</span></span></code></pre></div><img src="index_files/figure-gfm/unnamed-chunk-17-1.png" width="768" />
+
+
+
+
+<h4 id="heres-a-solution-for-6-topics">Here&rsquo;s a solution for 6 topics:
+  <a href="#heres-a-solution-for-6-topics"></a>
+</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># set a seed so that the output of the model is predictable</span>
+</span></span><span style="display:flex;"><span>ap_lda <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">LDA</span>(TextDoc_dtm, k <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">6</span>, control <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">list</span>(seed <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1234</span>))
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#&gt; A LDA_VEM topic model with 2 topics.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ap_topics <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">tidy</span>(ap_lda, matrix <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;beta&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ap_top_terms <span style="color:#000;font-weight:bold">&lt;-</span> ap_topics <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">group_by</span>(topic) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">slice_max</span>(beta, n <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">5</span>) <span style="color:#000;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">ungroup</span>() <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">arrange</span>(topic, <span style="color:#000;font-weight:bold">-</span>beta)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ap_top_terms <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">mutate</span>(term <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">reorder_within</span>(term, beta, topic)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">ggplot</span>(<span style="color:#900;font-weight:bold">aes</span>(beta, term, fill <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">factor</span>(topic))) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">geom_col</span>(show.legend <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">FALSE</span>) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">facet_wrap</span>(<span style="color:#000;font-weight:bold">~</span> topic, scales <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;free&#34;</span>) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">scale_y_reordered</span>()
+</span></span></code></pre></div><img src="index_files/figure-gfm/unnamed-chunk-18-1.png" width="768" />
+<p>See 
+<a href="https://www.tidytextmining.com/topicmodeling.html" target="_blank" rel="noopener">here</a> for more information on topic modeling.</p>
+<p>We could also consider examining the words with the greatest difference in beta between two topics. This can be estimated based on the log ratio of the two. We can filter for relatively common words to make the example more concrete. Here, we filter for words with a beta greater than 0.005.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(tidyr)
+</span></span><span style="display:flex;"><span>beta_wide <span style="color:#000;font-weight:bold">&lt;-</span> ap_topics <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">mutate</span>(topic <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">paste0</span>(<span style="color:#d14">&#34;topic&#34;</span>, topic)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">pivot_wider</span>(names_from <span style="color:#000;font-weight:bold">=</span> topic, values_from <span style="color:#000;font-weight:bold">=</span> beta) <span style="color:#000;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">filter</span>(topic1 <span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">.005</span> <span style="color:#000;font-weight:bold">|</span> topic2 <span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">.005</span>) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">mutate</span>(log_ratio <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">log2</span>(topic2 <span style="color:#000;font-weight:bold">/</span> topic1))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>beta_wide
+</span></span></code></pre></div><pre><code># A tibble: 167 × 8
+   term     topic1    topic2    topic3    topic4    topic5   topic6 log_ratio
+   &lt;chr&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+ 1 alarm   0.00904 6.55e- 75 5.20e-  3 8.16e-242 4.63e-104 1.31e-74 -240.    
+ 2 balance 0.00904 2.67e-104 2.07e-104 2.80e-248 2.46e-104 9.48e-75 -337.    
+ 3 bed     0.0422  5.92e-  2 1.32e-  2 1.89e-  2 3.67e-  2 2.47e-74    0.489 
+ 4 binge   0.00602 9.51e- 75 8.36e- 75 6.29e-  3 5.69e-  3 1.89e-74 -239.    
+ 5 brain   0.0120  1.18e-  2 2.38e-  7 6.29e-  3 1.14e-  2 1.18e- 2   -0.0258
+ 6 busy    0.00602 3.72e- 44 5.13e-  3 1.26e-  2 8.49e-  5 1.95e-74 -137.    
+ 7 chinese 0.00904 3.72e- 44 2.59e-104 1.52e-247 3.07e-104 1.18e- 2 -137.    
+ 8 clock   0.00602 5.92e-  3 1.04e-  2 1.43e-243 6.53e- 75 1.35e-74   -0.0258
+ 9 concern 0.00301 5.92e-  3 3.15e-104 5.91e-240 5.66e- 75 1.17e-74    0.974 
+10 control 0.0151  5.92e-  3 1.82e-  2 6.29e-  3 1.99e-  2 4.71e- 2   -1.35  
+# … with 157 more rows
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>beta_wide <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">group_by</span>(direction <span style="color:#000;font-weight:bold">=</span> log_ratio <span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">0</span>) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">slice_max</span>(<span style="color:#900;font-weight:bold">abs</span>(log_ratio), n <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">10</span>) <span style="color:#000;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">ungroup</span>() <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">mutate</span>(term <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">reorder</span>(term, log_ratio)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">ggplot</span>(<span style="color:#900;font-weight:bold">aes</span>(log_ratio, term)) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">geom_col</span>(fill <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;#b0157a&#34;</span>) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">labs</span>(x <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Log2 ratio of beta in topic 2 / topic 1&#34;</span>, y <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">NULL</span>)
+</span></span></code></pre></div><img src="index_files/figure-gfm/unnamed-chunk-19-1.png" width="768" />
+
+
+
+
+<h3 id="sentiment-analysis">Sentiment analysis
+  <a href="#sentiment-analysis"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Sentiment Analysis is a process of extracting opinions that have different scores like positive, negative or neutral. Based on sentiment analysis, we can find out the nature of opinion or sentences in the newspaper articles.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(tidytext)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(textdata)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nrc_joy <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">get_sentiments</span>(<span style="color:#d14">&#34;nrc&#34;</span>) <span style="color:#000;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">filter</span>(sentiment <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#34;joy&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>joyful_aspects <span style="color:#000;font-weight:bold">&lt;-</span> dtm_d_wc <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">inner_join</span>(nrc_joy) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">count</span>(word, sort <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>)
+</span></span></code></pre></div><p>A wordcloud of the joyful and pleasant aspects of revenge bedtime procrastination.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(wordcloud)
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">#generate word cloud</span>
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">set.seed</span>(<span style="color:#099">1234</span>)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">wordcloud</span>(words <span style="color:#000;font-weight:bold">=</span> joyful_aspects<span style="color:#000;font-weight:bold">$</span>word, freq <span style="color:#000;font-weight:bold">=</span> dtm_d<span style="color:#000;font-weight:bold">$</span>freq, min.freq <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">5</span>,
+</span></span><span style="display:flex;"><span>          scale<span style="color:#000;font-weight:bold">=</span><span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">3</span>,<span style="color:#099">.4</span>), 
+</span></span><span style="display:flex;"><span>          max.words<span style="color:#000;font-weight:bold">=</span><span style="color:#099">100</span>, random.order<span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">FALSE</span>, rot.per<span style="color:#000;font-weight:bold">=</span><span style="color:#099">0.40</span>, 
+</span></span><span style="display:flex;"><span>          colors<span style="color:#000;font-weight:bold">=</span><span style="color:#900;font-weight:bold">brewer.pal</span>(<span style="color:#099">8</span>, <span style="color:#d14">&#34;Dark2&#34;</span>))
+</span></span></code></pre></div><img src="index_files/figure-gfm/unnamed-chunk-21-1.png" width="768" />
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Somehow, &#34;work&#34; gets an extremely high positive value. We remove the word for the sentiment analysis. </span>
+</span></span><span style="display:flex;"><span>dtm_d_wc <span style="color:#000;font-weight:bold">&lt;-</span> dtm_d_wc[<span style="color:#000;font-weight:bold">-</span> <span style="color:#900;font-weight:bold">grep</span>(<span style="color:#d14">&#34;work&#34;</span>, dtm_d_wc<span style="color:#000;font-weight:bold">$</span>word),]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rbc_sentiment <span style="color:#000;font-weight:bold">&lt;-</span> dtm_d_wc <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">inner_join</span>(<span style="color:#900;font-weight:bold">get_sentiments</span>(<span style="color:#d14">&#34;bing&#34;</span>)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">pivot_wider</span>(names_from <span style="color:#000;font-weight:bold">=</span> sentiment, values_from <span style="color:#000;font-weight:bold">=</span> freq, values_fill <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>) <span style="color:#000;font-weight:bold">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">mutate</span>(sentiment <span style="color:#000;font-weight:bold">=</span> positive <span style="color:#000;font-weight:bold">-</span> negative)
+</span></span></code></pre></div><p>Now, we can plot the frequency of positive and negative words across all articles.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>rbc_sentiment<span style="color:#000;font-weight:bold">$</span>index <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">seq.int</span>(<span style="color:#900;font-weight:bold">nrow</span>(rbc_sentiment)) 
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">ggplot</span>(rbc_sentiment, <span style="color:#900;font-weight:bold">aes</span>(index, sentiment)) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">geom_col</span>(show.legend <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">FALSE</span>) 
+</span></span></code></pre></div><img src="index_files/figure-gfm/unnamed-chunk-23-1.png" width="768" />
+<p>We see that negative words appear more frequently in the articles.</p>
+<p>Finally, we take a look at the particulalry negative and positive words (with sentiment values qual to or greater than three):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>rbc_sentiment_strong <span style="color:#000;font-weight:bold">&lt;-</span> rbc_sentiment <span style="color:#000;font-weight:bold">%&gt;%</span> <span style="color:#900;font-weight:bold">filter</span>(sentiment <span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">3</span> <span style="color:#000;font-weight:bold">|</span> sentiment <span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">-3</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">ggplot</span>(rbc_sentiment_strong, <span style="color:#900;font-weight:bold">aes</span>(word, sentiment)) <span style="color:#000;font-weight:bold">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">geom_col</span>(show.legend <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">FALSE</span>, fill <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;#4e1391&#34;</span>) 
+</span></span></code></pre></div><img src="index_files/figure-gfm/unnamed-chunk-24-1.png" width="768" />
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">January 1, 0001</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">8 minute read, 1612 words</dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://annekathrinkleine.netlify.app/project/events/">&larr; Using NLP for examining entrepreneurs&#39; business errors</a>
+  
+  
+  
+</div>
+
+      </footer>
+    </article>
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2023 Anne-Kathrin Kleine
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/AnKaKleine" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.strava.com/athletes/56021200" title="strava" target="_blank" rel="noopener">
+      <i class="fab fa-strava fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/AnneOkk" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="http://orcid.org/0000-0003-1919-2834" title="orcid" target="_blank" rel="noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://de.linkedin.com/in/anne-kathrin-kleine/" title="linkedin-in" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=521wTxUAAAAJ&amp;hl=en&amp;oi=ao" title="google-scholar" target="_blank" rel="noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+</footer>
+
+      </div>
+    </body>
+</html>
