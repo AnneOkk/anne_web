@@ -125,8 +125,8 @@ enableEmoji = true
     url = "/about/"
     weight = 1
   [[menu.header]]
-    name = "Blog"
-    title = "Blog"
+    name = "Research"
+    title = "Research"
     url = "/blog/"
     weight = 2
   [[menu.header]]
@@ -144,7 +144,8 @@ enableEmoji = true
     url = "/pdf/cv.pdf"
     weight = 5
   [[menu.header]]
-    name = "search"
+    name = "Search"
+    url = "/search/"
     weight = 6
 
 

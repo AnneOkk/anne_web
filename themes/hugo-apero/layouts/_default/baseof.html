@@ -4,7 +4,7 @@
     <body>
       <div class="grid-container{{ if .Params.layout }} {{ .Params.layout }}{{ end }}{{ if .IsHome }} home{{ end }}">
         {{- block "header" . }}{{- partial "header.html" . -}}{{- end }}
-        {{- block "main" . }}{{- end }}
+        {{- block "main" . }}{{- partial "search.html" . -}}{{- end }}
         {{- block "footer" . }}{{- partial "footer.html" . -}}{{- end }}
       </div>
     </body>
