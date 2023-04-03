@@ -143,10 +143,6 @@ enableEmoji = true
     name = "Resume"
     url = "/pdf/cv.pdf"
     weight = 5
-  [[menu.header]]
-    name = "Search"
-    url = "/search/"
-    weight = 6
 
 
   # Configure footer
