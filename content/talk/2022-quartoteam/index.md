@@ -25,13 +25,16 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: 
-
+  url: https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/#/title-slide
+- icon: github
+  icon_pack: fab
+  name: materials
+  url: https://github.com/AnneOkk/Quarto_workshop
 ---
 
 # Slides 
 
-<iframe src=".." width="672" height="400px" data-external="1"></iframe>
+<iframe src="https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/#/title-slide" width="672" height="400px" data-external="1"></iframe>
 
  
 

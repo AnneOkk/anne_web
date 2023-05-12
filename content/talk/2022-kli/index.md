@@ -25,7 +25,7 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: https://anneokk.netlify.app/slides/day_one.html
+  url: "/pdf/day_one-compressed.pdf" 
 - icon: github
   icon_pack: fab
   name: materials
@@ -36,7 +36,7 @@ links:
 
 #### 1) Install R 
 
-Please make sure that you have a [recent R version](https://cran.rstudio.com/) installed (>= 4.0.0 is recommended). 
+Please make sure that you have a [recent R version](https://cran.rstudio.com/) installed. 
 You can check your R Version in the Console (in RStudio) by typing:
 `R.version.string`
 
@@ -113,16 +113,16 @@ Please [sign up on osf](https://osf.io/) before the workshop.
 
 # Slides 
 
-#### [Day 1](https://anneokk.netlify.app/slides/day_one.html)
+#### Day 1
 
 
-<iframe src="https://anneokk.netlify.app/slides/day_one.html#1" width="672" height="400px" data-external="1"></iframe>
+Available upon request.
 
  
-#### [Day 2](https://anneokk.netlify.app/slides/day_two.html)
+#### Day 2
 
 
-<iframe src="https://anneokk.netlify.app/slides/day_two.html#1" width="672" height="400px" data-external="1"></iframe>
+Available upon request.
 
 
 # Schedule
