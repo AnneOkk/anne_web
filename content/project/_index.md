@@ -1,6 +1,6 @@
 ---
-title: Data Projects
-description: "My portfolio includes data analysis projects and shiny apps."
+title: Scientific projects and beyond
+description: "A wild collection of data analysis projects, shiny apps, and open science initiatives I support or am part of."
 author: ""
 show_post_thumbnail: true
 show_author_byline: true
