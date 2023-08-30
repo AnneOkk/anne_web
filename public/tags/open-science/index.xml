@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>open science on Anne-Kathrin Kleine</title>
+    <link>https://annekathrinkleine.netlify.app/tags/open-science/</link>
+    <description>Recent content in open science on Anne-Kathrin Kleine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://annekathrinkleine.netlify.app/tags/open-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recommender for the Peer Community in Registered Reports (PCI RR)</title>
+      <link>https://annekathrinkleine.netlify.app/project/pcirr/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/project/pcirr/</guid>
+      <description>&lt;p&gt;PCI Registered Reports (PCI RR) is a dedicated community that reviews and recommends Registered Reports across different disciplines. The two-stage process involves reviewing study proposals and pre-accepting them (before research is conducted). Authors of recommended RRs have the option to publish in PCI RR-friendly journals. PCI RR aims to become a central hub for Registered Reports in all areas of research. For more info, please visit the 
+&lt;a href=&#34;https://rr.peercommunityin.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PCI RR Website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://annekathrinkleine.netlify.app/img/pcirr.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
+
+

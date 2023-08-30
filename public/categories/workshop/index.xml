@@ -48,7 +48,7 @@
 &lt;h1 id=&#34;slides&#34;&gt;Slides
   &lt;a href=&#34;#slides&#34;&gt;&lt;/a&gt;
 &lt;/h1&gt;
-&lt;iframe src=&#34;..&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;&lt;/iframe&gt;
+&lt;iframe src=&#34;https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/#/title-slide&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;&lt;/iframe&gt;
 </description>
     </item>
     
@@ -73,7 +73,7 @@
   &lt;a href=&#34;#1-install-r&#34;&gt;&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;Please make sure that you have a 
-&lt;a href=&#34;https://cran.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recent R version&lt;/a&gt; installed (&amp;gt;= 4.0.0 is recommended).
+&lt;a href=&#34;https://cran.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recent R version&lt;/a&gt; installed.
 You can check your R Version in the Console (in RStudio) by typing:
 &lt;code&gt;R.version.string&lt;/code&gt;&lt;/p&gt;
 &lt;img src=&#34;images/rvers.png&#34; width=&#34;50%&#34; /&gt;
@@ -171,20 +171,18 @@ Please
 
 
 
-&lt;h4 id=&#34;day-1httpsanneokknetlifyappslidesday_onehtml&#34;&gt;
-&lt;a href=&#34;https://anneokk.netlify.app/slides/day_one.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Day 1&lt;/a&gt;
-  &lt;a href=&#34;#day-1httpsanneokknetlifyappslidesday_onehtml&#34;&gt;&lt;/a&gt;
+&lt;h4 id=&#34;day-1&#34;&gt;Day 1
+  &lt;a href=&#34;#day-1&#34;&gt;&lt;/a&gt;
 &lt;/h4&gt;
-&lt;iframe src=&#34;https://anneokk.netlify.app/slides/day_one.html#1&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Available upon request.&lt;/p&gt;
 
 
 
 
-&lt;h4 id=&#34;day-2httpsanneokknetlifyappslidesday_twohtml&#34;&gt;
-&lt;a href=&#34;https://anneokk.netlify.app/slides/day_two.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Day 2&lt;/a&gt;
-  &lt;a href=&#34;#day-2httpsanneokknetlifyappslidesday_twohtml&#34;&gt;&lt;/a&gt;
+&lt;h4 id=&#34;day-2&#34;&gt;Day 2
+  &lt;a href=&#34;#day-2&#34;&gt;&lt;/a&gt;
 &lt;/h4&gt;
-&lt;iframe src=&#34;https://anneokk.netlify.app/slides/day_two.html#1&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Available upon request.&lt;/p&gt;
 
 
 

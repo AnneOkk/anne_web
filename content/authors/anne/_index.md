@@ -34,7 +34,7 @@ organizations:
 - name: LMU Munich
   url: lmu.de/en/index.html
   
-role: Data Scientist & Psychological Researcher
+role: Behavioral Researcher
 
 social:
 - icon: twitter

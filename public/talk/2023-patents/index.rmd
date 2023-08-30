@@ -1,7 +1,7 @@
 ---
 title: 'Advancing Mental Health Care with AI-Enabled Precision Psychiatry Tools: A Patent Review'
 draft: false
-event: 'Symposium on Human-AI-Interaction in Different Professional Domains at the ICPS Congress in Brussels, Belgium'
+event: 'Chairing a Symposium on Human-AI-Interaction in Different Professional Domains at the ICPS Congress in Brussels, Belgium'
 event_url: https://www.psychologicalscience.org/conventions/icps-2023
 location: Brussels, Belgium
 summary: "A glimpse into the future - how AI-enabled tools may contribute to the advancement of precision psychiatry"

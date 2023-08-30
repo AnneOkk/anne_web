@@ -1,7 +1,7 @@
 ---
 ## Configure sidebar content in narrow column
 author: "Anne-Kathrin Kleine"
-role: "Postdoctoral Researcher <br />Human-AI Interaction <br />LMU Munich"
+role: "Postdoctoral Researcher and PI<br />Human-AI Interaction in Healthcare<br />LMU Munich"
 avatar_shape: circle # circle, square, rounded
 show_social_links: true # specify social accounts in site config
 audio_link_label: "How my dad says my name"
