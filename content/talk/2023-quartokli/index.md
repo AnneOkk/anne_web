@@ -1,7 +1,7 @@
 ---
 title: Introduction to reproducible data analysis with R and Quarto
 draft: false
-event: 'KLI Course on reproducible data analysis with R and Quarto'
+event: 'KLI course on reproducible data analysis with R and Quarto'
 event_url: 
 location: remote
 summary: "A workshop on data analysis, reporting, and collaboration using R and Quarto."
@@ -9,7 +9,7 @@ summary: "A workshop on data analysis, reporting, and collaboration using R and 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: "2023-11-09T09:00:00Z"
-date_end: "2023-11-10T15:00:00Z"
+date_end: "2023-11-10T13:00:00Z"
 all_day: true
 publishdate: "2023-11-01"
 categories:
