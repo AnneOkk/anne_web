@@ -11,7 +11,7 @@ summary: "A workshop on data analysis, reporting, and collaboration using R and 
 date: "2023-11-09T09:00:00Z"
 date_end: "2023-11-10T13:00:00Z"
 all_day: true
-publishdate: "2023-11-01"
+publishdate: "2023-11-08"
 categories:
   - workshop
   - r 
