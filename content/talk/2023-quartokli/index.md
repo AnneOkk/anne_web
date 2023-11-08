@@ -32,7 +32,7 @@ links:
   url: https://github.com/AnneOkk/quartonov23
 ---
 
-# Slides 
+# [Slides Day 1](https://anneokk.quarto.pub/introduction-to-reproducible-data-analysis-with-r-and-quarto/#/title-slide)
 
 <iframe src="https://anneokk.quarto.pub/introduction-to-reproducible-data-analysis-with-r-and-quarto/#/title-slide" width="672" height="400px" data-external="1"></iframe>
 
