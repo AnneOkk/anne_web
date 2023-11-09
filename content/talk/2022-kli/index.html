@@ -1,0 +1,227 @@
+---
+title: R Markdown Workshop
+draft: false
+event: 'Educational Series for Behavioral Researchers in the Netherlands, Kurt-Lewin Institute'
+event_url: 
+location: remote
+summary: "A workshop on data analysis, reporting, and collaboration using R, R Markdown, osf, blogdown, and GitHub."
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2022-05-24T09:00:00Z"
+date_end: "2022-05-25T15:00:00Z"
+all_day: true
+publishdate: "2022-05-24"
+categories:
+  - workshop
+  - r 
+  - rmarkdown
+featured: no
+image:
+  focal_point: 'center'
+  preview_only: no
+projects: []
+links:
+- icon: images
+  icon_pack: fas
+  name: slides
+  url: "/pdf/day_one-compressed.pdf" 
+- icon: github
+  icon_pack: fab
+  name: materials
+  url: https://github.com/AnneOkk/Workshop_Rmarkdown/tree/master/content/blog/Workshop_day_one
+---
+
+
+
+<div id="preparation" class="section level1">
+<h1>Preparation</h1>
+<div id="install-r" class="section level4">
+<h4>1) Install R</h4>
+<p>Please make sure that you have a <a href="https://cran.rstudio.com/">recent R version</a> installed.
+You can check your R Version in the Console (in RStudio) by typing:
+<code>R.version.string</code></p>
+<p><img src="images/rvers.png" width="50%" /></p>
+<p>If you are using an older R version, please install the <a href="https://cran.rstudio.com/">newest R version</a>.</p>
+</div>
+<div id="install-r-studio" class="section level4">
+<h4>2) Install R Studio</h4>
+<p>Go to the <a href="https://www.rstudio.com/">RStudio website</a> and download the newest version if you are using an older version of RStudio (if in doubt, better update!). Simply follow the download instructions. The new version will be available next time you open RStudio.</p>
+</div>
+<div id="install-necessary-packages" class="section level4">
+<h4>3) Install necessary packages</h4>
+<p>You need several R packages for the workshop. Please make sure to install these packages before the workshop. The easiest way to do so is by running this code in R:</p>
+<pre class="tpl"><code>cran_packs &lt;- c(&quot;learnr&quot;, &quot;bookdown&quot;, &quot;stargazer&quot;,
+                &quot;officer&quot;, &quot;rticles&quot;, &quot;webshot&quot;,
+                &quot;tidyverse&quot;, &quot;remotes&quot;, &quot;magick&quot;, 
+                &quot;kableExtra&quot;, &quot;vtable&quot;, &quot;devtools&quot;)</code></pre>
+<pre class="tpl"><code>install.packages(cran_packs, dependencies = TRUE)</code></pre>
+<pre class="tpl"><code>github_packs &lt;- c(&#39;rstudio/blogdown&#39;,
+                  &#39;haozhu233/kableExtra&#39;, &#39;crsh/papaja&#39;)</code></pre>
+<pre class="tpl"><code>remotes::install_github(github_packs, dependencies = TRUE)</code></pre>
+<p>Once these packages are installed, you may use blogdown to install the Hugo package. Hugo is a static site generator that we will use to build blogdown paged. You may install Hugo using blogdown, like so:</p>
+<pre class="tpl"><code>blogdown::install_hugo()</code></pre>
+<p>You can check whether the installations were successful by running <code>library(package_name)</code>. All installed packages must be loaded before we can use them during the workshop.</p>
+<p><img src="images/library.png" width="50%" /></p>
+</div>
+<div id="set-up-git-and-github" class="section level4">
+<h4>4) Set up Git and GitHub</h4>
+<p>To make the most out of the workshop, I highly encourage you to install Git and to create a GitHub account for version control.
+Follow the instructions from the <a href="https://happygitwithr.com/">Happy Git with R Book</a> and the official <a href="https://docs.github.com/en/get-started/quickstart/set-up-git">GitHub guides</a>:</p>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://happygitwithr.com/github-acct.html">Register a GitHub account</a></p></li>
+<li><p><a href="https://docs.github.com/en/get-started/quickstart/set-up-git">Install Git</a>. Follow the instructions under <strong>Setting up Git</strong> (do not use the Desktop client). For <strong>Windows Users</strong>: Follow the installation instructions for Git <a href="https://www.computerhope.com/issues/ch001927.htm">here</a>.</p></li>
+</ol>
+</div>
+<div id="once-this-is-done-you-are-all-set-for-the-workshop" class="section level4">
+<h4>Once this is done, you are all set for the workshop! 🎉</h4>
+</div>
+<div id="sign-up-on-osf" class="section level4">
+<h4>5) Sign up on osf</h4>
+<p>Many social scientists use osf to store their data or code. It is possible to integrate your GitHub repositories into osf.
+Please <a href="https://osf.io/">sign up on osf</a> before the workshop.</p>
+</div>
+<div id="install-tex" class="section level4">
+<h4>6) Install TeX</h4>
+<ul>
+<li>Windows: <a href="https://miktex.org/">MikTeX</a></li>
+<li>Mac: <a href="http://www.tug.org/mactex/">MacTeX</a></li>
+</ul>
+</div>
+</div>
+<div id="slides" class="section level1">
+<h1>Slides</h1>
+<div id="day-1" class="section level4">
+<h4>Day 1</h4>
+<p>Available upon request.</p>
+</div>
+<div id="day-2" class="section level4">
+<h4>Day 2</h4>
+<p>Available upon request.</p>
+</div>
+</div>
+<div id="schedule" class="section level1">
+<h1>Schedule</h1>
+<div id="dates" class="section level4">
+<h4>🗓️ Dates:</h4>
+<p>24th &amp; 25th May 2022</p>
+</div>
+<div id="timetable-for-day-1" class="section level4">
+<h4>🕛 Timetable for Day 1:</h4>
+<table>
+<colgroup>
+<col width="39%" />
+<col width="39%" />
+<col width="21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Unit</th>
+<th>When</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>09:00-09:30</td>
+<td>🖐 WALK-IN and final installation support</td>
+</tr>
+<tr class="even">
+<td>Session #1</td>
+<td>09:30-10:15</td>
+<td><strong>Introduction to R Markdown</strong></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>10:15-10:30</td>
+<td>🍵 BREAK</td>
+</tr>
+<tr class="even">
+<td>Session #2</td>
+<td>10:30-11:15</td>
+<td><strong>R Markdown - Text, code, reference management</strong></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>11:15-11:30</td>
+<td>🍵 BREAK</td>
+</tr>
+<tr class="even">
+<td>Session #3</td>
+<td>11:30-13:00</td>
+<td><strong>R Markdown - extended options and project organisation</strong></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>13:00-13:40</td>
+<td>🍔 LUNCH BREAK</td>
+</tr>
+<tr class="even">
+<td>Session #4</td>
+<td>13:40-15:00</td>
+<td><strong>R Markdown - building your own project</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="timetable-for-day-2" class="section level4">
+<h4>🕛 Timetable for Day 2:</h4>
+<table>
+<colgroup>
+<col width="39%" />
+<col width="39%" />
+<col width="21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Unit</th>
+<th>When</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>09:00-09:30</td>
+<td>❓ Q &amp; A</td>
+</tr>
+<tr class="even">
+<td>Session #1</td>
+<td>09:30-10:15</td>
+<td><strong>Version control with Git &amp; GitHub - the basics</strong></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>10:15-10:30</td>
+<td>🍵 BREAK</td>
+</tr>
+<tr class="even">
+<td>Session #2</td>
+<td>10:30-11:15</td>
+<td><strong>Version control with Git &amp; GitHub - collaborating; Integration with osf</strong></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>11:15-11:30</td>
+<td>🍵 BREAK</td>
+</tr>
+<tr class="even">
+<td>Session #3</td>
+<td>11:30-13:00</td>
+<td><strong>Blogdown - build your own project websites</strong></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>13:00-13:40</td>
+<td>🍔 LUNCH BREAK</td>
+</tr>
+<tr class="even">
+<td>Session #4</td>
+<td>13:40-15:00</td>
+<td><strong>Other R (Markdown) tools, final Q &amp; A</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
