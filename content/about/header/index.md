@@ -7,6 +7,6 @@ headline: |
 ---
 
 <!-- this is a subheadline -->
-It is great to have you visiting my website! As of August 2023, I am the co-lead of the Human-AI-Interaction Group at the University of Munich. Before this, I completed my Ph.D. in Organizational Behavior at the University of Groningen. During this time I developed a passion for data science and data-based storytelling. In my current role, I explore the opportunities and challenges of using artificial intelligence and machine learning in healthcare. Furthermore, I provide teaching and guidance for individuals and groups to use and collaborate with R for data analysis and reporting purposes.
+As a data analyst and social scientist, I explore the opportunities and challenges of using artificial intelligence and machine learning in healthcare. In addition, I facilitate teaching sessions and workshops for individuals and groups in the areas of Open Science and reproducible data analysis.
 
 
