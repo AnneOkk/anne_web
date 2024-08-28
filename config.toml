@@ -139,10 +139,10 @@ enableEmoji = true
     title = "Talks"
     url = "/talk/"
     weight = 4
-  [[menu.header]]
-    name = "Resume"
-    url = "/pdf/CV_Academic.pdf"
-    weight = 5
+#  [[menu.header]]
+#    name = "Resume"
+#    url = "/pdf/CV_Academic.pdf"
+#    weight = 5
 
 
   # Configure footer

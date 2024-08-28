@@ -6,7 +6,29 @@
     <description>Recent content in r on Anne-Kathrin Kleine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 17 Sep 2022 09:00:00 +0000</lastBuildDate><atom:link href="https://annekathrinkleine.netlify.app/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Nov 2023 09:00:00 +0000</lastBuildDate><atom:link href="https://annekathrinkleine.netlify.app/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to reproducible data analysis with R and Quarto</title>
+      <link>https://annekathrinkleine.netlify.app/talk/2023-quartokli/</link>
+      <pubDate>Thu, 09 Nov 2023 09:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/talk/2023-quartokli/</guid>
+      <description>
+
+
+&lt;div id=&#34;slides-day-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;https://anneokk.quarto.pub/introduction-to-reproducible-data-analysis-with-r-and-quarto/#/title-slide&#34;&gt;Slides Day 1&lt;/a&gt;&lt;/h1&gt;
+&lt;iframe src=&#34;https://anneokk.quarto.pub/introduction-to-reproducible-data-analysis-with-r-and-quarto/#/title-slide&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div id=&#34;slides-day-2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;a href=&#34;https://anneokk.quarto.pub/quartoworkshopd2/#/title-slide&#34;&gt;Slides Day 2&lt;/a&gt;&lt;/h1&gt;
+&lt;iframe src=&#34;https://anneokk.quarto.pub/quartoworkshopd2/#/title-slide&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
     <item>
       <title>R and Quarto Workshop</title>
       <link>https://annekathrinkleine.netlify.app/talk/2022-quartoteam/</link>
@@ -16,11 +38,11 @@
       <description>
 
 
-
-&lt;h1 id=&#34;slides&#34;&gt;Slides
-  &lt;a href=&#34;#slides&#34;&gt;&lt;/a&gt;
-&lt;/h1&gt;
-&lt;iframe src=&#34;https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/#/title-slide&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;&lt;/iframe&gt;
+&lt;div id=&#34;slides&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Slides&lt;/h1&gt;
+&lt;iframe src=&#34;https://anneokk.quarto.pub/data-analysis-with-r-and-quarto--collaboration-using-github/#/title-slide&#34; width=&#34;672&#34; height=&#34;400px&#34; data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -33,259 +55,197 @@
       <description>
 
 
-
-&lt;h1 id=&#34;preparation&#34;&gt;Preparation
-  &lt;a href=&#34;#preparation&#34;&gt;&lt;/a&gt;
-&lt;/h1&gt;
-
-
-
-
-&lt;h4 id=&#34;1-install-r&#34;&gt;1) Install R
-  &lt;a href=&#34;#1-install-r&#34;&gt;&lt;/a&gt;
-&lt;/h4&gt;
-&lt;p&gt;Please make sure that you have a 
-&lt;a href=&#34;https://cran.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recent R version&lt;/a&gt; installed.
+&lt;div id=&#34;preparation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Preparation&lt;/h1&gt;
+&lt;div id=&#34;install-r&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;1) Install R&lt;/h4&gt;
+&lt;p&gt;Please make sure that you have a &lt;a href=&#34;https://cran.rstudio.com/&#34;&gt;recent R version&lt;/a&gt; installed.
 You can check your R Version in the Console (in RStudio) by typing:
 &lt;code&gt;R.version.string&lt;/code&gt;&lt;/p&gt;
-&lt;img src=&#34;images/rvers.png&#34; width=&#34;50%&#34; /&gt;
-&lt;p&gt;If you are using an older R version, please install the 
-&lt;a href=&#34;https://cran.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;newest R version&lt;/a&gt;.&lt;/p&gt;
-
-
-
-
-&lt;h4 id=&#34;2-install-r-studio&#34;&gt;2) Install R Studio
-  &lt;a href=&#34;#2-install-r-studio&#34;&gt;&lt;/a&gt;
-&lt;/h4&gt;
-&lt;p&gt;Go to the 
-&lt;a href=&#34;https://www.rstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio website&lt;/a&gt; and download the newest version if you are using an older version of RStudio (if in doubt, better update!). Simply follow the download instructions. The new version will be available next time you open RStudio.&lt;/p&gt;
-
-
-
-
-&lt;h4 id=&#34;3-install-necessary-packages&#34;&gt;3) Install necessary packages
-  &lt;a href=&#34;#3-install-necessary-packages&#34;&gt;&lt;/a&gt;
-&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;images/rvers.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;If you are using an older R version, please install the &lt;a href=&#34;https://cran.rstudio.com/&#34;&gt;newest R version&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;install-r-studio&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;2) Install R Studio&lt;/h4&gt;
+&lt;p&gt;Go to the &lt;a href=&#34;https://www.rstudio.com/&#34;&gt;RStudio website&lt;/a&gt; and download the newest version if you are using an older version of RStudio (if in doubt, better update!). Simply follow the download instructions. The new version will be available next time you open RStudio.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;install-necessary-packages&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;3) Install necessary packages&lt;/h4&gt;
 &lt;p&gt;You need several R packages for the workshop. Please make sure to install these packages before the workshop. The easiest way to do so is by running this code in R:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tpl&#34; data-lang=&#34;tpl&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cran_packs &amp;lt;- c(&amp;#34;learnr&amp;#34;, &amp;#34;bookdown&amp;#34;, &amp;#34;stargazer&amp;#34;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &amp;#34;officer&amp;#34;, &amp;#34;rticles&amp;#34;, &amp;#34;webshot&amp;#34;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &amp;#34;tidyverse&amp;#34;, &amp;#34;remotes&amp;#34;, &amp;#34;magick&amp;#34;, 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &amp;#34;kableExtra&amp;#34;, &amp;#34;vtable&amp;#34;, &amp;#34;devtools&amp;#34;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tpl&#34; data-lang=&#34;tpl&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;install.packages(cran_packs, dependencies = TRUE)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tpl&#34; data-lang=&#34;tpl&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;github_packs &amp;lt;- c(&amp;#39;rstudio/blogdown&amp;#39;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                  &amp;#39;haozhu233/kableExtra&amp;#39;, &amp;#39;crsh/papaja&amp;#39;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tpl&#34; data-lang=&#34;tpl&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;remotes::install_github(github_packs, dependencies = TRUE)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once these packages are installed, you may use blogdown to install the Hugo package. Hugo is a static site generator that we will use to build blogdown paged. You may install Hugo using blogdown, like so:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-tpl&#34; data-lang=&#34;tpl&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;blogdown::install_hugo()
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can check whether the installations were successful by running &lt;code&gt;library(package_name)&lt;/code&gt;. All installed packages must be loaded before we can use them during the workshop.&lt;/p&gt;
-&lt;img src=&#34;images/library.png&#34; width=&#34;50%&#34; /&gt;
-
-
-
-
-&lt;h4 id=&#34;4-set-up-git-and-github&#34;&gt;4) Set up Git and GitHub
-  &lt;a href=&#34;#4-set-up-git-and-github&#34;&gt;&lt;/a&gt;
-&lt;/h4&gt;
+&lt;pre class=&#34;tpl&#34;&gt;&lt;code&gt;cran_packs &amp;lt;- c(&amp;quot;learnr&amp;quot;, &amp;quot;bookdown&amp;quot;, &amp;quot;stargazer&amp;quot;,
+                &amp;quot;officer&amp;quot;, &amp;quot;rticles&amp;quot;, &amp;quot;webshot&amp;quot;,
+                &amp;quot;tidyverse&amp;quot;, &amp;quot;remotes&amp;quot;, &amp;quot;magick&amp;quot;, 
+                &amp;quot;kableExtra&amp;quot;, &amp;quot;vtable&amp;quot;, &amp;quot;devtools&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;tpl&#34;&gt;&lt;code&gt;install.packages(cran_packs, dependencies = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;tpl&#34;&gt;&lt;code&gt;github_packs &amp;lt;- c(&amp;#39;rstudio/blogdown&amp;#39;,
+                  &amp;#39;haozhu233/kableExtra&amp;#39;, &amp;#39;crsh/papaja&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;tpl&#34;&gt;&lt;code&gt;remotes::install_github(github_packs, dependencies = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once these packages are installed, you may use blogdown to install the Hugo package. Hugo is a static site generator that we will use to build blogdown paged. You may install Hugo using blogdown, like so:&lt;/p&gt;
+&lt;pre class=&#34;tpl&#34;&gt;&lt;code&gt;blogdown::install_hugo()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can check whether the installations were successful by running &lt;code&gt;library(package_name)&lt;/code&gt;. All installed packages must be loaded before we can use them during the workshop.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/library.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;set-up-git-and-github&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;4) Set up Git and GitHub&lt;/h4&gt;
 &lt;p&gt;To make the most out of the workshop, I highly encourage you to install Git and to create a GitHub account for version control.
-Follow the instructions from the 
-&lt;a href=&#34;https://happygitwithr.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Happy Git with R Book&lt;/a&gt; and the official 
-&lt;a href=&#34;https://docs.github.com/en/get-started/quickstart/set-up-git&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub guides&lt;/a&gt;:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://happygitwithr.com/github-acct.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Register a GitHub account&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://docs.github.com/en/get-started/quickstart/set-up-git&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Install Git&lt;/a&gt;. Follow the instructions under &lt;strong&gt;Setting up Git&lt;/strong&gt; (do not use the Desktop client). For &lt;strong&gt;Windows Users&lt;/strong&gt;: Follow the installation instructions for Git 
-&lt;a href=&#34;https://www.computerhope.com/issues/ch001927.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
+Follow the instructions from the &lt;a href=&#34;https://happygitwithr.com/&#34;&gt;Happy Git with R Book&lt;/a&gt; and the official &lt;a href=&#34;https://docs.github.com/en/get-started/quickstart/set-up-git&#34;&gt;GitHub guides&lt;/a&gt;:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://happygitwithr.com/github-acct.html&#34;&gt;Register a GitHub account&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://docs.github.com/en/get-started/quickstart/set-up-git&#34;&gt;Install Git&lt;/a&gt;. Follow the instructions under &lt;strong&gt;Setting up Git&lt;/strong&gt; (do not use the Desktop client). For &lt;strong&gt;Windows Users&lt;/strong&gt;: Follow the installation instructions for Git &lt;a href=&#34;https://www.computerhope.com/issues/ch001927.htm&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
-
-
-
-&lt;h4 id=&#34;once-this-is-done-you-are-all-set-for-the-workshop-&#34;&gt;Once this is done, you are all set for the workshop! 🎉
-  &lt;a href=&#34;#once-this-is-done-you-are-all-set-for-the-workshop-&#34;&gt;&lt;/a&gt;
-&lt;/h4&gt;
-
-
-
-
-&lt;h4 id=&#34;5-sign-up-on-osf&#34;&gt;5) Sign up on osf
-  &lt;a href=&#34;#5-sign-up-on-osf&#34;&gt;&lt;/a&gt;
-&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;once-this-is-done-you-are-all-set-for-the-workshop&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Once this is done, you are all set for the workshop! 🎉&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sign-up-on-osf&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;5) Sign up on osf&lt;/h4&gt;
 &lt;p&gt;Many social scientists use osf to store their data or code. It is possible to integrate your GitHub repositories into osf.
-Please 
-&lt;a href=&#34;https://osf.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;sign up on osf&lt;/a&gt; before the workshop.&lt;/p&gt;
-
-
-
-
-&lt;h4 id=&#34;6-install-tex&#34;&gt;6) Install TeX
-  &lt;a href=&#34;#6-install-tex&#34;&gt;&lt;/a&gt;
-&lt;/h4&gt;
+Please &lt;a href=&#34;https://osf.io/&#34;&gt;sign up on osf&lt;/a&gt; before the workshop.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;install-tex&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;6) Install TeX&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Windows: 
-&lt;a href=&#34;https://miktex.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MikTeX&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Mac: 
-&lt;a href=&#34;http://www.tug.org/mactex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MacTeX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Windows: &lt;a href=&#34;https://miktex.org/&#34;&gt;MikTeX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mac: &lt;a href=&#34;http://www.tug.org/mactex/&#34;&gt;MacTeX&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-
-
-
-&lt;h1 id=&#34;slides&#34;&gt;Slides
-  &lt;a href=&#34;#slides&#34;&gt;&lt;/a&gt;
-&lt;/h1&gt;
-
-
-
-
-&lt;h4 id=&#34;day-1&#34;&gt;Day 1
-  &lt;a href=&#34;#day-1&#34;&gt;&lt;/a&gt;
-&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;slides&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Slides&lt;/h1&gt;
+&lt;div id=&#34;day-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Day 1&lt;/h4&gt;
 &lt;p&gt;Available upon request.&lt;/p&gt;
-
-
-
-
-&lt;h4 id=&#34;day-2&#34;&gt;Day 2
-  &lt;a href=&#34;#day-2&#34;&gt;&lt;/a&gt;
-&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;day-2&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Day 2&lt;/h4&gt;
 &lt;p&gt;Available upon request.&lt;/p&gt;
-
-
-
-
-&lt;h1 id=&#34;schedule&#34;&gt;Schedule
-  &lt;a href=&#34;#schedule&#34;&gt;&lt;/a&gt;
-&lt;/h1&gt;
-
-
-
-
-&lt;h4 id=&#34;-dates&#34;&gt;🗓️ Dates:
-  &lt;a href=&#34;#-dates&#34;&gt;&lt;/a&gt;
-&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;schedule&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Schedule&lt;/h1&gt;
+&lt;div id=&#34;dates&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;🗓️ Dates:&lt;/h4&gt;
 &lt;p&gt;24th &amp;amp; 25th May 2022&lt;/p&gt;
-
-
-
-
-&lt;h4 id=&#34;-timetable-for-day-1&#34;&gt;🕛 Timetable for Day 1:
-  &lt;a href=&#34;#-timetable-for-day-1&#34;&gt;&lt;/a&gt;
-&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;timetable-for-day-1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;🕛 Timetable for Day 1:&lt;/h4&gt;
 &lt;table&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;39%&#34; /&gt;
+&lt;col width=&#34;39%&#34; /&gt;
+&lt;col width=&#34;21%&#34; /&gt;
+&lt;/colgroup&gt;
 &lt;thead&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;header&#34;&gt;
 &lt;th&gt;Unit&lt;/th&gt;
 &lt;th&gt;When&lt;/th&gt;
 &lt;th&gt;What&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;09:00-09:30&lt;/td&gt;
 &lt;td&gt;🖐 WALK-IN and final installation support&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;Session #1&lt;/td&gt;
 &lt;td&gt;09:30-10:15&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;Introduction to R Markdown&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;10:15-10:30&lt;/td&gt;
 &lt;td&gt;🍵 BREAK&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;Session #2&lt;/td&gt;
 &lt;td&gt;10:30-11:15&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;R Markdown - Text, code, reference management&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;11:15-11:30&lt;/td&gt;
 &lt;td&gt;🍵 BREAK&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;Session #3&lt;/td&gt;
 &lt;td&gt;11:30-13:00&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;R Markdown - extended options and project organisation&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;13:00-13:40&lt;/td&gt;
 &lt;td&gt;🍔 LUNCH BREAK&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;Session #4&lt;/td&gt;
 &lt;td&gt;13:40-15:00&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;R Markdown - building your own project&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-
-
-
-&lt;h4 id=&#34;-timetable-for-day-2&#34;&gt;🕛 Timetable for Day 2:
-  &lt;a href=&#34;#-timetable-for-day-2&#34;&gt;&lt;/a&gt;
-&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;timetable-for-day-2&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;🕛 Timetable for Day 2:&lt;/h4&gt;
 &lt;table&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;39%&#34; /&gt;
+&lt;col width=&#34;39%&#34; /&gt;
+&lt;col width=&#34;21%&#34; /&gt;
+&lt;/colgroup&gt;
 &lt;thead&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;header&#34;&gt;
 &lt;th&gt;Unit&lt;/th&gt;
 &lt;th&gt;When&lt;/th&gt;
 &lt;th&gt;What&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;09:00-09:30&lt;/td&gt;
 &lt;td&gt;❓ Q &amp;amp; A&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;Session #1&lt;/td&gt;
 &lt;td&gt;09:30-10:15&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;Version control with Git &amp;amp; GitHub - the basics&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;10:15-10:30&lt;/td&gt;
 &lt;td&gt;🍵 BREAK&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;Session #2&lt;/td&gt;
 &lt;td&gt;10:30-11:15&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;Version control with Git &amp;amp; GitHub - collaborating; Integration with osf&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;11:15-11:30&lt;/td&gt;
 &lt;td&gt;🍵 BREAK&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;Session #3&lt;/td&gt;
 &lt;td&gt;11:30-13:00&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;Blogdown - build your own project websites&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;13:00-13:40&lt;/td&gt;
 &lt;td&gt;🍔 LUNCH BREAK&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
 &lt;td&gt;Session #4&lt;/td&gt;
 &lt;td&gt;13:40-15:00&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;Other R (Markdown) tools, final Q &amp;amp; A&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
