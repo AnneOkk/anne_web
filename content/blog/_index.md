@@ -16,10 +16,7 @@ sidebar:
   description: "This blog features articles I have written and reports on topics I am currently researching, with a particular focus on Human-AI-Interaction, thriving at work, and the enablers of healthy work in general. 
   
   
-  I embrace the values of openness and transparency in science. I believe that such research practices increase the informational value and impact of our research, as the data can be reanalyzed and synthesized in future studies. Furthermore, they increase the credibility of the results, as an independent verification and replication is possible.
-  
-
-For this reason, I signed the [Commitment to Research Transparency](http://www.researchtransparency.org/) and the [Peer Reviewers' Openness Initiative](https://www.opennessinitiative.org/)." 
+  I embrace the values of openness and transparency in science. I believe that such research practices increase the informational value and impact of our research, as the data can be reanalyzed and synthesized in future studies. Furthermore, they increase the credibility of the results, as an independent verification and replication is possible. For this reason, I signed the [Commitment to Research Transparency](http://www.researchtransparency.org/) and the [Peer Reviewers' Openness Initiative](https://www.opennessinitiative.org/)." 
 
   text_link_url: /index.xml
   show_sidebar_adunit: true # show ad container
