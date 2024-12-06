@@ -6,6 +6,4 @@ headline: |
   Our lab!
 ---
 
-Please visit [clinaid-lab.com](https://clinaid-lab.com/) for more information.
-
-
+Please visit <a href="https://clinaid-lab.com/">clinaid-lab.com</a>
