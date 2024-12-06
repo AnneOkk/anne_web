@@ -1,5 +1,5 @@
 ---
-title: "Our lab"
+title: "The ClinAId lab"
 show_header: true
 sidebar_left: true
 # Keep this! Do not edit.

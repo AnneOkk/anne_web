@@ -148,7 +148,7 @@ enableEmoji = true
   [[menu.header]]
     name = "Resume"
     url = "/pdf/cv_akleine.pdf"
-    weight = 5
+    weight = 6
 
   # Configure footer
   [[menu.footer]]

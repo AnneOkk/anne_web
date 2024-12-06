@@ -3,7 +3,8 @@
 text_align_right: false
 show_title_as_headline: false
 headline: |
-  Our lab!
+  The ClinAId lab
 ---
 
-Please visit <a href="https://clinaid-lab.com/">clinaid-lab.com</a>
+Please visit <https://clinaid-lab.com/> for more information.
+
