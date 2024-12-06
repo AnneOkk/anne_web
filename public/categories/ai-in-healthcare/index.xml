@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI in healthcare on Anne-Kathrin Kleine</title>
+    <link>https://annekathrinkleine.netlify.app/categories/ai-in-healthcare/</link>
+    <description>Recent content in AI in healthcare on Anne-Kathrin Kleine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://annekathrinkleine.netlify.app/categories/ai-in-healthcare/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Predictors of Health Care Practitioners’ Intention to Use AI-Enabled Clinical Decision Support Systems: Meta-Analysis Based on the Unified Theory of Acceptance and Use of Technology</title>
+      <link>https://annekathrinkleine.netlify.app/blog/2024-08-predictors-of-health-care-practitioners-intention-to-use-ai-enabled-clinical-decision-support-systems-meta-analysis-based-on-the-unified-theory-of-acceptance-and-use-of-technology/</link>
+      <pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/blog/2024-08-predictors-of-health-care-practitioners-intention-to-use-ai-enabled-clinical-decision-support-systems-meta-analysis-based-on-the-unified-theory-of-acceptance-and-use-of-technology/</guid>
+      <description>&lt;p&gt;The literature search using electronic databases, forward searches, conference programs, and personal correspondence yielded 7731 results, of which 17 (0.22%) studies met the inclusion criteria. Random-effects meta-analysis, relative weight analyses, and meta-analytic moderation and mediation analyses were used to examine the relationships between relevant predictor variables and the intention to use AI-CDSSs.&lt;/p&gt;
+&lt;p&gt;The meta-analysis results supported the application of the UTAUT to the context of the intention to use AI-CDSSs. The results showed that performance expectancy (r=0.66), effort expectancy (r=0.55), social influence (r=0.66), and facilitating conditions (r=0.66) were positively associated with the intention to use AI-CDSSs, in line with the predictions of the UTAUT. The meta-analysis further identified positive attitude (r=0.63), trust (r=0.73), anxiety (r=–0.41), perceived risk (r=–0.21), and innovativeness (r=0.54) as additional relevant predictors. Trust emerged as the most influential predictor overall. The results of the moderation analyses show that the relationship between social influence and use intention becomes weaker with increasing age. In addition, the relationship between effort expectancy and use intention was stronger for diagnostic AI-CDSSs than for devices that combined diagnostic and treatment recommendations. Finally, the relationship between facilitating conditions and use intention was mediated through performance and effort expectancy.&lt;/p&gt;
+&lt;p&gt;The meta-analysis contributes to the understanding of the predictors of intention to use AI-CDSSs based on an extended UTAUT model. More research is needed to substantiate the identified relationships and explain the observed variations in effect sizes by identifying relevant moderating factors. The research findings bear important implications for the design and implementation of training programs for health care practitioners to ease the adoption of AI-CDSSs into their practice.&lt;/p&gt;
+
+
+
+
+&lt;h4 id=&#34;link-to-published-paperhttpswwwjmirorg20241e57224&#34;&gt;
+&lt;a href=&#34;https://www.jmir.org/2024/1/e57224/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link to published paper&lt;/a&gt;
+  &lt;a href=&#34;#link-to-published-paperhttpswwwjmirorg20241e57224&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
+
+

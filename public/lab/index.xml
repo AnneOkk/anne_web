@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Our lab on Anne-Kathrin Kleine</title>
+    <link>https://annekathrinkleine.netlify.app/lab/</link>
+    <description>Recent content in Our lab on Anne-Kathrin Kleine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://annekathrinkleine.netlify.app/lab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://annekathrinkleine.netlify.app/lab/sidebar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/lab/sidebar/</guid>
+      <description>&lt;p&gt;Our project (funded by the Volkswagen Stiftung) aims to improve clinical decision-making and reduce medical errors by increasing the usability of AI health-technology. Enhancing clinical outcomes and thus ensuring patient safety needs to be a priority in healthcare and medicine with the rise of “shiny” new technology. Providing healthcare professionals with better technology should not only reduce error rates but also free up time for more direct patient interaction, which ultimately leads to better care. We want to make our insights widely available to academics, technology developers, and healthcare practitioners to maximize its utility for society at large.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://annekathrinkleine.netlify.app/lab/header/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/lab/header/</guid>
+      <description>&lt;p&gt;Please visit 
+&lt;a href=&#34;https://clinaid-lab.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;clinaid-lab.com&lt;/a&gt; for more information.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://annekathrinkleine.netlify.app/lab/about-me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://annekathrinkleine.netlify.app/lab/about-me/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
+
+
