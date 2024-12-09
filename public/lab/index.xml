@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Our lab on Anne-Kathrin Kleine</title>
+    <title>The ClinAId lab on Anne-Kathrin Kleine</title>
     <link>https://annekathrinkleine.netlify.app/lab/</link>
-    <description>Recent content in Our lab on Anne-Kathrin Kleine</description>
+    <description>Recent content in The ClinAId lab on Anne-Kathrin Kleine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://annekathrinkleine.netlify.app/lab/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -23,7 +23,7 @@
       
       <guid>https://annekathrinkleine.netlify.app/lab/header/</guid>
       <description>&lt;p&gt;Please visit 
-&lt;a href=&#34;https://clinaid-lab.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;clinaid-lab.com&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;a href=&#34;https://clinaid-lab.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://clinaid-lab.com/&lt;/a&gt; for more information.&lt;/p&gt;
 </description>
     </item>
     

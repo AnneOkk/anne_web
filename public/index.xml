@@ -314,19 +314,6 @@
     </item>
     
     <item>
-      <title>Contact</title>
-      <link>https://annekathrinkleine.netlify.app/contact/</link>
-      <pubDate>Fri, 16 Sep 2022 13:38:41 -0600</pubDate>
-      
-      <guid>https://annekathrinkleine.netlify.app/contact/</guid>
-      <description>&lt;p&gt;** Contact page don&amp;rsquo;t contain a body, just the front matter above.
-See form.html in the layouts folder&lt;/p&gt;
-&lt;p&gt;Formspree requires a (free) account and new form to be set up. The link is made on the final published url in the field: Restrict to Domain. It is possible to register up to 2 emails free and you can select which one you want the forms to go to within Formspree in the Settings tab.
-**&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Feedback reports for entrepreneurs using shiny and golem</title>
       <link>https://annekathrinkleine.netlify.app/project/feedback-rep/</link>
       <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
@@ -1633,7 +1620,7 @@ See about/list.html in the layouts folder **&lt;/p&gt;
       
       <guid>https://annekathrinkleine.netlify.app/lab/header/</guid>
       <description>&lt;p&gt;Please visit 
-&lt;a href=&#34;https://clinaid-lab.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;clinaid-lab.com&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;a href=&#34;https://clinaid-lab.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://clinaid-lab.com/&lt;/a&gt; for more information.&lt;/p&gt;
 </description>
     </item>
     

@@ -149,6 +149,11 @@ enableEmoji = true
     name = "Resume"
     url = "/pdf/cv_akleine.pdf"
     weight = 6
+  [[menu.header]]
+    name = "Contact"
+    title = "Contact form"
+    url = "/contact/"
+    weight = 2
 
   # Configure footer
   [[menu.footer]]
@@ -156,11 +161,7 @@ enableEmoji = true
     title = "License"
     url = "/license/"
     weight = 1
-  [[menu.footer]]
-    name = "Contact"
-    title = "Contact form"
-    url = "/contact/"
-    weight = 2
+
 #  [[menu.footer]]
 #    name = "RSS"
 #    title = "RSS"
