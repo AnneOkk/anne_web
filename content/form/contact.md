@@ -1,7 +1,7 @@
 ---
 title: Contact
 name: Contact Us Form
-description: "Contact me if you have questions about the project or our work."
+description: "Contact me if you have questions about our projects."
 date: 2024-12-09T13:38:41-06:00
 draft: false
 url: contact
