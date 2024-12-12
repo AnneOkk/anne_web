@@ -3,7 +3,7 @@ title: "Anne-Kathrin Kleine"
 subtitle: "Postdoctoral Researcher and PI, Human-AI Interaction in Healthcare, LMU Munich"
 description: "Behavioral researcher, assessing the usability of AI solutions in the healthcare sector."
 images:
-  - img/anne4.jpeg
+  - img/me.jpeg
 image_left: false
 text_align_left: true
 show_social_links: true # specify social accounts in site config
