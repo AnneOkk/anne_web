@@ -4,7 +4,7 @@ draft: false
 event: 'Mastering Reproducible Data Analysis - Workshop at the University of Tromsø'
 event_url: 
 location: UiT Tromsø
-summary: "A workshop on data analysis and reporting R and quarto."
+summary: "A workshop on data analysis and reporting R and Quarto."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
