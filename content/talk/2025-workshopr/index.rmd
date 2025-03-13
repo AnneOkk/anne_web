@@ -29,7 +29,7 @@ links:
 
 ---
 
-# [Slides](https://anneokk.quarto.pub/r-quarto-intro-workshop/#/title-slide)
+# [Workshop Slides](https://anneokk.quarto.pub/r-quarto-intro-workshop/#/title-slide)
 
 ```{r echo = FALSE, include = TRUE}
 knitr::include_url('https://anneokk.quarto.pub/r-quarto-intro-workshop/#/title-slide') 

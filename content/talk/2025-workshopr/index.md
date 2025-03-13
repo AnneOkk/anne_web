@@ -29,6 +29,6 @@ links:
 
 ---
 
-# [Slides](https://anneokk.quarto.pub/r-quarto-intro-workshop/#/title-slide)
+# [Workshop Slides](https://anneokk.quarto.pub/r-quarto-intro-workshop/#/title-slide)
 
 <iframe src="https://anneokk.quarto.pub/r-quarto-intro-workshop/#/title-slide" width="672" height="400px" data-external="1"></iframe>
