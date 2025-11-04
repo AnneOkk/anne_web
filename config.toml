@@ -146,7 +146,7 @@ enableEmoji = true
     weight = 5
 
   [[menu.header]]
-    name = "Resume"
+    name = "CV"
     url = "/pdf/cv_akleine.pdf"
     weight = 6
 
