@@ -18,64 +18,18 @@ links:
 updated: "October 2026"
 ---
 
-## How I teach
-
-<div class="ak-grid">
-<div class="ak-card">
-
-### See before you compute
-
-Concepts such as sampling distributions, significance, and statistical power become intuitive through small simulations: students repeatedly draw samples from a known population and *see* how much results vary before they compute anything.
-
-</div>
-<div class="ak-card">
-
-### Work reproducibly from day one
-
-Analyses are written in R and documented with Quarto so that others can follow and reproduce them. Open science practices – preregistration, shared code and data – are part of the course, not an add-on.
-
-</div>
-<div class="ak-card">
-
-### Check, don't just execute
-
-Now that code and text can be generated, part of the learning goal shifts: students systematically check AI-generated analyses. Does the method fit the question? Does the interpretation match the output? Finding errors often teaches more than avoiding them.
-
-</div>
-</div>
-
 ## Current courses (winter term 2026/27)
 
 <table class="ak-table">
 <thead><tr><th>Level</th><th>Course</th><th>Details</th></tr></thead>
 <tbody>
-<tr><td>M.Sc.</td><td><strong>Work and Organizational Psychology in Socio-Technical Systems</strong> – lecture and seminar<br><em>TU Dresden</em></td><td>84 contact hours · approx. 60 students · English · course instructor and coordinator; developed all 14 lecture and 14 seminar sessions</td></tr>
-<tr><td>B.Sc.</td><td><strong>Work and Organizational Psychology</strong> – seminar (two groups)<br><em>TU Dresden</em></td><td>23 contact hours per group · approx. 30 students · German · course instructor and coordinator</td></tr>
-<tr><td>PhD, M.Sc., B.Sc.</td><td><strong>Good Scientific Practice</strong> – online seminar<br><em>Technical University of Applied Sciences Augsburg</em></td><td>14 contact hours · English · <a href="/talk/2026-goodpract/">materials</a></td></tr>
+<tr><td>M.Sc.</td><td><strong>Work and Organizational Psychology in Socio-Technical Systems</strong> – lecture and seminar<br><em>TU Dresden</em></td></tr>
+<tr><td>B.Sc.</td><td><strong>Work and Organizational Psychology</strong> – seminar (two groups)<br><em>TU Dresden</em></td></tr>
+<tr><td>PhD, M.Sc., B.Sc.</td><td><strong>Good Scientific Practice</strong> – online seminar<br><em>Technical University of Applied Sciences Augsburg</em></td></tr>
 </tbody>
 </table>
 
-## Previous courses
 
-<table class="ak-table">
-<thead><tr><th>Term</th><th>Course</th><th>Details</th></tr></thead>
-<tbody>
-<tr><td>Summer 2026</td><td><strong>Using AI for Academic Success: From Coursework to PhD</strong> (<em>KI sinnvoll in Studium und Promotion nutzen</em>)<br><em>TH Augsburg</em></td><td>21 contact hours · German · designed the course, the assessment scheme, and the written examination · <a href="/talk/2026-aiuni/">materials</a></td></tr>
-<tr><td>Summer 2026</td><td><strong>Good Scientific Practice</strong> (<em>Gute wissenschaftliche Praxis</em>)<br><em>TH Augsburg</em></td><td>14 contact hours · German · PhD candidates and students · <a href="/talk/2026-goodpract/">materials</a></td></tr>
-<tr><td>2023, 2024</td><td><strong>Invited guest lecture: AI-enabled Precision Psychiatry Tools – Current Challenges</strong><br><em>University College London, M.Sc. Human Factors for Healthcare</em></td><td>English · approx. 30 students</td></tr>
-<tr><td>2020–2021</td><td><strong>Statistics II: Foundations of Statistics for the Social Sciences</strong><br><em>University of Groningen</em></td><td>B.Sc. Psychology · 5 ECTS · English · seminar instructor</td></tr>
-<tr><td>2020</td><td><strong>Statistics III: Advanced Statistics for the Social Sciences</strong><br><em>University of Groningen</em></td><td>B.Sc. Psychology · 5 ECTS · English · seminar instructor</td></tr>
-<tr><td>2019–2020</td><td><strong>Research Practicum: Applying Psychological Research Methods and Writing Academic Papers</strong> (two cohorts)<br><em>University of Groningen</em></td><td>B.Sc. Psychology · 5 ECTS · English · seminar instructor</td></tr>
-<tr><td>2019–2020</td><td><strong>Academic Skills: Academic Writing and Good Scientific Practice</strong><br><em>University of Groningen</em></td><td>B.Sc. Psychology · 7.5 ECTS · English · seminar instructor</td></tr>
-</tbody>
-</table>
-
-## Workshops and short formats
-
-- **Reproducible data analysis with R and Quarto** – UiT The Arctic University of Norway, Tromsø (2025); Kurt Lewin Institute, The Netherlands (2023); LMU Munich (2022); Kurt Lewin Institute (R Markdown, LaTeX, and GitHub, 2022). [Slides and materials](/talk/)
-- **Statistical tutorials and peer coding sessions** – co-organizer and tutor of the R User Group Groningen for PhD students, postdocs, and staff (2020–2022).
-- **Excellence in leadership** for doctoral researchers, LMU Munich (2023) and **sports motivation** for academic staff, LMU Munich (2022, 2024).
-- **Invited talks for students** – *Career Exploration in Academia*, TU Dresden (2026); *Future Work Self Salience*, UiT Tromsø (2025).
 
 ## Open teaching materials
 
@@ -120,11 +74,6 @@ Two-day beginner workshop with slides and exercises, 2023–2025.
 
 ## Supervision
 
-<div class="ak-stats">
-<div class="ak-stat"><span class="ak-num">2</span><span class="ak-label">PhD projects co-supervised (LMU Munich; TH Augsburg)</span></div>
-<div class="ak-stat"><span class="ak-num">9</span><span class="ak-label">Master's theses</span></div>
-<div class="ak-stat"><span class="ak-num">13</span><span class="ak-label">Bachelor's theses</span></div>
-</div>
 
 **PhD co-supervision** on human–AI interaction in healthcare: AI decision support for mental healthcare (LMU Munich, 2022–2026) and AI decision support in ophthalmology (TH Augsburg, since 2022).
 

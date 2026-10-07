@@ -1,7 +1,7 @@
 ---
 title: "Publications"
 kicker: "Journal articles · book chapters · conference contributions"
-lead: "**My name is in bold**; \\* marks shared first authorship. Most articles are open access – follow the DOI links. Short summaries of many papers are on the [blog](/blog/)."
+lead: "Most articles are open access – follow the DOI links. Short summaries of many papers are on the [blog](/blog/)."
 description: "Publications of Anne-Kathrin Kleine: peer-reviewed journal articles on human–AI interaction in healthcare, AI in research, meta-analysis, thriving at work, careers, and entrepreneurship."
 type: page
 layout: academic
@@ -123,7 +123,7 @@ updated: "October 2026"
 
 </div>
 
-## Conference contributions
+## Conference contributions (selection)
 
 <div class="pubs">
 
@@ -147,18 +147,3 @@ updated: "October 2026"
 
 </div>
 
-<details>
-<summary>Contributions by team members (selection)</summary>
-
-<div class="pubs">
-
-- Schaffernak, I., Cecil, J., Kokje, E., **Kleine, A.-K.**, Saad, A., Zemo, F., & Lermer, E. (2025). Beyond the algorithm: Human factors in the adoption of AI in ophthalmology. Bavarian Conference on AI in Medicine, Munich, Germany.
-- Schaffernak, I., Cecil, J., Kokje, E., **Kleine, A.-K.**, Zemo, F., Saad, A., & Lermer, E. (2025). Einfluss von ärztlicher KI-Unterstützung bei medizinischen Entscheidungen auf Vertrauen: Eine experimentelle Studie. 14th AOWI Conference, Lüneburg, Germany.
-- Schaffernak, I., Cecil, J., **Kleine, A.-K.**, & Lermer, E. (2025). From apprehension to adoption: Qualitative insights into the sociotechnical dynamics of adopting and integrating AI in ophthalmology. 22nd EAWOP Congress, Prague, Czech Republic.
-- Cecil, J., Gaube, S., Kokje, E., **Kleine, A.-K.**, & Lermer, E. (2025). Human–AI interaction in healthcare: Identifying factors contributing to clinical utility. Final Symposium of the Volkswagen Foundation, Hannover, Germany.
-- Cecil, J., Schaffernak, I., Lermer, E., Gaube, S., & **Kleine, A.-K.** (2025). Insights into AI adoption in psychotherapy: A human-centered approach. Poster, 1st International Workshop on Understanding, Controlling, and Designing Human–AI Interactions, Freiburg, Germany.
-- Cecil, J., **Kleine, A.-K.**, Lermer, E., & Gaube, S. (2024). Exploring attitudes and adoption intentions of AI-enabled technologies among mental health practitioners. Talk, DGPs Congress, Vienna, Austria.
-- Gaube, S., Biebl, I., Engelmann, M. K. M., **Kleine, A.-K.**, & Lermer, E. (2024). Comparing preferences for skin cancer screening: A conjoint experiment. Talk, DGPs Congress, Vienna, Austria.
-
-</div>
-</details>

@@ -42,8 +42,3 @@ In Dresden, I continue my research on [human–AI interaction](/research/) – h
 
 Students interested in a thesis on human–AI interaction, AI in research and education, or careers in the age of AI are welcome to [get in touch](/contact/).
 
-#### Looking back
-
-Before Dresden, I spent four great years at **LMU Munich**: first as a postdoc and then as junior research group leader and Principal Investigator of the Human–AI Interaction Group in the Volkswagen Foundation project *AI and the Society of the Future*, followed by a Bavarian Equal Opportunities Fellowship. Many thanks to Eva Lermer, Susanne Gaube, and the whole team.
-
-I was also selected for the Zia-ZEIT Fellowship *Visible Women in Science* in 2026, which I declined because of the interim professorship.
