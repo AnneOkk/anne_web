@@ -8,10 +8,6 @@ aliases:
   - /resume/
   - /bio/
 links:
-  - icon: file-pdf
-    icon_pack: fas
-    name: Full CV (PDF)
-    url: /pdf/CV_Anne-Kathrin_Kleine.pdf
   - icon: book-open
     icon_pack: fas
     name: Publications
