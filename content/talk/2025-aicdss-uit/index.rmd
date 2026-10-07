@@ -30,4 +30,4 @@ links:
 ---
 
 ### [Slides](/pdf/Healthcare_AICDSS_share.pdf) 
-![](/img/aicdss.jpg) 
+![Title slide](/img/aicdss_title.png) 

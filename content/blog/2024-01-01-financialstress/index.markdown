@@ -10,7 +10,7 @@ categories:
   - entrepreneurs
 summary: One primary reason entrepreneurs abandon their goals is due to financial difficulties. In one experimental and two field studies, we found a positive relationship between financial stress and quit intention, mediated by affective commitment to their entrepreneurial endeavors. The findings are in line with the challenge–hindrance stressor (CHS) framework and self-determination theory (SDT).
 image:
-  caption: '[Image from](https://link.springer.com/article/10.1007/s11365-024-00972-8)'
+  caption: 'Screenshot: [*International Entrepreneurship and Management Journal*](https://link.springer.com/article/10.1007/s11365-024-00972-8)'
   focal_point: ''
 output:
   blogdown::html_page:

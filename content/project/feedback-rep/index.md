@@ -9,7 +9,7 @@ tags:
 - shiny
 - golem
 - application
-author: "Anne Kleine"
+author: "Anne-Kathrin Kleine"
 title: Feedback reports for entrepreneurs using shiny and golem  
 links:
 - icon: github

@@ -29,4 +29,4 @@ links:
 ---
 
 ### [Slides](/pdf/FWSS.pdf) 
-![](/img/aicdss.jpg) 
+![Title slide: Future Work Selves – Navigating Career Development](/img/fwss_title.png) 

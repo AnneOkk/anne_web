@@ -6,3 +6,6 @@
 resources/
 .hugo_build.lock
 **/data
+
+# Local archive (not published)
+archive/

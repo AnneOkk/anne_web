@@ -13,8 +13,8 @@ superuser: true
 bio: 
 education:
   courses:
-  - course: PhD in Organizational Behavior
-    institution: Groningen University
+  - course: PhD in Psychology
+    institution: University of Groningen
     year: 2022
   - course: MSc in Psychology
     institution: Leipzig University
@@ -24,22 +24,19 @@ education:
     year: 2016
 email: ""
 interests:
-- Knowledge sharing
-- Data analysis
-- Data visualization
-- Machine learning
-- Mental health
+- Human–AI interaction
+- AI in healthcare
+- Meta-analysis and quantitative methods
+- Thriving, careers, and well-being at work
+- Open science
 
 organizations:
-- name: LMU Munich
-  url: lmu.de/en/index.html
-  
-role: Behavioral Researcher
+- name: TU Dresden
+  url: https://tu-dresden.de/
+
+role: Interim Professor of Organizational Psychology
 
 social:
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/AnKaKleine
 - icon: github
   icon_pack: fab
   link: https://github.com/AnneOkk

@@ -36,8 +36,8 @@ enableEmoji = true
 [params]
   orgName = "Anne-Kathrin Kleine"
   orgLocal = ""
-  description = "Personal website and portfolio of Anne-Kathrin Kleine."
-  favicon = "/img/favicon.ico"
+  description = "Anne-Kathrin Kleine is Interim Professor of Organizational Psychology at TU Dresden. She studies how people evaluate, trust, and work with AI in consequential decisions, and develops the quantitative methods to study these questions rigorously."
+  favicon = "/img/favicon.png"
   logo = "/img/pie_PNG50.png"
   mainSections = ["blog", "project", "talk"]
   navallcaps = true
@@ -47,7 +47,7 @@ enableEmoji = true
   socialInFooter = true
   # Default image for social sharing and search engines.
   # Place image file in `static` folder and specify image name here.
-  sharing_image = "/img/papillons.jpg"
+  sharing_image = "/img/sharing.jpg"
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
   # twitter = "AnKaKleine"
 
@@ -75,8 +75,8 @@ enableEmoji = true
 
   # Configuration of https://utteranc.es/ for comments
   [params.utterances]
-    use_utterances = true
-    repo_name = "rbind/apreshill"
+    use_utterances = false
+    repo_name = ""
     issue_term = "title" # url, pathname, or title
     theme = "boxy-light"
     label = "comments :crystal_ball:"
@@ -120,41 +120,45 @@ enableEmoji = true
 [menu]
   # Configure header
   [[menu.header]]
-    name = "Content"
-    title = "Blog, Projects, Workshops"
+    name = "About"
+    title = "About me"
     url = "/about/"
     weight = 1
-#  [[menu.header]]
-#    name = "Research"
-#    title = "Research"
-#    url = "/blog/"
-#    weight = 2
-#  [[menu.header]]
-#    name = "Projects"
-#    title ="Project Portfolio"
-#    url = "/project/"
-#    weight = 3
-[[menu.header]]
-    name = "Talks"
-    title = "Talks"
-    url = "/talk/"
+  [[menu.header]]
+    name = "Research"
+    title = "Research lines, projects, and collaborations"
+    url = "/research/"
+    weight = 2
+  [[menu.header]]
+    name = "Publications"
+    title = "Publications"
+    url = "/publications/"
+    weight = 3
+  [[menu.header]]
+    name = "Teaching"
+    title = "Teaching, supervision, and teaching materials"
+    url = "/teaching/"
     weight = 4
   [[menu.header]]
-    name = "Lab"
-    title = "Lab"
-    url = "/lab/"
+    name = "Talks"
+    title = "Talks and workshops"
+    url = "/talk/"
     weight = 5
-
+  [[menu.header]]
+    name = "Blog"
+    title = "Research summaries and news"
+    url = "/blog/"
+    weight = 6
   [[menu.header]]
     name = "CV"
-    url = "/pdf/CV_Academic_Feb26.pdf"
-    weight = 6
-
+    title = "Curriculum vitae"
+    url = "/cv/"
+    weight = 7
   [[menu.header]]
     name = "Contact"
     title = "Contact form"
     url = "/contact/"
-    weight = 7
+    weight = 8
 
   # Configure footer
   [[menu.footer]]

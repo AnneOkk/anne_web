@@ -8,13 +8,13 @@
     </div>
     <div class="decorator dn-s mh5-ns"></div>
     <div class="w-100 w-80-ns mb4-ns mb3">
-        <h6 class="f5 pt0 mv0 pb2">{{ .title }}</h6>
+        <h3 class="f5 fw6 pt0 mv0 pb2 lh-title">{{ .title | markdownify }}</h3>
 
         <div class="flex flex-column flex-row-ns">
           <div class="f6 pv0 mv0 fl w-60-ns w-100 tl">
             {{ if .company }}
             <h6 class="f5 pv0 mv0 dark-gray">
-            {{ if .company_url }}<a href="{{ . }}">{{ end }}{{ .company }}{{ if .company_url }}</a>{{ end }}
+            {{ if .company_url }}<a href="{{ .company_url }}">{{ end }}{{ .company }}{{ if .company_url }}</a>{{ end }}
             </h6>
             {{ end }}
           </div>
@@ -28,12 +28,12 @@
 
 
         {{ with .description }}
-            <p class="measure mt2-ns mt1">{{ . }}</p>
+            <p class="measure mt2-ns mt1 f6 lh-copy">{{ . | markdownify }}</p>
         {{ end }}
         {{ if .bullets }}
           <ul class="pl3 lh-copy measure">
           {{ range .bullets }}
-            <li>{{ . }}</li>
+            <li class="f6">{{ . | markdownify }}</li>
           {{ end }}
           </ul>
         {{ end }}

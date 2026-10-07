@@ -20,9 +20,14 @@ image:
   focal_point: 'center'
   preview_only: no
 projects: []
+links:
+- icon: podcast
+  icon_pack: fas
+  name: listen
+  url: https://www.amboss.com/int/internationalpodcast
 
 ---
 
 In this episode, hosts Dr. Tanner Schrank and Sophie Neale delve deep into the world of Artificial Intelligence in healthcare with AI expert, Dr. Anne-Kathrin Kleine. From exploring how clinicians view AI to discussing its impact on mental health, Dr. Kleine paints a vivid picture of the technology’s potential. She expertly navigates us through both benefits and risks, providing invaluable insight for any medical student or health professional keen on the future of medicine. You won’t want to miss her insightful advice on embracing this technological frontier. Tune in for a glimpse into the future of healthcare.
 
-Listen [here](https://www.amboss.com/int/internationalpodcast) or or everywhere else where podcasts are available.
+Listen [here](https://www.amboss.com/int/internationalpodcast) or wherever else where podcasts are available.

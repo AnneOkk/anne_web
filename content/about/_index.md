@@ -1,7 +1,7 @@
 ---
 title: "About me"
 description: |
-  About Anne-Kathrin Kleine.
+  About Anne-Kathrin Kleine – Interim Professor of Organizational Psychology at TU Dresden, researching human–AI interaction and quantitative methods.
 show_header: true
 sidebar_left: true
 # Keep this! Do not edit.

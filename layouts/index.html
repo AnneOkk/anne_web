@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{ $page := . }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw9 center">
+    <div class="flex-l items-center" style="{{ if .Params.image_left }}flex-direction: row-reverse;{{ end }}">
+      <div class="mh4 w-50-l {{ if not .Params.text_align_left }}tr{{ end }}">
+        {{ with .Params.title }}<h1 class="f2 f1-m f-subheadline-l fw5-ns mv4 lh-solid">{{ . }}</h1>{{ end }}
+        {{ with .Params.subtitle }}<h2 class="f5 fw7 mt0 mb4 ttu tracked lh-copy">{{ . | markdownify }}</h2>{{ end }}
+        {{ if .Params.show_social_links }}{{ partial "shared/social-links.html" . }}{{ end }}
+        {{ with .Params.description }}<p class="f5 f4-l mt4 lh-copy measure">{{ . | markdownify }}</p>{{ end }}
+        {{ with .Params.action_links }}
+        <p class="mt4 home-actions">
+          {{ range . }}<a class="btn-links mr2 mb2 ba dib" href="{{ .url | relURL }}">{{ with .icon }}<i class="{{ $.Param "icon_pack" | default "fas" }} fa-{{ . }} fa-fw mr2"></i>{{ end }}{{ .name }}</a>{{ end }}
+        </p>
+        {{ end }}
+        {{ if .Params.show_action_link }}<a class="mt4 action {{ .Params.action_type }}" href="{{ .Params.action_link | relURL }}">{{ .Params.action_label | safeHTML }}</a>{{ end }}
+        {{ with .Params.news }}
+        <section class="home-news mt4 pt3">
+          <h3 class="f6 fw7 ttu tracked mv2">News</h3>
+          <ul class="list pl0 mv0 f6 lh-copy">
+            {{ range . }}<li class="pv1"><span class="home-news-date">{{ .date }}</span><span>{{ .text | markdownify }}</span></li>{{ end }}
+          </ul>
+        </section>
+        {{ end }}
+      </div>
+      <div class="tr w-50-l {{ if .Params.image_left }}ml4{{ else }}mr4{{ end }}">
+      {{ with .Params.images }}
+        {{ range first 1 . }}<img class="mv0 w-70-m" src="{{ . | relURL }}" alt="Portrait of {{ $page.Title }}"/>{{ end }}
+      {{ end }}
+      </div>
+    </div>
+  </section>
+</main>
+{{ end }}

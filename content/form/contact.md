@@ -1,7 +1,7 @@
 ---
 title: Contact
 name: Contact Us Form
-description: "Contact me if you have questions about our projects."
+description: "Get in touch about research collaborations, talks and workshops, teaching, or thesis supervision. You can also reach me at anne.k.kleine@gmail.com."
 date: 2024-12-09T13:38:41-06:00
 draft: false
 url: contact

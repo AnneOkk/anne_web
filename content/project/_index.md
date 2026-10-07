@@ -1,6 +1,6 @@
 ---
-title: Scientific projects and beyond
-description: "A wild collection of data analysis projects, shiny apps, and open science initiatives I support or am part of."
+title: Projects
+description: "Research projects, open science initiatives, teaching resources, and data analysis side projects I lead or contribute to."
 author: ""
 show_post_thumbnail: true
 show_author_byline: true

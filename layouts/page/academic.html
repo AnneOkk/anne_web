@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw8 center academic-page">
+    <header class="academic-header pb4 mb4">
+      {{ with .Params.kicker }}<p class="academic-kicker f6 fw7 ttu tracked mb2">{{ . }}</p>{{ end }}
+      <h1 class="f2 f1-ns fw4 mt2 mb3 lh-title">{{ .Title | markdownify }}</h1>
+      {{ with .Params.lead }}<div class="academic-lead f5 f4-ns measure-wide lh-copy">{{ . | markdownify }}</div>{{ end }}
+      {{ with .Params.links }}<div class="pt4">{{ partial "shared/btn-links.html" $ }}</div>{{ end }}
+      {{ if .Params.show_toc }}
+      <nav class="academic-toc f6 pt4" aria-label="On this page">
+        <span class="fw7 ttu tracked mr2">On this page</span>
+        {{ .TableOfContents }}
+      </nav>
+      {{ end }}
+    </header>
+    <article class="page-body ak-prose">
+      {{ .Content }}
+    </article>
+    {{ with .Params.updated }}<p class="f7 mt5 i">Last updated: {{ . }}</p>{{ end }}
+  </section>
+</main>
+{{ end }}

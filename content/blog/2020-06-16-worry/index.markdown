@@ -13,7 +13,7 @@ categories:
   - career-related worry
 summary: We shed light on social-cognitive resources that mitigate master students’ experience of dysfunctional career-related worry before graduation.
 image:
-  caption: '[Photo by Andrea Piacquadio on Pexels](pexels.com/photo/young-troubled-woman-using-laptop-at-home-3755755/)'
+  caption: '[Photo by Andrea Piacquadio on Pexels](https://www.pexels.com/photo/young-troubled-woman-using-laptop-at-home-3755755/)'
   focal_point: Smart
 output:
   blogdown::html_page:

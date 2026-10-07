@@ -8,9 +8,10 @@ summary: "A two-day tandem workshop on effective leadership strategies in resear
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2023-05-04T14:00:00Z and 2023-05-11T14:00:00Z"
-#date_end: "2023-02-09T19:30:00Z"
-all_day: false
+date: "2023-05-04T14:00:00Z"
+date_end: "2023-05-11T17:00:00Z"
+date_display: "May 4 and May 11, 2023"
+all_day: true
 publishdate: "2023-05-11"
 categories:
   - leadership

@@ -88,3 +88,150 @@
    width: 250px;
    font-size: 13px;
 }
+
+/* ------------------------------------------------------------------
+   Academic pages (Research, Publications, Teaching, CV) – added 2026
+   ------------------------------------------------------------------ */
+$ak-blue: #2a27ba;
+$ak-orange: #c98c5d;
+$ak-line: #088cb8;
+$ak-card: #fff8f5;
+
+.academic-header { border-bottom: 2px solid rgba($ak-line, .35); }
+.academic-kicker { color: $ak-orange; letter-spacing: .12em; }
+.academic-lead p { margin-top: 0; }
+.academic-toc {
+  ul { list-style: none; display: inline; padding: 0; margin: 0; }
+  li { display: inline-block; margin: .25rem 1.1rem .25rem 0; }
+  nav, #TableOfContents { display: inline; }
+  a { color: $ak-blue; text-decoration: none; border-bottom: 1px solid rgba($ak-blue, .3); }
+  a:hover { border-bottom-color: $ak-blue; }
+}
+
+.ak-prose {
+  line-height: 1.6;
+  h2 {
+    font-size: 1.75rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid rgba($ak-line, .45);
+  }
+  h3 { font-size: 1.25rem; margin-top: 2.25rem; margin-bottom: .5rem; }
+  h4 { font-size: 1rem; margin-top: 1.75rem; margin-bottom: .25rem; }
+  p, li { max-width: 46rem; }
+  ul:not(.panel-tabs), ol { max-width: 46rem; }
+  .pubs ul:not(.panel-tabs) { max-width: 50rem; }
+  img { max-width: 100%; height: auto; }
+  figure { margin: 2rem 0; }
+  figcaption { font-size: .8rem; color: #555; margin-top: .5rem; }
+}
+
+/* Publication lists */
+.pubs ul, .pubs ol { list-style: none; padding-left: 0; max-width: none; }
+.pubs li {
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  margin-bottom: 1.1rem;
+  max-width: 48rem;
+}
+.pub-links { display: inline-block; text-indent: 0; margin-left: .25rem; }
+.pub-links a,
+a.pub-tag {
+  display: inline-block;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.2;
+  padding: .15rem .45rem;
+  margin: .15rem .3rem .15rem 0;
+  border: 1px solid rgba($ak-blue, .5);
+  border-radius: 3px;
+  color: $ak-blue !important;
+  text-indent: 0;
+}
+.pub-links a:hover { background: $ak-blue; color: #fff !important; }
+.pub-note { font-size: .8rem; color: #555; text-indent: 0; display: block; padding-left: 0; }
+
+/* Cards and stats */
+.ak-grid.ak-grid-2 { grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr)); }
+@media screen and (max-width: 30em) { .ak-grid.ak-grid-2 { grid-template-columns: 1fr; } }
+.ak-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+.ak-card {
+  background: $ak-card;
+  border-top: 4px solid $ak-orange;
+  padding: 1.25rem 1.4rem 1.1rem;
+  h3, h4 { margin-top: 0; }
+  p { font-size: .92rem; margin: .4rem 0; }
+  ul { font-size: .92rem; padding-left: 1.1rem; margin: .4rem 0; }
+}
+.ak-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
+}
+.ak-stat {
+  border-left: 3px solid $ak-line;
+  padding: .25rem 0 .25rem .9rem;
+  .ak-num { display: block; font-size: 2rem; line-height: 1.1; color: $ak-blue; font-family: 'Merriweather', serif; }
+  .ak-label { display: block; font-size: .8rem; line-height: 1.35; }
+}
+.ak-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: .92rem; }
+.ak-table th { text-align: left; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; padding: .5rem .6rem; border-bottom: 2px solid rgba($ak-line, .45); }
+.ak-table td { padding: .65rem .6rem; vertical-align: top; border-bottom: 1px solid rgba(0, 0, 0, .08); }
+.ak-table td:first-child { white-space: nowrap; width: 1%; color: #444; }
+
+/* Home page */
+.home-actions a.btn-links,
+.academic-header a.btn-links {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .55rem .9rem;
+  margin: 0 .4rem .6rem 0;
+  border: 1px solid #231f20;
+  color: #231f20 !important;
+  background: transparent;
+  transition: background-color .15s ease-in, color .15s ease-in;
+}
+.home-actions a.btn-links:hover,
+.academic-header a.btn-links:hover { background: #231f20; color: #fff !important; }
+.home-news { border-top: 1px solid rgba($ak-line, .35); max-width: 34rem; }
+.home-news li { display: flex; gap: .75rem; }
+.home-news-date {
+  flex: 0 0 4.4rem;
+  font-weight: 700;
+  color: $ak-orange;
+}
+
+/* Blog figures */
+.post-body figure.ak-figure { margin: 2rem 0; }
+.post-body figure.ak-figure img { border: 1px solid rgba(0, 0, 0, .1); max-width: 100%; }
+.post-body figure.ak-figure figcaption { font-size: .8rem; color: #555; margin-top: .5rem; }
+.ak-callout {
+  background: $ak-card;
+  border-left: 4px solid $ak-orange;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  max-width: 46rem;
+  p { margin: .35rem 0; }
+}
+
+@media screen and (max-width: 30em) {
+  .ak-prose h2 { font-size: 1.45rem; }
+  .ak-table td:first-child { white-space: normal; }
+  .site-links a { font-size: .75rem; padding-left: .3rem; padding-right: .3rem; }
+}
+
+/* Featured image at the top of blog posts: keep portrait stock photos from dominating the page */
+.post-feature img { max-height: 24rem; object-fit: cover; object-position: center 35%; }

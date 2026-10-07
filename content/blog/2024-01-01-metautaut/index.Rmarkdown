@@ -10,7 +10,7 @@ categories:
   - AI in healthcare
 summary: Artificial intelligence–enabled clinical decision support systems (AI-CDSSs) offer potential for improving health care outcomes, but their adoption among health care practitioners remains limited. The meta-analysis identified predictors influencing health care practitioners’ intention to use AI-CDSSs based on the Unified Theory of Acceptance and Use of Technology (UTAUT). Additional predictors were examined based on existing empirical evidence.
 image:
-  caption: '[Image from](https://www.jmir.org/2024/1/e57224/)'
+  caption: 'Proposed research model. Figure from Dingel, Kleine, et al. (2024), [*Journal of Medical Internet Research*](https://www.jmir.org/2024/1/e57224/), CC BY 4.0'
   focal_point: ''
 output:
   blogdown::html_page:

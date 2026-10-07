@@ -30,4 +30,4 @@ links:
 ---
 
 ### [Slides](/pdf/Cross_talk_share.pdf) 
-![](/img/summerschool.png) 
+![Title slide: AI-enabled medical devices – progress, potential, challenges](/img/crosstalk.png) 

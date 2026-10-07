@@ -25,6 +25,12 @@ output:
     toc_depth: 1
 ---
 
+<div class="ak-callout">
+
+**Update:** This study has since been published in *Current Psychology* – see the [summary of the published paper]({{< relref "/blog/2024-01-01-challengethreat" >}}) or read the [article](https://doi.org/10.1007/s12144-023-04370-1).
+
+</div>
+
 According to transactional stress theory (TST), the extent to which entrepreneurs cope with errors by engaging in error damage control or ruminating about disengaging from their business goals depends on whether they interpret action errors as predominantly challenging or threatening. 
 
 #### What we did:

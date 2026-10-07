@@ -13,8 +13,9 @@ date_end: "2023-03-11T12:30:00Z"
 all_day: false
 publishdate: "2023-03-11"
 categories:
-  - thriving
-  - healthy work
+  - artificial intelligence
+  - precision psychiatry
+  - patent review
 featured: no
 image:
   focal_point: 'center'

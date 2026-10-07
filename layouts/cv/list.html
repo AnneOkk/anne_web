@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ $page := . }}
+<main class="page-main pa4 {{ .Kind }}" role="main">
+  <section class="page-content mw8 center academic-page">
+    <header class="academic-header pb4 mb4">
+      {{ with .Params.kicker }}<p class="academic-kicker f6 fw7 ttu tracked mb2">{{ . }}</p>{{ end }}
+      <h1 class="f2 f1-ns fw4 mt2 mb3 lh-title">{{ .Title | markdownify }}</h1>
+      {{ with .Params.lead }}<div class="academic-lead f5 f4-ns measure-wide lh-copy">{{ . | markdownify }}</div>{{ end }}
+      {{ with .Params.links }}<div class="pt4">{{ partial "shared/btn-links.html" $page }}</div>{{ end }}
+    </header>
+
+    {{ with .Params.stats }}
+    <div class="ak-stats">
+      {{ range . }}<div class="ak-stat"><span class="ak-num">{{ .num }}</span><span class="ak-label">{{ .label | markdownify }}</span></div>{{ end }}
+    </div>
+    {{ end }}
+
+    {{ with .Content }}<div class="page-body ak-prose">{{ . }}</div>{{ end }}
+
+    {{ range .Params.cv_sections }}
+      {{ $file := printf "/%s/%s" $page.Section .file }}
+      {{ $icon := .icon }}
+      {{ with site.GetPage $file }}
+      <section class="blog-content pt4">
+        <h2 class="f4 fw7 tracked ttu lh-title mv3 bb group-content pb2 pb3-ns"><i class="fas fa-{{ $icon }} pr3"></i>{{ .Title }}</h2>
+        {{ range .Params.items }}
+          {{ partial "resume.html" . }}
+        {{ end }}
+        {{ with .Content }}<div class="page-body ak-prose cv-text">{{ . }}</div>{{ end }}
+      </section>
+      {{ end }}
+    {{ end }}
+
+    {{ with .Params.updated }}<p class="f7 mt5 i">Last updated: {{ . }}</p>{{ end }}
+  </section>
+</main>
+{{ end }}

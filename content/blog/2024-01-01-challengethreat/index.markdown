@@ -10,7 +10,7 @@ categories:
   - entrepreneurs
 summary: According to transactional stress theory (TST), entrepreneurs' coping strategies depend on viewing errors as challenges or threats. This study uses latent profile analysis to explore distinct profiles of challenge and threat appraisals among entrepreneurs. The findings reveal five appraisal profiles that highlight differences in error damage control and rumination, suggesting improvements for TST and error management interventions.
 image:
-  caption: '[Image from](https://link.springer.com/article/10.1007/s12144-023-04370-1#Fig1)'
+  caption: 'Figure from the article in [*Current Psychology*](https://link.springer.com/article/10.1007/s12144-023-04370-1)'
   focal_point: ''
 output:
   blogdown::html_page:

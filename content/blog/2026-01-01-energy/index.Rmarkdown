@@ -17,7 +17,7 @@ categories:
 summary: Human energy is a widely studied concept in organizational psychology and is embedded in several theoretical frameworks. This meta-analysis examines the nomological network of individual human energy at work, compares different conceptualizations and measures of human energy, and investigates its empirical overlap with related constructs such as engagement and thriving.
 
 image:
-  caption: ''
+  caption: 'Screenshot: [*Applied Psychology*](https://doi.org/10.1111/apps.70073)'
   focal_point: ''
 
 output:
