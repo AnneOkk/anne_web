@@ -24,17 +24,6 @@ links:
     icon_pack: ai
     name: Google Scholar
     url: https://scholar.google.com/citations?user=521wTxUAAAAJ&hl=en
-stats:
-  - num: "24"
-    label: "peer-reviewed journal articles"
-  - num: "13"
-    label: "as first or shared-first author"
-  - num: "3"
-    label: "published meta-analyses as lead author"
-  - num: "€92k"
-    label: "funding awarded as applicant; PI of a €1.5M project (Volkswagen Foundation)"
-  - num: "24"
-    label: "supervised theses (2 PhD co-supervisions, 9 MSc, 13 BSc)"
 cv_sections:
   - file: experience.md
     icon: university
